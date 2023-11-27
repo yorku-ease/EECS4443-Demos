@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Tap the Buttons Below</string>
+    <string name="app_name">Demo_CustomButton</string>
+    <string name="mybuttontext">Text for MyButton</string>
+
+    <string name="clickCountAString">A click count = </string>
+    <string name="clickCountBString">B click count = </string>
+    <string name="debugString">Debug: </string>
+</resources>

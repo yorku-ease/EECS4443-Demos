@@ -1,0 +1,8 @@
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_front"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    class="ca.yorku.eecs.mack.democardanimation.CardFrontImageView"
+    android:contentDescription="@string/description_image_1"
+    android:scaleType="centerCrop"
+    android:src="@drawable/news01_2015" />

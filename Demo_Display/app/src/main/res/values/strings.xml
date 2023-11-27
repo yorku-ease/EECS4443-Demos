@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_Display</string>
+    <string name="title">Display Properties</string>
+    <string name="pixel_density">Pixel density:</string>
+    <string name="default_orientation">Natural orientation:</string>
+    <string name="current_display_size">Current display size:</string>
+    <string name="current_orientation">Current orientation:</string>
+    <string name="current_rotation">Current rotation:</string>
+    <string name="one_inch_button">One-inch button:</string>
+    <string name="one_inch_button_text">Button</string>
+    <string name="half_inch_circle">Half-inch circle:</string>
+
+    <string name="landscape">LANDSCAPE</string>
+    <string name="portrait">PORTRAIT</string>
+
+</resources>

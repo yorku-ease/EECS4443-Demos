@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_CardAnimation</string>
+    <string name="description_image_1">Image 1</string>
+    <string name="menu_title">Top News Stories of 2015</string>
+
+    <string-array name="card_title">
+        <item>#1 - Humboldt Broncos</item>
+        <item>#2 - Economic Challenges</item>
+        <item>#3 - Trudeau\'s Trade</item>
+        <item>#4 - Legalization of Cannibis</item>
+        <item>#5 - Trump\'s America</item>
+        <item>#6 - Thai Cave Rescue</item>
+        <item>#7 - Natural Disasters</item>
+        <item>#8 - Human Suffering</item>
+        <item>#9 - Toronto Homicides</item>
+        <item>#10 - Royal Wedding</item>
+    </string-array>
+
+
+    <string-array name="card_text">
+        <!-- Summary text for top news stories -->
+        <item>The bus crash on April 6 that left 16 people dead and 13 injured shocked the northern Saskatchewan city of
+            Humboldt and reverberated throughout Canada and the hockey world. Among the dead were 10 players ranging in
+            ages 16 to 21, and six team personnel.
+
+            On Jan. 1, CTV Winnipeg bureau chief Jill Macyshon recaps our number one story of 2018 – of a town with a
+            population of 6,000 rocked by the tragedy but united in support of their lost loved ones, with donors
+            worldwide raising $15.2 million for victims’ families.
+        </item>
+        <item>Canada’s economy continues to grow and unemployment has fallen to its lowest level in 40 years, but after
+            GM’s bombshell of an announcement to close its Oshawa plant and a downturn in the oil sector, the Liberal
+            government is under great pressure to turn things around as it heads into an election year in 2019. CTV
+            senior political correspondent Glen McGregor recaps the biggest news this year in Canada’s economy, on Dec.
+            31.
+        </item>
+        <item>On Dec. 30, CTV Ottawa bureau chief Joyce Napier recaps a challenging year in trade for the Liberal
+            government. From uncertainty over the Trans Mountain Expansion Project to a revamped NAFTA deal, signed
+            after an acrimonious trade war with the U.S., it’s been a steep learning curve for a government looking for
+            new trading partners on the international scene, realizing it needs to end total reliance on the U.S.
+        </item>
+        <item>CTV Montreal bureau chief Genevieve Beauchemin looks back on the year Canada’s marijuana laws became the
+            focus of the world. Statistics Canada says Canadians bought $43-million worth of pot in the first two weeks
+            after legalization went into effect on Oct. 17. But it’s clear that two months into legalization, the new
+            pot regime is still working out kinks in the supply chain and the enforcement of new rules.
+        </item>
+        <item>On Dec. 28, CTV Washington bureau chief Joy Malbon recaps year two of U.S. President Donald Trump’s
+            tumultuous term. From his presidential meeting with North Korean dictator Kim Jong Un, to hush money paid to
+            porn star Stormy Daniels, to the continuing Russia investigation and the firings and resignations in his
+            administration, it’s been quite the year for the 45th president, who faces a 2019 that could bring endless
+            House investigations into his finances, Russian interference and ethics.
+        </item>
+        <item>The daring rescue of 12 children who were part of a Thai soccer team and their coach, caught deep inside
+            the flooded Mae Sai cave complex in Chiang Rai, was number six in our top 10 stories of 2018. CTV’s Peter
+            Akman on Dec. 27 recounts the drama that riveted the world and the stunning moment when British divers found
+            the missing team.
+        </item>
+        <item>Few places in the world escaped natural disasters in 2018, from tornadoes that ripped through the Ottawa
+            area in September to deadly hurricanes, cyclones, earthquakes and massive wildfires worldwide. CTV Atlantic
+            bureau chief Todd Battis on Dec. 26 recounts the destruction that nature wreaked on Earth, and the fear that
+            consequences of climate change could lead to even more calamitous events in the future.
+        </item>
+        <item>On Dec. 25, London bureau chief Paul Workman looks at the terrible cost of war and the millions of
+            civilians it has left displaced and desperate this past year. From the plight of the Rohingya Muslims of
+            Myanmar to the humanitarian crises unfolding in Yemen and Syria, thanks to conflicts that have dragged on
+            for years. It has been a year of human suffering in many parts of the world.
+        </item>
+        <item>This has been an especially deadly year in Toronto, with the city notching more than 90 homicides so far
+            amidst a spate of brazen shootings and calls for a handgun ban. The numbers eclipse the previous record of
+            89 total homicides in 1991 and 80 in 2005, which was dubbed the “summer of the gun.”
+
+            On Dec. 24, CTV Toronto bureau correspondent John Vennavally-Rao looks back at a year in which violent
+            incidents—including the van attack and mass shooting on the Danforth—shocked and outraged the city.
+        </item>
+        <item>CTV London bureau correspondent Daniele Hamamdjian kicks off the top 10 countdown on Dec. 23, with a look
+            back at Prince Harry and Meghan Markle’s extraordinary wedding. Hamamdjian reflects on the spectacle that
+            attracted millions of viewers, the star-studded ceremony and the drama surrounding the former actress’s
+            family.
+        </item>
+    </string-array>
+
+    <!-- Background colors for summary text -->
+    <array name="card_background_color">
+        <item>#2c355d</item>
+        <item>#2f4d51</item>
+        <item>#4c3327</item>
+        <item>#70685b</item>
+        <item>#b60a0a</item>
+        <item>#777777</item>
+        <item>#7777ff</item>
+        <item>#59705a</item>
+        <item>#d23c2d</item>
+        <item>#6aaffd</item>
+    </array>
+
+</resources>

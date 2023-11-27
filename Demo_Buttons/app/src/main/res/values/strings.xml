@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="instructions">Click the Buttons Below</string>
+	<string name="app_name">Demo_Buttons</string>
+	<string name="buttonLabel">Simple Button</string>
+	<string name="checkboxLabel">CheckBox</string>
+	<string name="toggleButtonLabel">ToggleButton</string>
+	<string name="redButtonLabel">Red</string>
+	<string name="greenButtonLabel">Green</string>
+	<string name="blueButtonLabel">Blue</string>
+	<string name="exitButtonLabel">Exit</string>
+	<string name="backspaceButtonText">(image)</string>
+
+	<string name="unchecked">Unchecked</string>
+	<string name="checked">Checked</string>
+	<string name="red">Red</string>
+	<string name="green">Green</string>
+	<string name="blue">Blue</string>
+	<string name="on">On</string>
+	<string name="off">Off</string>
+</resources>

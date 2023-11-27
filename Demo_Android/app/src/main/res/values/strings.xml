@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="instruction">Tap a Button to Change Count</string>
+    <string name="count">Count:   </string>
+    <string name="increment">Increment</string>     
+    <string name="decrement">Decrement</string>        
+    <string name="app_name">Demo_Android</string>
+    <string name="exit">Exit</string>
+</resources>

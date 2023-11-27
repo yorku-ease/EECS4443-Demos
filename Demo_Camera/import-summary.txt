@@ -1,0 +1,71 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* doc\
+* doc\allclasses-frame.html
+* doc\allclasses-noframe.html
+* doc\ca\
+* doc\ca\yorku\
+* doc\ca\yorku\cse\
+* doc\ca\yorku\cse\mack\
+* doc\ca\yorku\cse\mack\androiddemo\
+* doc\ca\yorku\cse\mack\androiddemo\DemoCameraIntentActivity.html
+* doc\ca\yorku\cse\mack\androiddemo\class-use\
+* doc\ca\yorku\cse\mack\androiddemo\class-use\DemoCameraIntentActivity.html
+* doc\ca\yorku\cse\mack\androiddemo\package-frame.html
+* doc\ca\yorku\cse\mack\androiddemo\package-summary.html
+* doc\ca\yorku\cse\mack\androiddemo\package-tree.html
+* doc\ca\yorku\cse\mack\androiddemo\package-use.html
+* doc\constant-values.html
+* doc\deprecated-list.html
+* doc\help-doc.html
+* doc\index-files\
+* doc\index-files\index-1.html
+* doc\index-files\index-2.html
+* doc\index-files\index-3.html
+* doc\index-files\index-4.html
+* doc\index-files\index-5.html
+* doc\index-files\index-6.html
+* doc\index.html
+* doc\overview-tree.html
+* doc\package-list
+* doc\resources\
+* doc\resources\inherit.gif
+* doc\stylesheet.css
+* proguard.cfg
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\ca\yorku\cse\mack\democamera\DemoCamera-1.jpg => app\src\main\resources\ca\yorku\cse\mack\democamera\DemoCamera-1.jpg
+* src\ca\yorku\cse\mack\democamera\DemoCamera-2.jpg => app\src\main\resources\ca\yorku\cse\mack\democamera\DemoCamera-2.jpg
+* src\ca\yorku\cse\mack\democamera\DemoCamera-3.jpg => app\src\main\resources\ca\yorku\cse\mack\democamera\DemoCamera-3.jpg
+* src\ca\yorku\cse\mack\democamera\DemoCamera-4.jpg => app\src\main\resources\ca\yorku\cse\mack\democamera\DemoCamera-4.jpg
+* src\ca\yorku\cse\mack\democamera\DemoCamera-5.jpg => app\src\main\resources\ca\yorku\cse\mack\democamera\DemoCamera-5.jpg
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

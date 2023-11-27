@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#ff123456"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/instruction"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/incbutton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/increment"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/count"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/decbutton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/decrement"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/exitbutton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/exit"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Demo_Camera</string>
+    <string name="app_name">Demo_Camera</string>
+    <string name="imageviewtext">(image goes here)</string>
+    <string name="videoviewtext">(video goes here)</string>
+    <string name="button1text">Take Picture</string>
+    <string name="button1atext">Previous</string>
+    <string name="button1btext">Next</string>
+    <string name="button2text">Record Video</string>
+    <string name="imageCountString">(image count)</string>
+    <string name="videoCountString">(video count)</string>
+    <string name="empty">Loading images &#8230;</string>
+
+</resources>
