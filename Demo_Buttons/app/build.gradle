@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdk 33
+    namespace 'ca.yorku.eecs.mack.demobuttons'
 
     defaultConfig {
         applicationId "ca.yorku.eecs.mack.demobuttons"
-        minSdkVersion 13
-        targetSdkVersion 27
+        minSdk 13
+        targetSdk 33
     }
 
     buildTypes {
