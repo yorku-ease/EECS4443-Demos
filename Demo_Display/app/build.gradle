@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "ca.yorku.eecs.mack.demodisplay"
         minSdkVersion 13
-        targetSdkVersion 27
+        targetSdkVersion 33
     }
 
     buildTypes {
