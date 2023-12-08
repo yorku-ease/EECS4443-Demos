@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_VoiceEmail</string>
+    <string name="title">Demo_VoiceEmail</string>
+    <string name="menu_settings">Settings</string>
+    <string name="playbackText">Playback</string>
+    <string name="recordText">Record</string>
+    <string name="timeText">0:00</string>
+
+</resources>

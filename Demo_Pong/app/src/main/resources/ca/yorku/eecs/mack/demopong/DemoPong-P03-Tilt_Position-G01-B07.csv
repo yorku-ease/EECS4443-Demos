@@ -1,0 +1,15 @@
+Participant,Condition,Group,Block,Sequence,Level,Trials,Hits,Misses,Result,Time,Time_total,Mov_min,Mov_actual,Mov_eff,Reversals
+P03,Tilt_Position,G01,B07,1,1,5,5,0,Win,13.754,13.8,427,3461,12.3,27
+P03,Tilt_Position,G01,B07,2,2,5,5,0,Win,12.557,26.3,903,3574,25.3,28
+P03,Tilt_Position,G01,B07,3,3,5,5,0,Win,11.451,37.8,411,2428,16.9,21
+P03,Tilt_Position,G01,B07,4,4,5,5,0,Win,10.62,48.4,705,2343,30.1,23
+P03,Tilt_Position,G01,B07,5,5,5,5,0,Win,9.671,58.1,737,1567,47.0,22
+P03,Tilt_Position,G01,B07,6,6,5,5,0,Win,10.128,68.2,975,2562,38.1,24
+P03,Tilt_Position,G01,B07,7,7,5,5,0,Win,8.41,76.6,324,2087,15.5,19
+P03,Tilt_Position,G01,B07,8,8,5,4,1,Retry,8.609,85.2,109,2264,4.8,19
+P03,Tilt_Position,G01,B07,9,8,5,3,2,Retry,8.339,93.5,185,1802,10.3,30
+P03,Tilt_Position,G01,B07,10,8,5,4,1,Retry,8.161,101.7,461,2451,18.8,24
+P03,Tilt_Position,G01,B07,11,8,5,5,0,Win,8.726,110.4,1156,3699,31.3,21
+P03,Tilt_Position,G01,B07,12,9,5,4,1,Retry,7.861,118.3,46,2156,2.1,19
+P03,Tilt_Position,G01,B07,13,9,5,5,0,Win,7.744,126.0,110,2088,5.3,25
+P03,Tilt_Position,G01,B07,14,10,5,5,0,Victory,7.472,133.5,780,2557,30.5,31

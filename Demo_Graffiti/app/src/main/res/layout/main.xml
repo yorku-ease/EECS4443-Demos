@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/recognizedtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="@string/edittexthint"
+        android:textColorHint="#aaaaaa"
+        android:inputType="textNoSuggestions"
+        android:textAppearance="?android:attr/textAppearanceLarge">
+    </EditText>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ff888888"
+        android:orientation="vertical">
+
+        <view
+            android:id="@+id/paintPanel"
+            class="ca.yorku.eecs.mack.demograffiti.GraffitiPanel"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imgGestureSet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/imagecontentdescription"
+            android:scaleType="center"
+            android:src="@drawable/graffiti"/>
+
+        <LinearLayout
+            android:id="@+id/bottomPanel"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/eraseonfingerlift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                android:text="@string/checkboxtext"/>
+
+            <Button
+                android:id="@+id/clearbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/clearbuttontext"/>
+
+            <Button
+                android:id="@+id/exitbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/exitbuttontext"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ff123456"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="#ff123456"
+                  android:gravity="center_horizontal"
+                  android:layout_gravity="center_horizontal"
+                  android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/setupTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff234567"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/setuptitletext"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25sp"/>
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/paramLabelOrderOfControl"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelorderofcontroltext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramOrderOfControl"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/paramLabelGain"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelgaintext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramGain"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/paramLabelPathType"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelpathtypetext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramPathType"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/paramLabelPathWidth"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelpathwidthtext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramPathWidth"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clickOK"
+                android:text="@string/button01text"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+            </Button>
+
+            <Button
+                android:id="@+id/Button03"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clickExit"
+                android:text="@string/button03text"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

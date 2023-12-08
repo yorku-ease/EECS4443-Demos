@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="5" >
+
+    <TextView
+        android:id="@+id/info_text_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#ff444444"
+        android:hint="@string/hint_text"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical" 
+         android:weightSum="6">
+
+        <TextView
+            android:id="@+id/sensorname"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffabcdef"
+            android:gravity="center"
+            android:hint="@string/sensornamehint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff804444" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal" >
+
+            <ca.yorku.eecs.mack.demosensors.ViewMeter
+                android:id="@+id/xmeter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+            </ca.yorku.eecs.mack.demosensors.ViewMeter>
+
+            <ca.yorku.eecs.mack.demosensors.ViewMeter
+                android:id="@+id/ymeter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+            </ca.yorku.eecs.mack.demosensors.ViewMeter>
+
+            <ca.yorku.eecs.mack.demosensors.ViewMeter
+                android:id="@+id/zmeter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+            </ca.yorku.eecs.mack.demosensors.ViewMeter>
+
+            <ca.yorku.eecs.mack.demosensors.ViewMeter
+                android:id="@+id/meter4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+            </ca.yorku.eecs.mack.demosensors.ViewMeter>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

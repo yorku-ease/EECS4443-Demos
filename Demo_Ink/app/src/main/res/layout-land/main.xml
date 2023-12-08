@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/instructions"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff666666"
+        android:orientation="horizontal" >
+
+        <view
+            android:id="@+id/paintPanel"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            class="ca.yorku.eecs.mack.demoink.PaintPanel" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.2" >
+
+            <TextView
+                android:id="@+id/inkcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:text="@string/inkcolortext"
+                android:textAppearance="?android:attr/textAppearanceSmall" >
+            </TextView>
+
+            <View
+                android:id="@+id/currentcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/inkcolor"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <!-- New stuff below -->
+
+            <TextView
+                android:id="@+id/linemeterlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentcolor"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:text="@string/linemetertext"
+                android:textAppearance="?android:attr/textAppearanceSmall" >
+            </TextView>
+
+            <view
+                android:id="@+id/linemeter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linemeterlabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                class="ca.yorku.eecs.mack.demoink.LineMeter"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <view
+                android:id="@+id/darkerbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/linemeter"
+                android:layout_below="@id/linemeter"
+                class="ca.yorku.eecs.mack.demoink.TouchModeButton"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <view
+                android:id="@+id/lighterbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linemeter"
+                android:layout_toRightOf="@id/darkerbutton"
+                class="ca.yorku.eecs.mack.demoink.TouchModeButton"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/changecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/darkerbutton"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="5dp"
+                android:text="@string/changecolortext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <!-- TOP ROW -->
+
+            <RelativeLayout
+                android:id="@+id/colorchiptable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/changecolor"
+                android:layout_centerHorizontal="true" >
+
+                <view
+                    android:id="@+id/color0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <view
+                    android:id="@+id/color1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changecolor"
+                    android:layout_toRightOf="@id/color0"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changecolor"
+                    android:layout_toRightOf="@id/color1"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changecolor"
+                    android:layout_toRightOf="@id/color2"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <!-- SECOND ROW -->
+
+                <view
+                    android:id="@+id/color4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color0"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/color0"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color1"
+                    android:layout_below="@id/color1"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color2"
+                    android:layout_below="@id/color2"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color3"
+                    android:layout_below="@id/color3"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <!-- THIRD ROW -->
+
+                <view
+                    android:id="@+id/color8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/color4"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color5"
+                    android:layout_below="@id/color5"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color6"
+                    android:layout_below="@id/color6"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <view
+                    android:id="@+id/color11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/color7"
+                    android:layout_below="@id/color7"
+                    class="ca.yorku.eecs.mack.demoink.ColorChip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/undobutton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dip"
+                android:text="@string/undobuttontext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/clearbutton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dip"
+                android:text="@string/clearbuttontext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dip"
+                android:text="@string/savebuttontext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/sendbutton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dip"
+                android:text="@string/sendbuttontext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/exitbutton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dip"
+                android:text="@string/exitbuttontext"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

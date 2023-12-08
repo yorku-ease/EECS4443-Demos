@@ -1,0 +1,49 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* proguard.cfg
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\ca\yorku\cse\mack\demograffiti\DemoGraffiti-1.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\DemoGraffiti-1.jpg
+* src\ca\yorku\cse\mack\demograffiti\DemoGraffiti-2.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\DemoGraffiti-2.jpg
+* src\ca\yorku\cse\mack\demograffiti\DemoGraffiti-3.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\DemoGraffiti-3.JPG
+* src\ca\yorku\cse\mack\demograffiti\DemoGraffiti-4.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\DemoGraffiti-4.JPG
+* src\ca\yorku\cse\mack\demograffiti\DemoGraffiti-5.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\DemoGraffiti-5.JPG
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Digits.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Digits.jpg
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti-A.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti-A.jpg
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti-Z.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti-Z.jpg
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Graffiti.JPG
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Tokens.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Tokens.jpg
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Unistrokes.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Alphabet-Unistrokes.JPG
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-BoundingBox.jpg => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-BoundingBox.jpg
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-Quadrant-Example.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-Quadrant-Example.JPG
+* src\ca\yorku\cse\mack\demograffiti\Unistroke-StartStopXY.JPG => app\src\main\resources\ca\yorku\cse\mack\demograffiti\Unistroke-StartStopXY.JPG
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

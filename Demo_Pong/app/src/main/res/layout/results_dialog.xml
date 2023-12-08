@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/results_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ff000000"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/results_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/results_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ff333333" />
+
+    <!-- TOP ROW -->
+
+    <view
+        android:id="@+id/results_view"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        class="ca.yorku.eecs.mack.demopong.ResultsView" >
+    </view>
+   
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ff333333" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/continue_string"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Debug information</string>
+    <string name="app_name">Demo_Sensors</string>
+    <string name="setuptitletext">Demo_Sensors</string>
+    <string name="paramlabelsensortext">Sensor</string>
+    <string name="paramlabelsamplingratetext">Sampling rate</string>
+    <string name="button01text">OK</string>
+    <string name="button03text">Exit</string>
+    <string name="hint_text">(debug information written here)</string>
+    <string name="sensornamehint">(sensor)</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_TiltBall</string>
+    <string name="setuptitletext">Demo_TiltBall</string>
+    <string name="paramlabelorderofcontroltext">Order of control</string>
+    <string name="paramlabelgaintext">Gain</string>
+    <string name="paramlabelpathwidthtext">Path width</string>
+    <string name="paramlabelpathtypetext">Path type</string>
+    <string name="button01text">OK</string>
+    <string name="button03text">Exit</string>
+
+</resources>

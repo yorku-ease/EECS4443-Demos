@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Touch the panel below</string>
+    <string name="app_name">Demo_Touch</string>
+
+    <string name="actionDown">ACTION_DOWN</string>
+    <string name="actionMove">ACTION_MOVE</string>
+    <string name="actionUp">ACTION_UP</string>
+    <string name="touchStatus">Touch status</string>
+    <string name="xEquals">x=</string>
+    <string name="yEquals">y=</string>
+    <string name="pEquals">p=</string>
+    <string name="velocities">Velocities:</string>
+    <string name="flingXEquals">flingx=</string>
+    <string name="flingYEquals">flingy=</string>
+
+</resources>

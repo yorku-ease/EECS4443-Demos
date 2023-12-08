@@ -1,0 +1,50 @@
+<!--
+    This XML animator resource is used as a custom fragment transition. It is used
+    for the "entering card", which is the card fragment that is entering into the
+    main activity.
+    
+    The resource Id is provided as an argument to FragmentTransaction.setCustomAnimation. 
+    Consult for more details.
+
+    The effect of the animation is to rotate the card into view.
+    
+    The overall duration of the animation is card_flip_time.  This is divided into two 
+    halfs.  During the first half, the "exiting card" is rotated out of view (see 
+    card_flip_exit.xml for details).  During the second half, the "entering card" is 
+    rotated into view.  Together, the animations give the impression of a single card 
+    with two sides which is being flipped over.
+    
+    Three objectAnimator elements are specified.  They execute in parallel.
+-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Begin the animation by setting alpha to 0.  This makes the card invisible. -->
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="alpha"
+        android:valueFrom="1.0"
+        android:valueTo="0.0" />
+
+    <!--
+    Begin the rotation half way through the animation.  Rotate
+    about the Y-axis from 90 degrees (invisible) to 0 degrees (fully visible).
+    -->
+    <objectAnimator
+        android:duration="@integer/card_flip_time_half"
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:propertyName="rotationY"
+        android:startOffset="@integer/card_flip_time_half"
+        android:valueFrom="90"
+        android:valueTo="0" />
+
+    <!-- Half-way through the animation, set the alpha to 1. -->
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="alpha"
+        android:startOffset="@integer/card_flip_time_half"
+        android:valueFrom="0.0"
+        android:valueTo="1.0" />
+
+</set>
+

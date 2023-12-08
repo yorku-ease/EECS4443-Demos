@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Demo Layout</string>
+    <string name="app_name">Demo_Layout</string>
+    <string name="buttonOne">One</string>
+    <string name="buttonTwo">Two</string>
+    <string name="buttonThree">Three</string>
+    <string name="buttonClear">Clear</string>
+    <string name="buttonExit">Exit</string>
+    
+</resources>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:background="#ff234567"
+            android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/param_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff123456"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Title and Subtitle -->
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:gravity="center_horizontal"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/setupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/setup_title"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:id="@+id/setupSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="0dp"
+                android:text="@string/setup_subtitle"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/Button01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:onClick="clickOK"
+                    android:text="@string/ok"
+                    android:textAppearance="?android:attr/textAppearanceMedium">
+                </Button>
+
+                <Button
+                    android:id="@+id/Button02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:onClick="clickSave"
+                    android:text="@string/save"
+                    android:textAppearance="?android:attr/textAppearanceMedium">
+                </Button>
+
+                <Button
+                    android:id="@+id/Button03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:onClick="clickExit"
+                    android:text="@string/exit"
+                    android:textAppearance="?android:attr/textAppearanceMedium">
+                </Button>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_participant_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_participant"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_condition_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_condition"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/param_group_text"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_group_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_group"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_level_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_level"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_trials_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_trials"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_sequences_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_sequences"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_tilt_range_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_tilt_range"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+ 
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_tilt_center_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_tilt_center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/param_gain_velocity_control_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/param_gain_velocity_control"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/param_vibrotactile_feedback"
+                android:text="@string/param_vibrotactile_feedback_text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <CheckBox
+                android:id="@+id/param_auditory_feedback"
+                android:text="@string/param_auditory_feedback_text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <CheckBox
+                android:id="@+id/param_disable_data_collection"
+                android:text="@string/param_disable_data_collection_text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

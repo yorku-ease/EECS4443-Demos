@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Tap on the H4Touch keys below</string>
+    <string name="app_name">Demo H4Touch</string>
+    <string name="hideletterstext">Hide letters</string>
+    <string name="clearbuttontext">Clear</string>
+    <string name="exitbuttontext">Exit</string>
+    <string name="edittexthint">(text appears here)</string>
+</resources>

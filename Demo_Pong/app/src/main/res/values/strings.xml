@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_Pong</string>
+    <string name="touch">Touch</string>
+    <string name="touch_position">(position control)</string>
+    <string name="touch_velocity">(velocity control)</string>
+    <string name="tilt">Tilt</string>
+    <string name="tilt_position">(position control)</string>
+    <string name="tilt_velocity">(velocity control)</string>
+
+    <string name="pref_level">Level</string>
+    <string name="pref_level_key">level_key</string>
+    <string name="pref_level_summary">Select game level</string>
+    <string name="continue_string">Continue</string>
+    <string name="done_string">Done</string>
+    <string name="results_title">Results</string>
+    <string name="level_label">Level:</string>
+    <string name="hits_label">Hits:</string>
+    <string name="misses_label">Misses:</string>
+    <string name="paddle_mode_label">Paddle mode:</string>
+    <string name="paddle_mode_touch_position">Touch (position control)</string>
+    <string name="paddle_mode_touch_velocity">Touch (velocity control)</string>
+    <string name="paddle_mode_tilt_position">Tilt (position control)</string>
+    <string name="paddle_mode_tilt_velocity">Tilt (velocity control)</string>
+    <string name="settings_participant_key">participant</string>
+    <string name="settings_condition_key">condition</string>
+    <string name="settings_group_key">group</string>
+    <string name="settings_level_key">level</string>
+    <string name="settings_trials_key">trials</string>
+    <string name="settings_sequences_key">sequences</string>
+    <string name="settings_tilt_range_key">tilt_range</string>
+    <string name="settings_tilt_center_key">tilt_center</string>
+    <string name="settings_gain_velocity_control_key">gain</string>
+    <string name="settings_vibrotactile_feedback_key">vibrotactile</string>
+    <string name="settings_auditory_feedback_key">auditory</string>
+    <string name="settings_disable_data_collection_key">disabledatacollection</string>
+    <string name="setup_title">Setup</string>
+    <string name="setup_subtitle">(Demo_Pong Experiment)</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="exit">Exit</string>
+    <string name="param_participant_text">Participant code</string>
+    <string name="param_condition_text">Condition code</string>
+    <string name="param_group_text">Group code</string>
+    <string name="param_level_text">Starting level</string>
+    <string name="param_trials_text">Balls per sequence</string>
+    <string name="param_sequences_text">Sequences (max)</string>
+    <string name="param_tilt_range_text">Tilt range (degrees)</string>
+    <string name="param_tilt_center_text">Tilt center (degrees)</string>
+    <string name="param_gain_velocity_control_text">Gain (velocity control)</string>
+    <string name="param_vibrotactile_feedback_text">Vibrotactile feedback</string>
+    <string name="param_auditory_feedback_text">Auditory feedback</string>
+    <string name="param_disable_data_collection_text">Disable data collection</string>
+    <string name="thank_you_text">Thank You</string>
+   
+      
+  
+</resources>

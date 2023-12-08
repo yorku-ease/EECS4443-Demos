@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="instructions">Touch and move the image.  Touch with a second finger to scale.</string>
+    <string name="app_name">Demo_Scale_New</string>
+    <string name="statuspanelhint">(status)</string>
+    <string name="resetbuttontext">Reset</string>
+    <string name="image_view_text">(image)</string>
+
+</resources>

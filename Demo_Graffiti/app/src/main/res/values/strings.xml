@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Enter Graffiti gestures with your finger on the panel below</string>
+    <string name="app_name">Demo_Graffiti</string>
+    <string name="checkboxtext">Erase Ink</string>
+    <string name="clearbuttontext">Clear</string>
+    <string name="exitbuttontext">Exit</string>
+    <string name="edittexthint">(text appears here)</string>
+    <string name="imagecontentdescription">Graffiti Gestures</string>
+    <string name="debug">Debug (x,y,p): </string>
+</resources>

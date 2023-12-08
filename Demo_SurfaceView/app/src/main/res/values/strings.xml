@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_SurfaceView</string>
+    <string name="ball_velocity">Ball Velocity (inches per second)</string>
+    <string name="seekbar_value_text">0000</string>
+ 
+</resources>

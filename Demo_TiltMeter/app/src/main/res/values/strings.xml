@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Demo_TiltMeter</string>
+    <string name="setuptitletext">Demo_TiltMeter</string>
+    <string name="paramlabelsamplingratetext">Sampling rate</string>
+    <string name="paramlabelsensormodetext">Sensor mode</string>
+    <string name="okButtonText">OK</string>
+    <string name="exitButtonText">Exit</string>
+    <string name="radioButton1Label">Orientation</string>
+    <string name="radioButton2Label">Accelerometer + Magnetic Field</string>
+    <string name="radioButton3Label">Accelerometer only</string>
+
+
+</resources>

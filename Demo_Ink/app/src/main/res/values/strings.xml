@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="instructions">Draw With Your Finger on the Panel Below</string>
+    <string name="app_name">Demo_Ink</string>
+    <string name="debug">Debug (x,y,p): </string>
+    <string name="widertext">+</string>
+    <string name="narrowertext">-</string>
+    <string name="undobuttontext">Undo</string>
+    <string name="clearbuttontext">Clear</string>
+    <string name="strokewidthtext">Stroke Width</string>
+    <string name="inkcolortext">Ink Color</string>
+    <string name="changecolortext">Change Color</string>
+    <string name="savebuttontext">Save</string>
+    <string name="sendbuttontext">Send</string>
+    <string name="exitbuttontext">Exit</string>
+    <string name="linemetertext">Shading</string>
+    
+</resources>

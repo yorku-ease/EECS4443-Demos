@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffafb0" >
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff123456"
+            android:contentDescription="@string/image_view_text" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff666666"
+        android:orientation="horizontal" >
+
+        <ca.yorku.eecs.mack.demoscalenew.StatusPanel
+            android:id="@+id/statuspanel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:hint="@string/statuspanelhint" />
+
+        <Button
+            android:id="@+id/resetbutton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:onClick="clickReset"
+            android:text="@string/resetbuttontext" />
+    </LinearLayout>
+
+</LinearLayout>

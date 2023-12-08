@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/pref_vibrate"
+        android:summary="@string/vibrate_on_max_summary"
+        android:title="@string/pref_vibrate" />
+
+    <ListPreference
+        android:defaultValue="-5"
+        android:dialogTitle="@string/pref_min_title"
+        android:entries="@array/pref_min_entries"
+        android:entryValues="@array/pref_min_entryValues"
+        android:key="@string/pref_min_title"
+        android:summary="@string/pref_min_summary"
+        android:title="@string/pref_min_title" />
+    <ListPreference
+        android:defaultValue="5"
+        android:dialogTitle="@string/pref_max_title"
+        android:entries="@array/pref_max_entries"
+        android:entryValues="@array/pref_max_entryValues"
+        android:key="@string/pref_max_title"
+        android:summary="@string/pref_max_summary"
+        android:title="@string/pref_max_title" />
+
+</PreferenceScreen>
+

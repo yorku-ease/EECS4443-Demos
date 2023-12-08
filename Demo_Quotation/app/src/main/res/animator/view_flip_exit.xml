@@ -1,0 +1,31 @@
+<!--
+    This XML animator resource is used as a custom fragment transition. It is used
+    for the "exiting card", which is the card fragment that is exiting out of the 
+    main activity.
+    
+    The resource Id is provided as an argument to FragmentTransaction.setCustomAnimation. 
+    Consult for more details.
+
+    The effect of the animation is to rotate the card out of view.
+    
+    The overall duration of the animation is card_flip_time.  This is divided into two 
+    halfs.  During the first half, the "exiting card" is rotated out of view (see below). 
+    During the second half, the "entering card" is rotated into view (consult 
+    card_flip_enter.xml for details).  Together, the animations give the impression of a 
+    single card with two sides that is flipped over.
+-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    Rotate the card about the Y-axis from 0 degrees (fully visible) to -90 degrees (invsible).
+    The rotation occurs during the first half of the overall time for the animation.
+    -->
+    <objectAnimator
+        android:duration="@integer/card_flip_time_half"
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:propertyName="rotationY"
+        android:valueFrom="0"
+        android:valueTo="-90" />
+
+</set>

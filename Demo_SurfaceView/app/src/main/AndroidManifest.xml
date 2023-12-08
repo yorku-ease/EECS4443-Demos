@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.yorku.eecs.mack.demosurfaceview"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!--
+  The use of the "lauchMode" and "alwaysRetainTaskState" attributes for the activity 
+  element is suggested in the following developers blog:
+
+  http://blorb.tumblr.com/post/236799414/simple-java-android-game-loop
+  
+  	  android:alwaysRetainTaskState="true"
+      android:launchMode="singleTask"
+    -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="ca.yorku.eecs.mack.demosurfaceview.DemoSurfaceViewActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

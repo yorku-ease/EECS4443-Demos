@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="instructions">Cover the proximity sensor to zoom</string>
+    <string name="app_name">Demo_ProximityZoom</string>
+    <string name="statuspanelhint">(status)</string>
+    <string name="resetbuttontext">Reset</string>
+    <string name="image_view_text">(image)</string>
+
+</resources>

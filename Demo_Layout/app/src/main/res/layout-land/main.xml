@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#ff123456"
+    android:padding="5dp" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="515dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:background="#ff666666"
+        android:gravity="left"
+        android:inputType="textNoSuggestions"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/editText1"
+        android:layout_below="@id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/buttonOne" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/button1"
+        android:text="@string/buttonTwo" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/button2"
+        android:text="@string/buttonThree" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/button3"
+        android:text="@string/buttonClear" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/buttonClear"
+        android:text="@string/buttonExit" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ca.yorku.eecs.mack.demopong.PongView
+        android:id="@+id/pong_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#01000000"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <view
+                android:id="@+id/message_view"
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="10dp"
+                class="ca.yorku.eecs.mack.demopong.MessageView"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff654321" />
+
+            <view
+                android:id="@+id/setup_button"
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="10dp"
+                class="ca.yorku.eecs.mack.demopong.OvalButton"
+                android:textColor="#ff6666ff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <view
+                android:id="@+id/tilt_button_position_control"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="3dp"
+                
+                class="ca.yorku.eecs.mack.demopong.OvalButton"
+                android:textColor="#ff66ff66" />
+
+            <view
+                android:id="@+id/tilt_button_velocity_control"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                class="ca.yorku.eecs.mack.demopong.OvalButton"
+                android:textColor="#ff66ff66" />
+
+            <view
+                android:id="@+id/touch_button_position_control"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                class="ca.yorku.eecs.mack.demopong.OvalButton"
+                android:textColor="#ff6666ff" />
+
+            <view
+                android:id="@+id/touch_button_velocity_control"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+             
+                android:layout_marginTop="3dp"
+                class="ca.yorku.eecs.mack.demopong.OvalButton"
+                android:textColor="#ffff6666" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <view
+            android:id="@+id/touch_strip"
+            android:layout_width="120dp"
+            android:layout_height="320dp"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="20dp"
+            class="ca.yorku.eecs.mack.demopong.TouchStrip"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</FrameLayout>

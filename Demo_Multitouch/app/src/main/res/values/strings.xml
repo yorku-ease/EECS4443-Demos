@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Touch the panel below (multiple fingers)</string>
+    <string name="app_name">Demo_Multitouch</string>
+    <string name="debugstring">Debug</string>
+
+</resources>

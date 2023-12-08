@@ -1,0 +1,61 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* tests\
+* tests\AndroidManifest.xml
+* tests\build.properties
+* tests\src\
+* tests\src\com\
+* tests\src\com\example\
+* tests\src\com\example\android\
+* tests\src\com\example\android\lunarlander\
+* tests\src\com\example\android\lunarlander\LunarLanderTest.java
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\ca\yorku\cse\mack\demopong\DemoPong-1.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-1.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-10.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-10.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-11.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-11.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-2.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-2.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-3.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-3.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-4.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-4.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-4.png => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-4.png
+* src\ca\yorku\cse\mack\demopong\DemoPong-5.gif => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-5.gif
+* src\ca\yorku\cse\mack\demopong\DemoPong-5.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-5.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-5.png => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-5.png
+* src\ca\yorku\cse\mack\demopong\DemoPong-6.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-6.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-6.png => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-6.png
+* src\ca\yorku\cse\mack\demopong\DemoPong-7.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-7.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-7.png => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-7.png
+* src\ca\yorku\cse\mack\demopong\DemoPong-8.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-8.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-8.png => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-8.png
+* src\ca\yorku\cse\mack\demopong\DemoPong-9.jpg => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-9.jpg
+* src\ca\yorku\cse\mack\demopong\DemoPong-P03-Tilt_Position-G01-B07.csv => app\src\main\resources\ca\yorku\cse\mack\demopong\DemoPong-P03-Tilt_Position-G01-B07.csv
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

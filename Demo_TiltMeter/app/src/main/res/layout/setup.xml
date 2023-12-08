@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ff123456"
+              android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:background="#ff123456"
+                  android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/setupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff234567"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/setuptitletext"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/paramLabelSensorMode"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="@string/paramlabelsensormodetext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/radiobutton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="buttonClick"
+                        android:text="@string/radioButton1Label"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <RadioButton
+                        android:id="@+id/radiobutton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="buttonClick"
+                        android:text="@string/radioButton2Label"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <RadioButton
+                        android:id="@+id/radiobutton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="buttonClick"
+                        android:text="@string/radioButton3Label"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/paramLabelSamplingRate"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelsamplingratetext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramSamplingRate"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/okButtonText"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+            </Button>
+
+            <Button
+                android:id="@+id/exitButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/exitButtonText"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

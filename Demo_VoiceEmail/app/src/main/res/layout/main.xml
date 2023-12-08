@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff123456"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ff234567"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:text="@string/title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/recordtextview"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/recordText"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ProgressBar
+        android:id="@+id/indeterminateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@id/recordtextview"
+        android:layout_alignRight="@id/recordtextview"
+        android:layout_below="@id/recordtextview"
+        android:layout_marginTop="5dp"
+    />
+
+
+    <ImageButton
+        android:id="@+id/recordbutton"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/recordtextview"
+        android:layout_below="@id/indeterminateBar"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick"
+        android:src="@drawable/record_button_icon" />
+
+    <TextView
+        android:id="@+id/recordtime"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/indeterminateBar"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/recordbutton"
+        android:text="@string/timeText"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/stopbutton1"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@id/recordtextview"
+        android:layout_below="@id/indeterminateBar"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick"
+        android:src="@drawable/stop_button_icon" />
+
+    <TextView
+        android:id="@+id/playbacktextview"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/recordbutton"
+        android:layout_below="@id/recordbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/playbackText"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ProgressBar
+        android:id="@+id/determinateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@id/playbacktextview"
+        android:layout_alignRight="@id/playbacktextview"
+        android:layout_below="@id/playbacktextview"
+        android:layout_marginTop="5dp"
+        android:progress="0"/>
+
+    <ImageButton
+        android:id="@+id/playbutton"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/determinateBar"
+        android:layout_below="@id/determinateBar"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick"
+        android:src="@drawable/play_button_icon"  />
+
+    <TextView
+        android:id="@+id/playbacktime"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/determinateBar"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/playbutton"
+        android:text="@string/timeText"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/stopbutton2"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@id/playbacktextview"
+        android:layout_below="@id/determinateBar"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="5dp"
+        android:onClick="onButtonClick"
+        android:src="@drawable/stop_button_icon" />
+
+    <ImageButton
+        android:id="@+id/sendbutton"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/playbutton"
+        android:layout_below="@id/playbutton"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="20dp"
+        android:onClick="onButtonClick"
+        android:src="@drawable/send_button_icon" />
+
+</RelativeLayout>

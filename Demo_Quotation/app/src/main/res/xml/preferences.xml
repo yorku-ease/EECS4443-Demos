@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:defaultValue="1"
+        android:dialogTitle="@string/pref_quiz_length_title"
+        android:entries="@array/pref_quiz_length_entries"
+        android:entryValues="@array/pref_quiz_length_values"
+        android:key="@string/pref_quiz_length_key"
+        android:summary="@string/pref_quiz_length_summary"
+        android:title="@string/pref_quiz_length_title" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/pref_quiz_hints_key"
+        android:summary="@string/pref_quiz_hints_summary"
+        android:title="@string/pref_quiz_hints_title" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_quiz_vibrate_key"
+        android:summary="@string/pref_quiz_vibrate_summary"
+        android:title="@string/pref_quiz_vibrate_title" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_quiz_audio_key"
+        android:summary="@string/pref_quiz_audio_summary"
+        android:title="@string/pref_quiz_audio_title" />
+
+</PreferenceScreen>
