@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="ca.yorku.eecs.mack.demoedittext.DemoEditTextActivity"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustPan|stateHidden" >
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
