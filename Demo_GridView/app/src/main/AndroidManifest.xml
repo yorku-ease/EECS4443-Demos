@@ -13,7 +13,7 @@
         android:theme="@android:style/Theme.Holo" >
         <activity
             android:name="ca.yorku.eecs.mack.demogridview.DemoGridViewActivity"
-            android:label="@string/app_name" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
