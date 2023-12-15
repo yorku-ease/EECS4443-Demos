@@ -413,8 +413,8 @@ public class DemoTiltBallActivity extends Activity implements SensorEventListene
                 if (accValues != null && magValues != null)
                 {
                     // compute pitch and roll
-                    float R[] = new float[9];
-                    float I[] = new float[9];
+                    float[] R = new float[9];
+                    float[] I = new float[9];
                     boolean success = SensorManager.getRotationMatrix(R, I, accValues, magValues);
                     if (success) // see SensorManager API
                     {
