@@ -374,6 +374,7 @@ public class DemoSensorsActivity extends Activity implements SensorEventListener
         setContentView(R.layout.main);
 
         Bundle b = getIntent().getExtras();
+        assert b != null;
         sensorInfoIdx = b.getInt("sensorInfoIdx");
         samplingRate = b.getInt("sensorSamplingRate");
 
@@ -382,6 +383,7 @@ public class DemoSensorsActivity extends Activity implements SensorEventListener
 
         // use a SensorManage instance to get a Sensor object for the selected sensor
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        assert sensorManager != null;
         sensor = sensorManager.getDefaultSensor(sensorInfo.type);
 
         // NOTE: sensor listener is registered in onResume
