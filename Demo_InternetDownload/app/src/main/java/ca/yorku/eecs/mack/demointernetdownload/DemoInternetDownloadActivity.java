@@ -67,7 +67,7 @@ import java.util.Locale;
  * The URL of the image is hard-coded in a final: <p>
  *
  * <pre>
- *      final String TEST_URL = "http://www.yorku.ca/mack/nordichi2012-f5.jpg";
+ *      final String TEST_URL = "https://archives.bulbagarden.net/media/upload/4/4a/0025Pikachu.png";
  * </pre>
  *
  * The image is download from the Internet web site and presented in an <code>ImageView</code>: <p>
@@ -88,7 +88,7 @@ import java.util.Locale;
 
 public class DemoInternetDownloadActivity extends Activity
 {
-    final String TEST_URL = "http://www.yorku.ca/mack/nordichi2012-f5.jpg";
+    final String TEST_URL = "https://archives.bulbagarden.net/media/upload/4/4a/0025Pikachu.png";
 
     TextView textView;
     ImageView imageView;
