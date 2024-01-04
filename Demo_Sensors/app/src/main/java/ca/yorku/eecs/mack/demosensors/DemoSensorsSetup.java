@@ -119,12 +119,12 @@ public class DemoSensorsSetup extends Activity implements OnItemSelectedListener
             sensorNameArray[i] = sensorList.get(i).getName();
 
         // configure Sensor spinner to display the sensor names
-        ArrayAdapter<CharSequence> adapter1 = new ArrayAdapter<CharSequence>(this, R.layout.spinnerstyle,
+        ArrayAdapter<CharSequence> adapter1 = new ArrayAdapter<>(this, R.layout.spinnerstyle,
                 sensorNameArray);
         spinSensor.setAdapter(adapter1);
 
         // configure the Sampling rate spinner to display the available sampling rates
-        ArrayAdapter<CharSequence> adapter2 = new ArrayAdapter<CharSequence>(this, R.layout.spinnerstyle,
+        ArrayAdapter<CharSequence> adapter2 = new ArrayAdapter<>(this, R.layout.spinnerstyle,
                 SAMPLING_RATE_STRING);
         spinSamplingRate.setAdapter(adapter2);
 
