@@ -2,18 +2,17 @@ package ca.yorku.eecs.mack.demointernetdownload;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.methods.HttpGet;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /*
  * The main purpose of the ImageDownloader class is to host the inner class
@@ -75,13 +74,10 @@ class ImageDownloader
 				bitmap = null;
 			}
 
-			if (imageViewReference != null)
+			ImageView imageView = imageViewReference.get();
+			if (imageView != null)
 			{
-				ImageView imageView = imageViewReference.get();
-				if (imageView != null)
-				{
-					imageView.setImageBitmap(bitmap);
-				}
+				imageView.setImageBitmap(bitmap);
 			}
 		}
 	}
@@ -89,57 +85,27 @@ class ImageDownloader
 	/*
 	 * Download the image referenced by the URL string and return it as a bitmap.
 	 */
-	private static Bitmap downloadBitmap(String url)
-	{
-		final AndroidHttpClient client = AndroidHttpClient.newInstance("Android");
-		final HttpGet getRequest = new HttpGet(url);
+	private static Bitmap downloadBitmap(String url) {
+		OkHttpClient client = new OkHttpClient();
+		Request request = new Request.Builder()
+				.url(url)
+				.build();
 
-		try
-		{
-			HttpResponse response = client.execute(getRequest);
-			final int statusCode = response.getStatusLine().getStatusCode();
-			if (statusCode != HttpStatus.SC_OK)
-			{
-				/*
-				 * If you see this message, your device is probably *not* connected to the Internet.
-				 * Connect and try again.
-				 */
-				Log.i(MYDEBUG, "Oops! statusCode=" + statusCode + " while retrieving bitmap from " + url);
+		// Note: the execute() method is synchronous and blocks the current thread until the HTTP response is received
+		try (Response response = client.newCall(request).execute()) {
+			if (!response.isSuccessful()) {
+				Log.i(MYDEBUG, "Oops! statusCode=" + response.code() + " while retrieving bitmap from " + url);
 				return null;
 			}
 
-			final HttpEntity entity = response.getEntity();
-			if (entity != null)
-			{
-				InputStream inputStream = null;
-				try
-				{
-					inputStream = entity.getContent();
+			assert response.body() != null;
+			InputStream inputStream = response.body().byteStream();
+			return BitmapFactory.decodeStream(new FlushedInputStream(inputStream));
 
-					// see comment below for FlushedInputStream class
-					return BitmapFactory.decodeStream(new FlushedInputStream(inputStream));
-
-				} finally
-				{
-					if (inputStream != null)
-					{
-						inputStream.close();
-					}
-					entity.consumeContent();
-				}
-			}
-		} catch (Exception e)
-		{
-			getRequest.abort();
-			Log.i(MYDEBUG, "Oops! Abort while retrieving bitmap from " + url + ", e=" + e.toString());
-
-		} finally
-		{
-			if (client != null)
-			{
-				client.close();
-			}
+		} catch (Exception e) {
+			Log.i(MYDEBUG, "Oops! Abort while retrieving bitmap from " + url + ", e=" + e);
 		}
+
 		return null;
 	}
 
