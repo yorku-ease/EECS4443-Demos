@@ -53,9 +53,9 @@ import android.widget.TextView.OnEditorActionListener;
  * right shows the UI after entering "Hello world." and clicking the Send button on the keyboard.
  * <p>
  *
- * <center> <a href="DemoEditText-1.jpg"><img src="DemoEditText-1.jpg"
- * width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoEditText-2.jpg"><img
- * src="DemoEditText-2.jpg" width="300"></a> </center>
+ * <center> <a href="./javadoc_images/DemoEditText-1.jpg"><img src="./javadoc_images/DemoEditText-1.jpg"
+ * width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoEditText-2.jpg"><img
+ * src="./javadoc_images/DemoEditText-2.jpg" width="300"></a> </center>
  * <p>
  *
  * A touch-and-hold gesture on the text in the <code>EditText</code> instance selects a word for
@@ -65,9 +65,9 @@ import android.widget.TextView.OnEditorActionListener;
  * <code>Toast</code>) with additional information (below right).
  * <p>
  *
- * <center> <a href="DemoEditText-8.jpg"><img src="DemoEditText-8.jpg"
+ * <center> <a href="./javadoc_images/DemoEditText-8.jpg"><img src="./javadoc_images/DemoEditText-8.jpg"
  * height="450"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoEditText-10.jpg"><img
- * src="DemoEditText-10.jpg" height="450"></a> </center>
+ * src="./javadoc_images/DemoEditText-10.jpg" height="450"></a> </center>
  * <p>
  *
  * Additional features and behaviours for text entry are embedded in the IME (Input Method Editor),
@@ -83,17 +83,17 @@ import android.widget.TextView.OnEditorActionListener;
  * then delivered to the <code>EditText</code> instance. See below, right.
  * <p>
  *
- * <center> <a href="DemoEditText-3.jpg"><img src="DemoEditText-3.jpg" width="300">
- * </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoEditText-4.jpg"><img src="DemoEditText-4.jpg"
- * width="300"></a> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoEditText-9.jpg"><img
- * src="DemoEditText-9.jpg" width="300"></a> </center>
+ * <center> <a href="./javadoc_images/DemoEditText-3.jpg"><img src="./javadoc_images/DemoEditText-3.jpg" width="300">
+ * </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoEditText-4.jpg"><img src="./javadoc_images/DemoEditText-4.jpg"
+ * width="300"></a> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoEditText-9.jpg"><img
+ * src="./javadoc_images/DemoEditText-9.jpg" width="300"></a> </center>
  * <p>
  *
  * The IME may be changed via the <code>Settings > Language and Input</code>. On the device used
  * while debugging this demo (a Nexus 4), the following options appear:
  * <p>
  *
- * <center> <a href="DemoEditText-5.jpg"><img src="DemoEditText-5.jpg" width="300"></a> </center>
+ * <center> <a href="./javadoc_images/DemoEditText-5.jpg"><img src="./javadoc_images/DemoEditText-5.jpg" width="300"></a> </center>
  * <p>
  *
  * The two IMEs at the bottom are for <i>Graffiti</i> and <i>H4Touch</i>. If each is selected in
@@ -101,9 +101,9 @@ import android.widget.TextView.OnEditorActionListener;
  * <i>H4Touch</i> on the right.)
  * <p>
  *
- * <center> <a href="DemoEditText-6.jpg"><img src="DemoEditText-6.jpg"
- * width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoEditText-7.jpg"><img
- * src="DemoEditText-7.jpg" width="300"></a> </center>
+ * <center> <a href="./javadoc_images/DemoEditText-6.jpg"><img src="./javadoc_images/DemoEditText-6.jpg"
+ * width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoEditText-7.jpg"><img
+ * src="./javadoc_images/DemoEditText-7.jpg" width="300"></a> </center>
  * <p>
  *
  * These methods will be discussed and demonstrated during classroom lectures.

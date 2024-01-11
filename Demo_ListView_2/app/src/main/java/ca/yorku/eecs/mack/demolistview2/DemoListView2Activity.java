@@ -69,7 +69,7 @@ import java.io.FilenameFilter;
  *
  * Here's a screen snap of the app with a partial view into the scrollable list of images: <p>
  *
- * <center><a href="DemoListView2-1.jpg"><img src="DemoListView2-1.jpg" width="300" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoListView2-1.jpg"><img src="./javadoc_images/DemoListView2-1.jpg" width="300" alt="image"></a></center> <p>
  *
  * Instead of displaying text strings in the <code>ListView</code>, we display images.  As you can imagine, displaying
  * images brings special challenges, since the image files must be accessed and converted to bit maps for display in the

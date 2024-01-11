@@ -69,7 +69,7 @@ import java.util.Locale;
  *
  * Here is a screen snap of the demo application, showing a picture and video: </p>
  *
- * <center> <a href="DemoCamera-1.jpg"><img src="DemoCamera-1.jpg" width="300"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoCamera-1.jpg"><img src="./javadoc_images/DemoCamera-1.jpg" width="300"></a> </center> </p>
  *
  * The picture (left) is displayed in an <code>ImageView</code>, a subclass of <code>View</code>. The video (right) is
  * displayed in a <code>VideoView</code>, as subclass of <code>SurfaceView</code> which is a subclass of
@@ -104,7 +104,7 @@ import java.util.Locale;
  * The following screen snap shows the camera application just after taking a picture. The Save button (see arrow) must
  * be tapped to save the picture and return control to the demo application. </p>
  *
- * <center> <a href="DemoCamera-2.jpg"><img src="DemoCamera-2.jpg" width="300"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoCamera-2.jpg"><img src="./javadoc_images/DemoCamera-2.jpg" width="300"></a> </center> </p>
  *
  * Taking this option saves the picture/video and returns control to the activity that launched the intent
  * (<code>DemoCameraActivity</code>). At this juncture, the <code>onActivityResult</code> method in the calling activity
@@ -177,13 +177,13 @@ import java.util.Locale;
  * The following is a example of the scrollable list of images available through <code>ImageListViewerActivity</code>:
  * </p>
  *
- * <center> <a href="DemoCamera-3.jpg"><img src="DemoCamera-3.jpg" width="300"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoCamera-3.jpg"><img src="./javadoc_images/DemoCamera-3.jpg" width="300"></a> </center> </p>
  *
  * From the main activity, tapping on the view of a video starts a new activity to allow video viewing in full-screen
  * mode. The activity is named <code>VideoViewerActivity</code>. Here's an example screen snap after
  * <code>VideoViewerActivity</code> is launched: </p>
  *
- * <center> <a href="DemoCamera-4.jpg"><img src="DemoCamera-4.jpg" width="300"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoCamera-4.jpg"><img src="./javadoc_images/DemoCamera-4.jpg" width="300"></a> </center> </p>
  *
  * Full-screen video viewing mode supports flick gestures (called "flings" in the Android documentation). These are
  * provided through a custom class, <code>MyGestureListener</code>, which extends <code>GestureDetector
@@ -213,7 +213,7 @@ import java.util.Locale;
  * available for inspection. Here's a state diagram showing the flow of execution of activities within this demo
  * application: </p>
  *
- * <center> <a href="DemoCamera-5.jpg"><img src="DemoCamera-5.jpg" width="600"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoCamera-5.jpg"><img src="./javadoc_images/DemoCamera-5.jpg" width="600"></a> </center> </p>
  *
  * The description above is a light on details, since there is the separate issue of passing data between activities.
  * </p>

@@ -28,13 +28,13 @@ import android.view.WindowManager;
  * Upon launch, the user is presented with a setup dialog.  See below.  Radio buttons are used to set the sensor mode
  * (described below).  A spinner is used to set the sensor sampling rate (as in Demo_Sensors).<p>
  *
- * <center><a href="DemoTiltMeter-1.jpg"><img src="DemoTiltMeter-1.jpg" width="250"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoTiltMeter-1.jpg"><img src="./javadoc_images/DemoTiltMeter-1.jpg" width="250"></a></center> </p>
  *
  * After choosing a sampling rate and sensor mode, the main activity begins when the user taps "OK". The tilt meter
  * appears with the needle indicating the position of the device relative to a flat surface (below left). </p>
  *
- * <center><a href="DemoTiltMeter-3.jpg"><img src="DemoTiltMeter-3.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
- * href="DemoTiltMeter-7.jpg"><img src="DemoTiltMeter-7.jpg" width="300"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoTiltMeter-3.jpg"><img src="./javadoc_images/DemoTiltMeter-3.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+ * href="./javadoc_images/DemoTiltMeter-7.jpg"><img src="./javadoc_images/DemoTiltMeter-7.jpg" width="300"></a></center> </p>
  *
  * The meter is an instance of <code>TiltMeter</code>, a custom-designed class, sub-classed from <code>View</code>. The
  * UI also outputs the device pitch and roll (as reported by the sensors) and the overall tilt angle and tilt magnitude
@@ -44,9 +44,9 @@ import android.view.WindowManager;
  * As the user moves the device about, the magnitude and direction of the meter's needle are adjusted to correspond to
  * the device's tilt angle and tilt magnitude. Some examples follow. </p>
  *
- * <center> <a href="DemoTiltMeter-4.jpg"><img src="DemoTiltMeter-4.jpg" height="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoTiltMeter-5.jpg"><img src="DemoTiltMeter-5.jpg" height="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoTiltMeter-6.jpg"><img src="DemoTiltMeter-6.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoTiltMeter-4.jpg"><img src="./javadoc_images/DemoTiltMeter-4.jpg" height="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoTiltMeter-5.jpg"><img src="./javadoc_images/DemoTiltMeter-5.jpg" height="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoTiltMeter-6.jpg"><img src="./javadoc_images/DemoTiltMeter-6.jpg" height="250"></a> </center> </p>
  *
  * The device's rotation about the <i>x</i>-axis (pitch) and the <i>y</i>-axis (roll) are available from the device
  * sensors. For this demo, we need to aggregate these measures into the device's overall tilt angle and tilt magnitude.
@@ -72,7 +72,7 @@ import android.view.WindowManager;
  * Studio that this sensor is flagged as deprecated: </p>
  *
  *
- * <center><img src="DemoTiltMeter-9.jpg" alt="image"></center> </p>
+ * <center><img src="./javadoc_images/DemoTiltMeter-9.jpg" alt="image"></center> </p>
  *
  * Yes, the <code>TYPE_ORIENTATION</code> sensor was deprecated with Android API level 8. In the
  * <code>SensorEvent</code> API under <code>TYPE_ORIENTATION</code>, we are told,
@@ -110,7 +110,7 @@ import android.view.WindowManager;
  *
  * This demo was designed to conform to the following advice given in the Sensors Overview API Guide:<p>
  *
- * <center><img src="DemoTiltMeter-8.jpg" alt="image"></center> </p>
+ * <center><img src="./javadoc_images/DemoTiltMeter-8.jpg" alt="image"></center> </p>
  *
  * In view of this, we separate the input of sensor data (in <code>onSensorChanged</code>) from the processing of sensor
  * data. In <code>onSensorChanged</code>, as little data processing as possible occurs. The processing of sensor data

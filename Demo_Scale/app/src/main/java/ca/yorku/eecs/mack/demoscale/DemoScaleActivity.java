@@ -30,8 +30,8 @@ import android.view.Window;
  * The following are screen snaps of the application upon launch (left) and after the image has been moved and scaled
  * (right). <p>
  *
- * <center> <a href="DemoScale-1.jpg"><img src="DemoScale-1.jpg" width="300" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoScale-2.jpg"><img src="DemoScale-2.jpg" width="300" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoScale-1.jpg"><img src="./javadoc_images/DemoScale-1.jpg" width="300" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoScale-2.jpg"><img src="./javadoc_images/DemoScale-2.jpg" width="300" alt="image"></a> </center> <p>
  *
  * The image is a resource (<code>varihall.jpg</code>) that is loaded into a <code>Drawable</code> which is drawn into a
  * canvas. The pink region is a <code>PaintPanel</code> &ndash; a subclass of <code>View</code>. The drawing occurs
@@ -40,7 +40,7 @@ import android.view.Window;
  * Demo_Touch and Demo_Multitouch where <code>onTouch</code> was implemented in the Activity hosting the view. The
  * difference in organization is illustrated below. </p>
  *
- * <center> <a href="DemoScale-7.jpg"><img src="DemoScale-7.jpg" width="550" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoScale-7.jpg"><img src="./javadoc_images/DemoScale-7.jpg" width="550" alt="image"></a> </center> <p>
  *
  *
  * Touch events in Android are more generally called <i>gestures</i>. A gesture begins when the first finger (or
@@ -51,8 +51,8 @@ import android.view.Window;
  * The most common example of a multitouch gesture is a two-finger "pinch". A pinch gesture has two forms: <i>pinch
  * open</i> to zoom in to content (below left) and <i>pinch close</i> to zoom out of content (below right). <p>
  *
- * <center> <a href="DemoScale-3.jpg"><img src="DemoScale-3.jpg" width="250" alt="image"></a>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoScale-4.jpg"><img src="DemoScale-4.jpg"
+ * <center> <a href="./javadoc_images/DemoScale-3.jpg"><img src="./javadoc_images/DemoScale-3.jpg" width="250" alt="image"></a>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoScale-4.jpg"><img src="./javadoc_images/DemoScale-4.jpg"
  * width="250" alt="image"></a> </center> <p>
  *
  * Zooming in and zooming out are often called <i>scaling</i>. In this demo, we show how to move and scale an image
@@ -105,8 +105,8 @@ import android.view.Window;
  * the image (below, left). From this, we compute <code>xRatio</code> &ndash; the focus point within the image divided
  * by the current width of the image (below, right). <p>
  *
- * <center> <a href="DemoScale-5.jpg"><img src="DemoScale-5.jpg" height="350" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoScale-6.jpg"><img src="DemoScale-6.jpg" height="250" alt="image"></a>
+ * <center> <a href="./javadoc_images/DemoScale-5.jpg"><img src="./javadoc_images/DemoScale-5.jpg" height="350" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoScale-6.jpg"><img src="./javadoc_images/DemoScale-6.jpg" height="250" alt="image"></a>
  *
  * </center> <p>
  *

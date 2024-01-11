@@ -49,7 +49,7 @@ import java.util.Locale;
  * Our custom button is an instance of <code>MyButton</code>, sub-classed from <code>View</code>. Objects of the
  * <code>MyButton</code> class are hexagonal in shape. The following screen snap shows the demo upon launching: <p>
  *
- * <center><a href="DemoCustomButton-1.jpg"><img src="DemoCustomButton-1.jpg" width=" 200"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoCustomButton-1.jpg"><img src="./javadoc_images/DemoCustomButton-1.jpg" width=" 200"></a></center> <p>
  *
  * Now, if you're wondering why on earth anyone would want to use hexagonal buttons, have a look at the Metropolis
  * keyboard designed by Hunter, Zhai, and Smith (<a href="http://www.yorku.ca/mack/hci3.html">Click here</a>, see Figure
@@ -60,7 +60,7 @@ import java.util.Locale;
  * hexagonal shape for our
  * custom button is achieved by defining a <code>Path</code> with points forming a hexagon:<p>
  *
- * <center><a href="DemoCustomButton-5.jpg"><img src="DemoCustomButton-5.jpg" width="500"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoCustomButton-5.jpg"><img src="./javadoc_images/DemoCustomButton-5.jpg" width="500"></a></center> <p>
  *
  * Clearly, the layout of hexagonal buttons poses special challenges. Layout is performed by positioning the buttons
  * within an instance of <code>RelativeLayout</code> called <code>buttonPanel</code>. The actual layout and positioning
@@ -76,7 +76,7 @@ import java.util.Locale;
  * and also outputs the current width and height of <code>buttonPanel</code>. The following appears in the LogCat window
  * when debugging on an LG <i>Nexus 5x</i> in portrait orientation: <p>
  *
- * <center> <img src="DemoCustomButton-4.jpg"> </center> <p>
+ * <center> <img src="./javadoc_images/DemoCustomButton-4.jpg"> </center> <p>
  *
  * Since the buttons are subclasses of <code>View</code>, they inherently lie within rectangular bounds. Determining
  * when a button is tapped requires special care, since the rectangular bounds of the buttons overlap. The details for
@@ -94,13 +94,13 @@ import java.util.Locale;
  * same time. Buttons are "clicked" when each finger is raised. Either order of lifting is fine. An example is seen in
  * the following series of screen snaps: <p>
  *
- * <center><a href="DemoCustomButton-2.jpg"><img src="DemoCustomButton-2.jpg" width=" 700"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoCustomButton-2.jpg"><img src="./javadoc_images/DemoCustomButton-2.jpg" width=" 700"></a></center> <p>
  *
  * One advantage of the scenario above is that fast taps may overlap without a loss of information. As
  * well, behaviours such as SHIFT-a to generate uppercase A are possible. Other more involved possibilities emerge, such
  * as using multiple fingers simultaneously on a series of "buttons" resembling piano keys: <p>
  *
- * <center><a href="DemoCustomButton-3.jpg"><img src="DemoCustomButton-3.jpg" width=" 400"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoCustomButton-3.jpg"><img src="./javadoc_images/DemoCustomButton-3.jpg" width=" 400"></a></center> <p>
  *
  * We'll leave it to you to explore this possibility. <p>
  *

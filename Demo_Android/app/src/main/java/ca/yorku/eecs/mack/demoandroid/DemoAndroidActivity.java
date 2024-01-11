@@ -51,7 +51,7 @@ import java.util.Locale;
  * <p>
  * This demo application is deliberately simple. Here is a screen snap: (click to enlarge)<p>
  *
- * <center><a href="DemoAndroid-1.jpg"><img src="DemoAndroid-1.jpg" width=200></a></center> <p>
+ * <center><a href="./javadoc_images/DemoAndroid-1.jpg"><img src="./javadoc_images/DemoAndroid-1.jpg" width=200></a></center> <p>
  * <p>
  * The application includes a text field for output and three buttons for input. The buttons are Increment, Decrement,
  * and Exit. Button events are handled by including <code>implements OnClickListener</code> in the Activity's signature
@@ -82,7 +82,7 @@ import java.util.Locale;
  * prints an information message to LogCat. With this, the following appears in the LogCat window when
  * <code>DemoAndroid</code> is launched: (click to enlarge)<p>
  *
- * <center><a href="DemoAndroid-2.jpg"><img src="DemoAndroid-2.jpg" width=800 > </a></center> <p>
+ * <center><a href="./javadoc_images/DemoAndroid-2.jpg"><img src="./javadoc_images/DemoAndroid-2.jpg" width=800 > </a></center> <p>
  * <p>
  * To avoid clutter, other messages can be hidden by entering  the string "MYDEBUG" in the search field (red arrow in
  * image above). The string (<code>"MYDEBUG"</code>) is a tag to identify the source of the message. The second

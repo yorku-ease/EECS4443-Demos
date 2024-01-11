@@ -48,8 +48,8 @@ import android.widget.EditText;
  * This demo concerns UI layouts and changing layouts when the screen orientation changes. The following screen snaps
  * show the UI with the device in portrait orientation (left) and landscape orientation (right): <p>
  *
- * <center><a href="DemoLayout-1.jpg"><img src="DemoLayout-1.jpg" width=300></a> <a href="DemoLayout-2.jpg"><img
- * src="DemoLayout-2.jpg" width=500></a> </center> <p>
+ * <center><a href="./javadoc_images/DemoLayout-1.jpg"><img src="./javadoc_images/DemoLayout-1.jpg" width=300></a> <a href="./javadoc_images/DemoLayout-2.jpg"><img
+ * src="./javadoc_images/DemoLayout-2.jpg" width=500></a> </center> <p>
  * <p>
  * <!-----------------------------------------------------------------------------------------> <b>Layout</b> <p>
  * <p>
@@ -92,8 +92,8 @@ import android.widget.EditText;
  * choice whether you work directly with the XML code or with the graphical layout. Either way, some trial and error
  * will be required as you experiment with different ideas and techniques in creating an appealing UI. <p>
  *
- * <center><a href="DemoLayout-3.jpg"><img src="DemoLayout-3.jpg" width="500"></a> <a href="DemoLayout-4.jpg"><img
- * src="DemoLayout-4.jpg" width="500"></a> </center> <p>
+ * <center><a href="./javadoc_images/DemoLayout-3.jpg"><img src="./javadoc_images/DemoLayout-3.jpg" width="500"></a> <a href="./javadoc_images/DemoLayout-4.jpg"><img
+ * src="./javadoc_images/DemoLayout-4.jpg" width="500"></a> </center> <p>
  * <p>
  * Not only does this demo use a different layout for each screen orientation, we also use a different layout class to
  * create each layout. In portrait mode, the layout is created using <code>LinearLayout</code>. In landscape mode, the
@@ -116,7 +116,7 @@ import android.widget.EditText;
  * An Android activity has a lifecycle. The lifecycle begins when the activity is created and ends when the activity is
  * destroyed. The following figure illustrates: <p>
  *
- * <center><a href="DemoLayout-5.jpg"><img src="DemoLayout-5.jpg" width="500"></a> </center> <p>
+ * <center><a href="./javadoc_images/DemoLayout-5.jpg"><img src="./javadoc_images/DemoLayout-5.jpg" width="500"></a> </center> <p>
  * <p>
  * The figure above is from an early Android training document.  Note
  * the series of method calls and activity states as an activity is created, then destroyed. The normal "running" state
@@ -138,7 +138,7 @@ import android.widget.EditText;
  * limit the output to <code>Log.i</code> messages.  You can also limit the output by filtering on "MYDEBUG" (see
  * below). <p>
  *
- * <center><a href="DemoLayout-7.jpg"><img src="DemoLayout-7.jpg" width=800></a></center> <p>
+ * <center><a href="./javadoc_images/DemoLayout-7.jpg"><img src="./javadoc_images/DemoLayout-7.jpg" width=800></a></center> <p>
  * <p>
  * If the Back button in the Navigation Bar is pressed while the activity is running, the activity terminates. It is
  * <i>Destroyed</i> in Android terms. The following <code>Log.i</code> messages will appear in the LogCat window: <p>

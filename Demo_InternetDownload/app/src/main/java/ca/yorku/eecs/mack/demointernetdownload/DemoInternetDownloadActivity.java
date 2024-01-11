@@ -72,7 +72,7 @@ import java.util.Locale;
  *
  * The image is download from the Internet web site and presented in an <code>ImageView</code>: <p>
  *
- * <center><a href="DemoInternetDownload-1.jpg"><img src="DemoInternetDownload-1.jpg" width="300"
+ * <center><a href="./javadoc_images/DemoInternetDownload-1.jpg"><img src="./javadoc_images/DemoInternetDownload-1.jpg" width="300"
  * alt="image"></a></center> <p>
  *
  * Since this program is accessing the Internet, the manifest must include the following permission (placed just before

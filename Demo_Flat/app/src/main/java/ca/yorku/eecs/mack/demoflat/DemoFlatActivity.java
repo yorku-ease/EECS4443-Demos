@@ -42,14 +42,14 @@ import ca.yorku.eecs.mack.demolevel.R;
  * The image resource is a <code>.jpg</code> file showing a map. Superimposed on the map is an arrow pointing NORTH
  * (below left). When the demo launches, the image is loaded and placed in the activity's UI (below right). <p>
  *
- * <center> <a href="DemoFlat-1.jpg"><img src="DemoFlat-1.jpg" height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoFlat-2.jpg"><img src="DemoFlat-2.jpg" height="400"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoFlat-1.jpg"><img src="./javadoc_images/DemoFlat-1.jpg" height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoFlat-2.jpg"><img src="./javadoc_images/DemoFlat-2.jpg" height="400"></a> </center> <p>
  *
  * The UI image above was captured with the device sitting flat on a table, facing approximately NORTH (below left). If
  * the device is rotated, the arrow continues to point NORTH (below right).
  *
- * <center> <a href="DemoFlat-6a.jpg"><img src="DemoFlat-6a.jpg" height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoFlat-6b.jpg"><img src="DemoFlat-6b.jpg" height="300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoFlat-6a.jpg"><img src="./javadoc_images/DemoFlat-6a.jpg" height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="DemoFlat-6b.jpg"><img src="./javadoc_images/DemoFlat-6b.jpg" height="300"></a> </center> <p>
  *
  *
  * Furthermore, if the device is picked up and moved about, the image remains flat with respect to the table or ground.
@@ -57,9 +57,9 @@ import ca.yorku.eecs.mack.demolevel.R;
  * approximately NORTH. This is possible by rotating the view about the <i>z</i>-axis. A few examples of screen snaps
  * with the device held in different positions are shown below. <p>
  *
- * <center> <a href="DemoFlat-3.jpg"><img src="DemoFlat-3.jpg" width="200"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoFlat-4.jpg"><img src="DemoFlat-4.jpg" width="200"></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoFlat-5.jpg"><img src="DemoFlat-5.jpg" width="200"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoFlat-3.jpg"><img src="./javadoc_images/DemoFlat-3.jpg" width="200"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoFlat-4.jpg"><img src="./javadoc_images/DemoFlat-4.jpg" width="200"></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoFlat-5.jpg"><img src="./javadoc_images/DemoFlat-5.jpg" width="200"></a> </center> <p>
  *
  * The images above look strange. To appreciate this demo, it must be experienced first-hand: Run the app, hold the
  * device, and move the device around. Fun, isn't it! Can you think of other uses for this sort of interaction? <p>
@@ -68,7 +68,7 @@ import ca.yorku.eecs.mack.demolevel.R;
  * <i>roll</i>, and <i>azimuth</i>, respectively. (Azimuth is sometimes called <i>yaw</i>.) The device and world axes
  * are shown below using images from the <code>SensorEvent</code> API:
  *
- * <center> <img src="DemoFlat-7.jpg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="DemoFlat-8.jpg"></a></center> <p>
+ * <center> <img src="./javadoc_images/DemoFlat-7.jpg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="./javadoc_images/DemoFlat-8.jpg"></a></center> <p>
  *
  * NOTE: For this demo to fully work, the Android device must have either (a) an orientation sensor
  * (<code>Sensor.TYPE_ORIENTATION</code>) or (b) an accelerometer ( <code>Sensor.TYPE_ACCELEROMETER</code>) <i>and</i> a

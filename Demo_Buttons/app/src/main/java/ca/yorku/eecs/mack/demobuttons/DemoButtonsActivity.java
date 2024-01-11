@@ -56,8 +56,8 @@ import android.widget.ToggleButton;
  * Here are screen snaps of the application upon launching and after some interaction:
  * <p>
  *
- * <center><a href="DemoButtons-1.jpg"><img src="DemoButtons-1.jpg" width="200"></a> <a
- * href="DemoButtons-2.jpg"><img src="DemoButtons-2.jpg" width="200"></a></center>
+ * <center><a href="./javadoc_images/DemoButtons-1.jpg"><img src="./javadoc_images/DemoButtons-1.jpg" width="200"></a> <a
+ * href="./javadoc_images/DemoButtons-2.jpg"><img src="./javadoc_images/DemoButtons-2.jpg" width="200"></a></center>
  * <p>
  * <p>
  * The following types of Android buttons are seen in the screen snaps above (top to bottom): a
@@ -114,7 +114,7 @@ import android.widget.ToggleButton;
  * For <code>DemoButtons</code>, there are resources in each sub-folder, for example
  * <p>
  *
- * <center><a href="DemoButtons-3.jpg"><img src="DemoButtons-3.jpg" width="300"></a></center>
+ * <center><a href="./javadoc_images/DemoButtons-3.jpg"><img src="./javadoc_images/DemoButtons-3.jpg" width="300"></a></center>
  * <p>
  * <p>
  * The image above shows the <i>Android</i> view of the project files, which is the default
@@ -144,7 +144,7 @@ import android.widget.ToggleButton;
  * showing this application's appearance in landscape mode:
  * <p>
  *
- * <center><a href="DemoButtons-4.jpg"><img src="DemoButtons-4.jpg" width="400"></a></center>
+ * <center><a href="./javadoc_images/DemoButtons-4.jpg"><img src="./javadoc_images/DemoButtons-4.jpg" width="400"></a></center>
  * <p>
  * <p>
  * The Backspace and Exit buttons at the bottom are not visible, since there is insufficient room on

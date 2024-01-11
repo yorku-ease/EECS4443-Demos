@@ -46,13 +46,13 @@ import java.util.Locale;
  * The best way to appreciate this demo is to run it and observe its behaviour as the device is rotated. Doing so with
  * an LG Nexus 4 yields the following displays for portrait (left) or landscape (right) orientation:</p>
  *
- * <center> <a href="DemoDisplay-1.jpg"><img src="DemoDisplay-1.jpg" width="240"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoDisplay-2.jpg"><img src="DemoDisplay-2.jpg" width="400"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoDisplay-1.jpg"><img src="./javadoc_images/DemoDisplay-1.jpg" width="240"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoDisplay-2.jpg"><img src="./javadoc_images/DemoDisplay-2.jpg" width="400"></a> </center> </p>
  *
  * The following shows the output to the LogCat window when the app launches with the device upright and after a few
  * screen rotations: </p>
  *
- * <center> <a href="DemoDisplay-3.jpg"><img src="DemoDisplay-3.jpg" width="700"></a></center> </p>
+ * <center> <a href="./javadoc_images/DemoDisplay-3.jpg"><img src="./javadoc_images/DemoDisplay-3.jpg" width="700"></a></center> </p>
  *
  * Five lines of display information are sent to the LogCat window when the app launches and  each time the screen is
  * rotated. The first two lines give native properties that do not change. The next three lines give properties that
@@ -233,7 +233,7 @@ import java.util.Locale;
  * However, in some cases you might want to control the size of components in absolute terms. For example, you might
  * want a button that is 1-inch wide or a View that contains a &frac12;-inch wide circle: </p>
  *
- * <center> <a href="DemoDisplay-4.jpg"><img src="DemoDisplay-4.jpg" width="400"></a></center> </p>
+ * <center> <a href="./javadoc_images/DemoDisplay-4.jpg"><img src="./javadoc_images/DemoDisplay-4.jpg" width="400"></a></center> </p>
  *
  * Furthermore, you might want the components to be the same size on any device running the app. Let's examine some of
  * the details in controlling the absolute size of components. </p>

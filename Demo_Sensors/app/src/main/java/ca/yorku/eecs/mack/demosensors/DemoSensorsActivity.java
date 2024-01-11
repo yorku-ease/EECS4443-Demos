@@ -104,13 +104,13 @@ import java.util.Locale;
  * selects a sensor and sampling rate from spinners and then clicks "OK" to launch the second activity to demonstrate
  * the sensor selected. The flow of execution is illustrated below. </p>
  *
- * <center><a href="DemoSensors-11.jpg"><img src="DemoSensors-11.jpg" width="600"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoSensors-11.jpg"><img src="./javadoc_images/DemoSensors-11.jpg" width="600"></a></center> </p>
  *
  * Of course, a full examination of the flow of execution will consider the life cycle states and methods defined for
  * Android activities.  These were introduced in Demo_Layout.  The following diagram is a reminder that, since our app
  * has two activities, two sets of life cycle states and methods must be considered: <p>
  *
- * <center><a href="DemoSensors-12.jpg"><img src="DemoSensors-12.jpg" width="800"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoSensors-12.jpg"><img src="./javadoc_images/DemoSensors-12.jpg" width="800"></a></center> </p>
  *
  * The demo includes an implementation of all the life cycle methods for both activities.  For each, a simple message is
  * sent to the logcat window along with an indication of which activity ("setup" or "main") is associated with the
@@ -215,9 +215,9 @@ import java.util.Locale;
  * The following screen snaps show the application upon launching (left), the sensor list (center), and the sampling
  * rates (right): (The device is a Google <i>Nexus 5x</i>.) </p>
  *
- * <center><a href="DemoSensors-1.jpg"><img src="DemoSensors-1.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoSensors-2.jpg"><img src="DemoSensors-2.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
- * href="DemoSensors-8.jpg"><img src="DemoSensors-8.jpg" width="250"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoSensors-1.jpg"><img src="./javadoc_images/DemoSensors-1.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoSensors-2.jpg"><img src="./javadoc_images/DemoSensors-2.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+ * href="./javadoc_images/DemoSensors-8.jpg"><img src="./javadoc_images/DemoSensors-8.jpg" width="250"></a></center> </p>
  *
  * The demo will run on devices running API level 12 or higher.  All sensors defined up to Android API level 23 are
  * supported. If the device running the demo supports newer sensors, these will appear in the spinner. If the user
@@ -265,7 +265,7 @@ import java.util.Locale;
  * The following screen snap shows the main activity with data from the <code>TYPE_ORIENTATION</code> sensor with the
  * sampling set to "Normal": (click to enlarge)</p>
  *
- * <center><a href="DemoSensors-3.jpg"><img src="DemoSensors-3.jpg" width="500"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoSensors-3.jpg"><img src="./javadoc_images/DemoSensors-3.jpg" width="500"></a></center> </p>
  *
  * The labels for the meters are hard-coded using the labels in the <code>SensorEvent</code> API where each sensor is
  * described. For <code>TYPE_ORIENTATION</code> (see above), the labels are Azimuth, Pitch, and Roll. The labels
@@ -301,8 +301,8 @@ import java.util.Locale;
  * axes are called pitch (about the <i>x</i>-axis), roll (about the <i>y</i>-axis), and azimuth (about the
  * <i>z</i>-axis). </p>
  *
- * <center> <a href="DemoSensors-4.jpg"><img src="DemoSensors-4.jpg" height="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
- * href="DemoSensors-5.jpg"><img src="DemoSensors-5.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoSensors-4.jpg"><img src="./javadoc_images/DemoSensors-4.jpg" height="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+ * href="./javadoc_images/DemoSensors-5.jpg"><img src="./javadoc_images/DemoSensors-5.jpg" height="250"></a> </center> </p>
  *
  * Compare the figures above with the screen snap. Yes, the device is flat, facing approximately NORTH. </p>
  *
@@ -327,8 +327,8 @@ import java.util.Locale;
  * (<code>SENSOR_DELAY_NORMAL</code>) is obviously sufficient for this purpose. The following screen snaps show
  * Demo_Sensors with the proximity sensor selected. </p>
  *
- * <center> <a href="DemoSensors-9.jpg"><img src="DemoSensors-9.jpg" height="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
- * href="DemoSensors-10.jpg"><img src="DemoSensors-10.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoSensors-9.jpg"><img src="./javadoc_images/DemoSensors-9.jpg" height="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+ * href="./javadoc_images/DemoSensors-10.jpg"><img src="./javadoc_images/DemoSensors-10.jpg" height="250"></a> </center> </p>
  *
  * According to information in the <code>SensorEvent</code> API, the proximity sensor data represent the "sensor
  * distance measured in centimeters". However, it is also noted that </p>

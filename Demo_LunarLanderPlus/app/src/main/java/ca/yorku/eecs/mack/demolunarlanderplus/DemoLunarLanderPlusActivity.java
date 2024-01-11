@@ -65,9 +65,9 @@ import ca.yorku.eecs.mack.demolunarlanderplus.LunarView.LunarThread;
  * Lunar Lander was an arcade game released by Atari in 1979:
  * <p>
  *
- * <center> <a href="DemoLunarLanderPlus-1.jpg"><img src="DemoLunarLanderPlus-1.jpg"
- * height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoLunarLanderPlus-2.jpg"><img
- * src="DemoLunarLanderPlus-2.jpg" height="300"></a> </center>
+ * <center> <a href="./javadoc_images/DemoLunarLanderPlus-1.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-1.jpg"
+ * height="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoLunarLanderPlus-2.jpg"><img
+ * src="./javadoc_images/DemoLunarLanderPlus-2.jpg" height="300"></a> </center>
  * <p>
  *
  *
@@ -87,7 +87,7 @@ import ca.yorku.eecs.mack.demolunarlanderplus.LunarView.LunarThread;
  * The button pad is seen in the following screen snap, showing the demo upon launching:
  * <p>
  *
- * <center> <a href="DemoLunarLanderPlus-3.jpg"><img src="DemoLunarLanderPlus-3.jpg"
+ * <center> <a href="./javadoc_images/DemoLunarLanderPlus-3.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-3.jpg"
  * height="400"></a> </center>
  * <p>
  *
@@ -145,10 +145,10 @@ import ca.yorku.eecs.mack.demolunarlanderplus.LunarView.LunarThread;
  * decent.
  * <p>
  *
- * <center> <a href="DemoLunarLanderPlus-4.jpg"><img src="DemoLunarLanderPlus-4.jpg"
- * height="400"></a> <a href="DemoLunarLanderPlus-5.jpg"><img src="DemoLunarLanderPlus-5.jpg"
- * height="400"></a> <a href="DemoLunarLanderPlus-6.jpg"><img src="DemoLunarLanderPlus-6.jpg"
- * height="400"></a> <a href="DemoLunarLanderPlus-7.jpg"><img src="DemoLunarLanderPlus-7.jpg"
+ * <center> <a href="./javadoc_images/DemoLunarLanderPlus-4.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-4.jpg"
+ * height="400"></a> <a href="./javadoc_images/DemoLunarLanderPlus-5.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-5.jpg"
+ * height="400"></a> <a href="./javadoc_images/DemoLunarLanderPlus-6.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-6.jpg"
+ * height="400"></a> <a href="./javadoc_images/DemoLunarLanderPlus-7.jpg"><img src="./javadoc_images/DemoLunarLanderPlus-7.jpg"
  * height="400"></a> </center>
  * <p>
  *

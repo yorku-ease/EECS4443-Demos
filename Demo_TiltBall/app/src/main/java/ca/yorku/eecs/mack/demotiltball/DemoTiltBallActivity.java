@@ -25,7 +25,7 @@ import android.view.WindowManager;
  *
  * This demo begins by presenting the user with a setup dialog containing four spinners: <p>
  *
- * <center> <a href="DemoTiltBall-1.jpg"><img src="DemoTiltBall-1.jpg" width = "600" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoTiltBall-1.jpg"><img src="./javadoc_images/DemoTiltBall-1.jpg" width = "600" alt="image"></a> </center> <p>
  *
  * Four interaction parameters may be selected: <p>
  *
@@ -50,15 +50,15 @@ import android.view.WindowManager;
  * Once the interaction parameters are selected, the user taps "OK" to proceed to the main activity. The following
  * screen snaps show the square paths for each of the three widths. The virtual ball is seen within the path. <p>
  *
- * <center> <a href="DemoTiltBall-2.jpg"><img src="DemoTiltBall-2.jpg" width = "300"
- * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoTiltBall-3.jpg"><img src="DemoTiltBall-3.jpg" width =
- * "300" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoTiltBall-4.jpg"><img src="DemoTiltBall-4.jpg" width
+ * <center> <a href="./javadoc_images/DemoTiltBall-2.jpg"><img src="./javadoc_images/DemoTiltBall-2.jpg" width = "300"
+ * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoTiltBall-3.jpg"><img src="./javadoc_images/DemoTiltBall-3.jpg" width =
+ * "300" alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoTiltBall-4.jpg"><img src="./javadoc_images/DemoTiltBall-4.jpg" width
  * = "300" alt="image"></a> </center> <p>
  *
  * Screen snaps of the free movement option and the circular path (medium width) are shown below. <p>
  *
- * <center> <a href="DemoTiltBall-5.jpg"><img src="DemoTiltBall-5.jpg" width = "300"
- * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoTiltBall-6.jpg"><img src="DemoTiltBall-6.jpg" width =
+ * <center> <a href="./javadoc_images/DemoTiltBall-5.jpg"><img src="./javadoc_images/DemoTiltBall-5.jpg" width = "300"
+ * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoTiltBall-6.jpg"><img src="./javadoc_images/DemoTiltBall-6.jpg" width =
  * "300" alt="image"></a> </center> <p>
  *
  * <b>Human Performance</b><p> This is our first demo where issues of human performance arise. Each of the four
@@ -91,7 +91,7 @@ import android.view.WindowManager;
  * rectangle fits inside the outer rectangle and is separated from the outer rectangle by the diameter of the ball.  See
  * below (click to enlarge). <p>
  *
- * <center> <a href="DemoTiltBall-11.jpg"><img src="DemoTiltBall-11.jpg" width=400 alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoTiltBall-11.jpg"><img src="./javadoc_images/DemoTiltBall-11.jpg" width=400 alt="image"></a> </center> <p>
  *
  * A custom method called <code>ballTouchingWall</code> is defined in <code>RollingBallPanel.java</code>. The method
  * returns <code>true</code> if the ball is touching the line, <code>false</code> otherwise.  The
@@ -117,10 +117,10 @@ import android.view.WindowManager;
  * <code>!</code> (NOT), so the overall result of the conditional expression is <code>false</code>: the ball is not
  * touching the line (see diagram).<p>
  *
- * <center> (a)<a href="DemoTiltBall-7.jpg"><img src="DemoTiltBall-7.jpg" width=200 alt="image"></a> (b)<a
- * href="DemoTiltBall-8.jpg"><img src="DemoTiltBall-8.jpg" width=200 alt="image"></a> (c)<a
- * href="DemoTiltBall-9.jpg"><img src="DemoTiltBall-9.jpg" width=200 alt="image"></a> (d)<a
- * href="DemoTiltBall-10.jpg"><img src="DemoTiltBall-10.jpg" width=200 alt="image"></a>
+ * <center> (a)<a href="./javadoc_images/DemoTiltBall-7.jpg"><img src="./javadoc_images/DemoTiltBall-7.jpg" width=200 alt="image"></a> (b)<a
+ * href="./javadoc_images/DemoTiltBall-8.jpg"><img src="./javadoc_images/DemoTiltBall-8.jpg" width=200 alt="image"></a> (c)<a
+ * href="./javadoc_images/DemoTiltBall-9.jpg"><img src="./javadoc_images/DemoTiltBall-9.jpg" width=200 alt="image"></a> (d)<a
+ * href="./javadoc_images/DemoTiltBall-10.jpg"><img src="./javadoc_images/DemoTiltBall-10.jpg" width=200 alt="image"></a>
  *
  * </center> <p>
  *

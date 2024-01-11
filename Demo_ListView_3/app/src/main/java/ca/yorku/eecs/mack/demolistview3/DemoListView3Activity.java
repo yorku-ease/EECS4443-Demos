@@ -51,7 +51,7 @@ import android.util.Log;
  *
  * Here's a screen snap of the app with a partial view into the scrollable list of images: <p>
  *
- * <center><a href="DemoListView3-1.jpg"><img src="DemoListView3-1.jpg" width="300" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoListView3-1.jpg"><img src="./javadoc_images/DemoListView3-1.jpg" width="300" alt="image"></a></center> <p>
  *
  * As with Demo_ListView_1 and Demo_ListView_2, the <code>onCreate</code> method in the main activity is very simple.
  * The final step for all three demos is to bind the <code>ListView</code> to a <code>ListAdapter</code>: <p>

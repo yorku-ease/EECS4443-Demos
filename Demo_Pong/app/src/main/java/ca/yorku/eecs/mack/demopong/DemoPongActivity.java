@@ -60,8 +60,8 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * Pong was an arcade video game developed by Atari in 1972. The game-play simulates table tennis
  * where the player manipulates a paddle to bounce back an approaching ping-pong ball: </p>
  *
- * <center> <a href="DemoPong-1.jpg"><img src="DemoPong-1.jpg" width="250"></a> &nbsp; &nbsp; &nbsp;
- * &nbsp; &nbsp; <a href="DemoPong-2.jpg"><img src="DemoPong-2.jpg" width="400"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-1.jpg"><img src="./javadoc_images/DemoPong-1.jpg" width="250"></a> &nbsp; &nbsp; &nbsp;
+ * &nbsp; &nbsp; <a href="./javadoc_images/DemoPong-2.jpg"><img src="./javadoc_images/DemoPong-2.jpg" width="400"></a> </center> </p>
  *
  * Additional historical details are found on Wikipedia (<a
  * href="http://en.wikipedia.org/wiki/Pong">click here</a>). </p>
@@ -70,13 +70,13 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  *
  * When Demo_Pong is launched, the following UI appears: (click to enlarge)</p>
  *
- * <center> <a href="DemoPong-3.jpg"><img src="DemoPong-3.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-3.jpg"><img src="./javadoc_images/DemoPong-3.jpg" height="250"></a> </center> </p>
  *
  * The app runs in fullscreen, landscape mode. Game-play begins by tapping one of the Tilt or Touch
  * oval buttons. With this, the buttons disappear and a pong ball appears and moves diagonally on
  * the <i>table</i>, bouncing off the walls: (dashed lines added)</p>
  *
- * <center> <a href="DemoPong-4.jpg"><img src="DemoPong-4.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-4.jpg"><img src="./javadoc_images/DemoPong-4.jpg" height="250"></a> </center> </p>
  *
  *
  *
@@ -88,7 +88,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  *
  * If the control mode is touch, a touch strip appears along the left side of the display: </p>
  *
- * <center> <a href="DemoPong-4.png"><img src="DemoPong-4.png" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-4.png"><img src="./javadoc_images/DemoPong-4.png" height="250"></a> </center> </p>
  *
  * As the ball moves, the user manoeuvres the paddle up and down anticipating the ball's arrival at
  * the right side of the table. The objective is to bounce the ball back with the paddle. This is a
@@ -111,7 +111,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * <th>Description
  *
  * <tr>
- * <td><a href="DemoPong-5.png"><img src="DemoPong-5.png" width="100"></a>
+ * <td><a href="./javadoc_images/DemoPong-5.png"><img src="./javadoc_images/DemoPong-5.png" width="100"></a>
  * <td align="center">Tilt
  * <td align="center">Position
  * <td>The tilt angle of the device controls the <i>position</i> of the paddle. If the device is
@@ -122,7 +122,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * through the app's settings (discussed below).
  *
  * <tr>
- * <td><a href="DemoPong-6.png"><img src="DemoPong-6.png" width="100"></a>
+ * <td><a href="./javadoc_images/DemoPong-6.png"><img src="./javadoc_images/DemoPong-6.png" width="100"></a>
  * <td align="center">Tilt
  * <td align="center">Velocity
  * <td>The tilt angle of the device controls the <i>velocity</i> of the paddle. The center angle and
@@ -133,7 +133,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * forward from the center angle.
  *
  * <tr>
- * <td><a href="DemoPong-7.png"><img src="DemoPong-7.png" width="100"></a>
+ * <td><a href="./javadoc_images/DemoPong-7.png"><img src="./javadoc_images/DemoPong-7.png" width="100"></a>
  * <td align="center">Touch
  * <td align="center">Position
  * <td>The position of the finger on the touch strip controls the <i>position</i> of the paddle. The
@@ -142,7 +142,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * and the paddle position.
  *
  * <tr>
- * <td><a href="DemoPong-8.png"><img src="DemoPong-8.png" width="100"></a>
+ * <td><a href="./javadoc_images/DemoPong-8.png"><img src="./javadoc_images/DemoPong-8.png" width="100"></a>
  * <td align="center">Touch
  * <td align="center">Velocity
  * <td>The position of the finger on the touch strip controls the <i>velocity</i> of the paddle. The
@@ -171,9 +171,9 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  *
  * The following popups illustrate: </p>
  *
- * <center> <a href="DemoPong-6.jpg"><img src="DemoPong-6.jpg" height="200"></a> &nbsp; &nbsp; <a
- * href="DemoPong-7.jpg"><img src="DemoPong-7.jpg" height="200"></a> &nbsp; &nbsp; <a
- * href="DemoPong-8.jpg"><img src="DemoPong-8.jpg" height="200"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-6.jpg"><img src="./javadoc_images/DemoPong-6.jpg" height="200"></a> &nbsp; &nbsp; <a
+ * href="./javadoc_images/DemoPong-7.jpg"><img src="./javadoc_images/DemoPong-7.jpg" height="200"></a> &nbsp; &nbsp; <a
+ * href="./javadoc_images/DemoPong-8.jpg"><img src="./javadoc_images/DemoPong-8.jpg" height="200"></a> </center> </p>
  *
  * The game difficulty increases in three ways as the levels progress: </p>
  *
@@ -191,7 +191,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  *
  * Victory occurs when the user completes level 10 with zero misses: </p>
  *
- * <center> <a href="DemoPong-9.jpg"><img src="DemoPong-9.jpg" height="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-9.jpg"><img src="./javadoc_images/DemoPong-9.jpg" height="250"></a> </center> </p>
  *
  * The happy face above is animated. It rotates and bounces around within the popup. Auditory
  * feedback ("Tada!") accompanies victory.</p>
@@ -203,7 +203,7 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * dialog to select codes for participants, operating parameters, etc. The setup dialog is shown
  * below: </p>
  *
- * <center> <a href="DemoPong-10.jpg"><img src="DemoPong-10.jpg" width="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoPong-10.jpg"><img src="./javadoc_images/DemoPong-10.jpg" width="250"></a> </center> </p>
  *
  * For each launch of the program, game-play proceeds over the number of sequences specified in the
  * setup dialog. This is a maximum, however. If the player reaches level 10 and completes it with no
@@ -211,11 +211,11 @@ import ca.yorku.eecs.mack.demopong.PongView.PongThread;
  * terminates. </p>
  *
  * The following is an example of a data file collected as part of experimental testing: <a
- * href="DemoPong-P03-Tilt_Position-G01-B07.csv">DemoPong-P03-Tilt_Position-G01-B07.csv</a>. After
+ * href="./javadoc_images/DemoPong-P03-Tilt_Position-G01-B07.csv">DemoPong-P03-Tilt_Position-G01-B07.csv</a>. After
  * opening in Excel and adjusting the column widths and cell alignments, the data might look like
  * this: (click to enlarge)</p>
  *
- * <center><a href="DemoPong-11.jpg"><img src="DemoPong-11.jpg" width="800"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoPong-11.jpg"><img src="./javadoc_images/DemoPong-11.jpg" width="800"></a></center> </p>
  *
  * The first four columns (A-D) identify the circumstances of the test, including codes for the
  * participant, the condition, the group, and the block. The condition code in the example is

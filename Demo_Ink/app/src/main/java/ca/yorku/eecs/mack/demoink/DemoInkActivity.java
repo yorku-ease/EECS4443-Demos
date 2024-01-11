@@ -62,7 +62,7 @@ import java.util.Locale;
  *
  * Here's an example screen snap showing a quick sketch: </p>
  *
- * <center><a href="DemoInk-1.jpg"><img src="DemoInk-1.jpg" width="300"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoInk-1.jpg"><img src="./javadoc_images/DemoInk-1.jpg" width="300"></a></center> </p>
  *
  * <b>Digital Ink, Drawing, and Canvas</b> </p>
  *
@@ -127,7 +127,7 @@ import java.util.Locale;
  * TouchModeButtons also support touch-and-hold. If the finger touches and continues to touch the button, the shading is
  * continuously adjusted, darker or lighter: </p>
  *
- * <center><a href="DemoInk-5.jpg"><img src="DemoInk-5.jpg" width="400"></a> </center> </p>
+ * <center><a href="./javadoc_images/DemoInk-5.jpg"><img src="./javadoc_images/DemoInk-5.jpg" width="400"></a> </center> </p>
  *
  * Implementing this feature involves several steps. The following is a high-level summary. </p>
  *
@@ -164,8 +164,8 @@ import java.util.Locale;
  * If the device undergoes a configuration change, such as a screen rotation, it is desirable to save and restore the
  * current sketch: </p>
  *
- * <center><a href="DemoInk-3.jpg"><img src="DemoInk-3.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoInk-4.jpg"><img src="DemoInk-4.jpg" width="425"></a> </center> </p>
+ * <center><a href="./javadoc_images/DemoInk-3.jpg"><img src="./javadoc_images/DemoInk-3.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoInk-4.jpg"><img src="./javadoc_images/DemoInk-4.jpg" width="425"></a> </center> </p>
  *
  *
  * This is done is the usual manner &mdash; by saving and restoring variables through <code>onSaveInstanceState</code>
@@ -236,7 +236,7 @@ import java.util.Locale;
  *
  * For example, </p>
  *
- * <center><a href="DemoInk-2.jpg"><img src="DemoInk-2.jpg" Height="450"></a></center> </p>
+ * <center><a href="./javadoc_images/DemoInk-2.jpg"><img src="./javadoc_images/DemoInk-2.jpg" Height="450"></a></center> </p>
  *
  * Programming note: Implementing the file save feature requires the manifest file to include the
  * <code>uses-permission</code> element for writing to external storage. See <code>AndroidManifest.xml</code> for

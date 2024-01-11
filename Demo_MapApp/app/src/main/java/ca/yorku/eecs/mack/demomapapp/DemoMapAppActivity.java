@@ -115,9 +115,9 @@ import android.util.Log;
  * > Location > On.) Tapping the "York U" button changes the map to a close up of York University (below center). The
  * transition is smoothed using animation.</p>
  *
- * <center> <a href="DemoMapApp-1.jpg"><img src="DemoMapApp-1.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoMapApp-2.jpg"><img src="DemoMapApp-2.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoMapApp-10.jpg"><img src="DemoMapApp-10.jpg" width="250"></a></center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-1.jpg"><img src="./javadoc_images/DemoMapApp-1.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoMapApp-2.jpg"><img src="./javadoc_images/DemoMapApp-2.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoMapApp-10.jpg"><img src="./javadoc_images/DemoMapApp-10.jpg" width="250"></a></center></p>
  *
  * Did you notice the marker on the York U map in the vicinity of the Lassonde Building? This is a custom marker. Two
  * taps on the "+" button zooms in. A tap on the marker brings up an info window for the map location (above right).
@@ -195,8 +195,8 @@ import android.util.Log;
  * (ii) a seekbar to the adjust the value of a parameter, and (iii) a text field to display the current value (below
  * left). Tapping the button pops up a dialog to change the camera control mode (below right). </p>
  *
- * <center> <a href="DemoMapApp-3.jpg"><img src="DemoMapApp-3.jpg" width="500"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoMapApp-4.jpg"><img src="DemoMapApp-4.jpg" width="250"></a></center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-3.jpg"><img src="./javadoc_images/DemoMapApp-3.jpg" width="500"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoMapApp-4.jpg"><img src="./javadoc_images/DemoMapApp-4.jpg" width="250"></a></center></p>
  *
  * Changes in the camera zoom, tilt, or bearing occur through adjustments in the seekbar slider. The work is done in the
  * seekbar's listener method, <code>onProgressChanged</code>: <p>
@@ -245,7 +245,7 @@ import android.util.Log;
  * bookmarks. These are accessed using a Navigation Drawer &ndash; a sliding panel at the left edge of the UI. The panel
  * is revealed when the user swipes a finger from the left edge of the screen:</p>
  *
- * <center> <a href="DemoMapApp-5.jpg"><img src="DemoMapApp-5.jpg" width="600"></a> </center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-5.jpg"><img src="./javadoc_images/DemoMapApp-5.jpg" width="600"></a> </center></p>
  *
  * Using a bookmark to change the camera view is much the same as using a button, as described earlier. Of course, the
  * <code>CameraPosition</code> objects for bookmarks are stored in a different array. As well, the code is responding to
@@ -272,9 +272,9 @@ import android.util.Log;
  * the coast of the Black Sea (below left). Navigations here might include zooming in to the Sochi Olympic Park (below
  * center) and then switching the camera control mode to Tilt and adjusting the camera tilt (below right). </p>
  *
- * <center> <a href="DemoMapApp-6.jpg"><img src="DemoMapApp-6.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoMapApp-7.jpg"><img src="DemoMapApp-7.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoMapApp87.jpg"><img src="DemoMapApp-8.jpg" width="250"></a></center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-6.jpg"><img src="./javadoc_images/DemoMapApp-6.jpg" width="250"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoMapApp-7.jpg"><img src="./javadoc_images/DemoMapApp-7.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoMapApp87.jpg"><img src="./javadoc_images/DemoMapApp-8.jpg" width="250"></a></center></p>
  *
  * <!---------------------------------------------------------------------------------------------> <b>Satellites,
  * Settings, and Options </b></p>
@@ -282,7 +282,7 @@ import android.util.Log;
  * Did you notice anything unusual in the map views above? Sure! These are satellite views. Switching to a satellite
  * view is possible through the Settings entry in the Options Menu: </p>
  *
- * <center> <a href="DemoMapApp-9.jpg"><img src="DemoMapApp-9.jpg" width="600"></a> </center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-9.jpg"><img src="./javadoc_images/DemoMapApp-9.jpg" width="600"></a> </center></p>
  *
  * The code to do the switch is a one-liner: </p>
  *
@@ -299,8 +299,8 @@ import android.util.Log;
  * method to open the navigation drawer. Restore clears the map and brings up the original map of Ontario. Help is
  * unimplemented but selecting Help is acknowledged using popup Toast (below left). </p>
  *
- * <center> <a href="DemoMapApp-11.jpg"><img src="DemoMapApp-11.jpg" width="400"></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
- * <a href="DemoMapApp-12.jpg"><img src="DemoMapApp-12.jpg" width="400"></a> </center></p>
+ * <center> <a href="./javadoc_images/DemoMapApp-11.jpg"><img src="./javadoc_images/DemoMapApp-11.jpg" width="400"></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ * <a href="./javadoc_images/DemoMapApp-12.jpg"><img src="./javadoc_images/DemoMapApp-12.jpg" width="400"></a> </center></p>
  *
  * Speaking of unimplemented, the app also senses a long-press finger gesture on the map surface. This is detected by
  * implementing <code>GoogleMap.OnMapLongClickListener</code>. If a long press is detected, a 50-ms vibrotactile pulse

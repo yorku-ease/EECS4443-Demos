@@ -72,8 +72,8 @@ import java.util.Locale;
  * Let's see how these fit with the overall operation of Demo_Settings. Below are screen snaps of the application upon
  * launch in portrait and landscape modes: <p>
  *
- * <center> <a href="DemoSettings-1.jpg"><img src="DemoSettings-1.jpg" width=" 300" alt="image"></a>&nbsp;&nbsp;&nbsp;
- * &nbsp;&nbsp; <a href="DemoSettings-2.jpg"><img src="DemoSettings-2.jpg" width=" 500" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoSettings-1.jpg"><img src="./javadoc_images/DemoSettings-1.jpg" width=" 300" alt="image"></a>&nbsp;&nbsp;&nbsp;
+ * &nbsp;&nbsp; <a href="./javadoc_images/DemoSettings-2.jpg"><img src="./javadoc_images/DemoSettings-2.jpg" width=" 500" alt="image"></a> </center> <p>
  *
  * The count is incremented or decremented by tapping the Increment or Decrement buttons. The count is displayed. So too
  * are the values of a min field and a max field. The count is constrained to lie within min and max (inclusive). If the
@@ -155,9 +155,9 @@ import java.util.Locale;
  * settings menu appears (below center). Tapping Minimum brings up the list of choices for the <code>minValue</code>
  * setting (below right) <p>
  *
- * <center> <a href="DemoSettings-3.jpg"><img src="DemoSettings-3.jpg" width=" 300" alt="image"></a>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DemoSettings-4.jpg"><img src="DemoSettings-4.jpg" width=" 300"
- * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DemoSettings-5.jpg"><img src="DemoSettings-5.jpg" width="
+ * <center> <a href="./javadoc_images/DemoSettings-3.jpg"><img src="./javadoc_images/DemoSettings-3.jpg" width=" 300" alt="image"></a>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./javadoc_images/DemoSettings-4.jpg"><img src="./javadoc_images/DemoSettings-4.jpg" width=" 300"
+ * alt="image"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./javadoc_images/DemoSettings-5.jpg"><img src="./javadoc_images/DemoSettings-5.jpg" width="
  * 300" alt="image"></a> </center><p>
  *
  * The code to create the settings UI is now described.<p>
@@ -211,7 +211,7 @@ import java.util.Locale;
  * When the user taps Exit, a dialog pops up asking for confirmation that the user really wants to exit the application:
  * <p>
  *
- * <center> <a href="DemoSettings-6.jpg"><img src="DemoSettings-6.jpg" width=" 300" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoSettings-6.jpg"><img src="./javadoc_images/DemoSettings-6.jpg" width=" 300" alt="image"></a> </center> <p>
  *
  * The dialog is an instance of <code>ExitAlertDialog</code>, a custom class that extends <code>DialogFragment</code>.
  * The dialog pops up from the <code>onCick</code> callback for the Exit button: <p>

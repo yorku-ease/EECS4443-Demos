@@ -36,8 +36,8 @@ import android.view.View;
  *
  * Below is a screen snap showing four contact points (left) and UI photo showing three (right):
  *
- * <center> <a href="DemoMultitouch-1.jpg"><img src="DemoMultitouch-1.jpg" width=" 300"></a> <a
- * href="DemoMultitouch-2.jpg"><img src="DemoMultitouch-2.jpg" width=" 500"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoMultitouch-1.jpg"><img src="./javadoc_images/DemoMultitouch-1.jpg" width=" 300"></a> <a
+ * href="./javadoc_images/DemoMultitouch-2.jpg"><img src="./javadoc_images/DemoMultitouch-2.jpg" width=" 500"></a> </center> </p>
  *
  * If fingers always left the tablet in the reverse order from touching, multitouch would be simple. Of course, there is
  * no guarantee that finger events will be so orderly. To manage touch events for multiple fingers, each finger touch

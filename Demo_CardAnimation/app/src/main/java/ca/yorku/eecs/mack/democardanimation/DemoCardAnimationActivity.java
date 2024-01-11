@@ -62,8 +62,8 @@ import android.widget.Toast;
  * (below left). If the user taps the cards, the card flips over to show a summary of the story (below right). The
  * front-to-back transition is animated. Obviously, the animation is not apparent in the screen snaps. <p>
  *
- * <center> <a href="DemoCardAnimation-2.jpg"><img src="DemoCardAnimation-2.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoCardAnimation-3.jpg"><img src="DemoCardAnimation-3.jpg" width="300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoCardAnimation-2.jpg"><img src="./javadoc_images/DemoCardAnimation-2.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoCardAnimation-3.jpg"><img src="./javadoc_images/DemoCardAnimation-3.jpg" width="300"></a> </center> <p>
  *
  * All card transitions in this demo are initiated using finger gestures. The animations are implemented using Android's
  * Property Animation framework which was introduced in Honeycomb (Android 3.0). The animations are demo'd using
@@ -182,7 +182,7 @@ import android.widget.Toast;
  * The following shows the contents of <code>res/animator/card_flip_enter.xml</code> &ndash; the animation for bringing
  * a card into view: (This appears below as an image, since the XML is well-commented. Please review in detail.) <p>
  *
- * <center> <a href="DemoCardAnimation-1.jpg"><img src="DemoCardAnimation-1.jpg" width="600"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoCardAnimation-1.jpg"><img src="./javadoc_images/DemoCardAnimation-1.jpg" width="600"></a> </center> <p>
  *
  * And that's about it. <p>
  *
@@ -195,7 +195,7 @@ import android.widget.Toast;
  * The fade-in/scale animation is used when a new card is selected from a popup menu. The menu appears in response to a
  * long-press gesture (in <code>onLongPress</code>): <p>
  *
- * <center> <a href="DemoCardAnimation-4.jpg"><img src="DemoCardAnimation-4.jpg" width="300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoCardAnimation-4.jpg"><img src="./javadoc_images/DemoCardAnimation-4.jpg" width="300"></a> </center> <p>
  *
  * Another feature demo'd is the use of Android's <code>Shader</code> class (actually, its subclasses) to create a
  * background for the card title. The background has gradient shading around the edges, creating a fading-out feathered
@@ -228,7 +228,7 @@ import android.widget.Toast;
  * The gradient bitmap is built-up as a series of seven regions which are drawn into the bitmap to create the desired
  * effect for the background and the edges: <p>
  *
- * <center> <a href="DemoCardAnimation-5.jpg"><img src="DemoCardAnimation-5.jpg" width="600"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoCardAnimation-5.jpg"><img src="./javadoc_images/DemoCardAnimation-5.jpg" width="600"></a> </center> <p>
  *
  * The central, left, and right regions are painted using a <code>LinearGradient</code> shader while the corner regions
  * are painted using a <code>RadialGradient</code> shader. Consult the source code and comments for further details.

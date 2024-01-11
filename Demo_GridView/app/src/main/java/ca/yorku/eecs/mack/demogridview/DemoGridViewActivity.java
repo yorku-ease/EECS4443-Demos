@@ -66,7 +66,7 @@ import android.util.Log;
  *
  * The following illustrates the flow of activities, beginning at the home screen: <p>
  *
- * <center><a href="DemoGridView-6.jpg"><img src="DemoGridView-6.jpg" width=" 300"></a></center>
+ * <center><a href="./javadoc_images/DemoGridView-6.jpg"><img src="./javadoc_images/DemoGridView-6.jpg" width=" 300"></a></center>
  * <p>
  *
  *
@@ -74,7 +74,7 @@ import android.util.Log;
  * thumbnail images, each representing a directory that contains images. (Here, an "image" is any
  * file with a filename suffix of ".jpg" or ".JPG".) An example follows. <p>
  *
- * <center><a href="DemoGridView-1.jpg"><img src="DemoGridView-1.jpg" width=" 300"></a></center>
+ * <center><a href="./javadoc_images/DemoGridView-1.jpg"><img src="./javadoc_images/DemoGridView-1.jpg" width=" 300"></a></center>
  * <p>
  *
  * The directories are determined at run time via <code>traverse</code>, a recursive method that
@@ -143,7 +143,7 @@ import android.util.Log;
  * Now, the grid shows images <i>within</i> the selected directory. Here's an example screen snap:
  * <p>
  *
- * <center><a href="DemoGridView-2.jpg"><img src="DemoGridView-2.jpg" width=" 300"></a></center>
+ * <center><a href="./javadoc_images/DemoGridView-2.jpg"><img src="./javadoc_images/DemoGridView-2.jpg" width=" 300"></a></center>
  * <p>
  *
  * Once again, the images are read from storage in the same manner as in Demo_ListView_2. Consult
@@ -158,9 +158,9 @@ import android.util.Log;
  * viewed in greater detail. The image below, on the left, shows an initial UI when the activity
  * launches. <p>
  *
- * <center> <a href="DemoGridView-3.jpg"><img src="DemoGridView-3.jpg" width=" 300"></a> <a
- * href="DemoGridView-4.jpg"><img src="DemoGridView-4.jpg" width=" 300"></a> <a
- * href="DemoGridView-5.jpg"><img src="DemoGridView-5.jpg" width=" 300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGridView-3.jpg"><img src="./javadoc_images/DemoGridView-3.jpg" width=" 300"></a> <a
+ * href="./javadoc_images/DemoGridView-4.jpg"><img src="./javadoc_images/DemoGridView-4.jpg" width=" 300"></a> <a
+ * href="./javadoc_images/DemoGridView-5.jpg"><img src="./javadoc_images/DemoGridView-5.jpg" width=" 300"></a> </center> <p>
  *
  * The layout for <code>ImageViewerActivity</code> is given in <code>imageviewer.xml</code>. It
  * includes a

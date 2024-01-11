@@ -63,8 +63,8 @@ import java.util.Locale;
  *
  * The following screen snaps show the demo application with a light touch (left) and a heavy touch (right): </p>
  *
- * <center> <a href="DemoTouch-1.jpg"><img src="DemoTouch-1.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoTouch-2.jpg"><img src="DemoTouch-2.jpg" width="300"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoTouch-1.jpg"><img src="./javadoc_images/DemoTouch-1.jpg" width="300"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoTouch-2.jpg"><img src="./javadoc_images/DemoTouch-2.jpg" width="300"></a> </center> </p>
  *
  * The pink region is a <code>PaintPanel</code>, a subclass of <code>View</code>. A circle is painted on the paint panel
  * where the finger is touching. Pressure sensing is straight forward on Android devices, so this is included in the
@@ -75,7 +75,7 @@ import java.util.Locale;
  * Note that this demo does not include an Exit button (unlike earlier demos). Generally, Android applications do not
  * need an explicit button to exit an application. The Back button in the Navigation Bar serves this purpose: </p>
  *
- * <center> <a href="DemoTouch-3.jpg"><img src="DemoTouch-3.jpg" width="600"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoTouch-3.jpg"><img src="./javadoc_images/DemoTouch-3.jpg" width="600"></a> </center> </p>
  *
  * The Back button is used for <i>back navigation</i>. As used here, pressing Back terminates ("destroys") the current
  * activity. Furthermore, since Demo Touch includes just a single activity, the effect is to exit the application. </p>
@@ -99,7 +99,7 @@ import java.util.Locale;
  *
  * An example stream of messages written to the LogCat window is shown below. </p>
  *
- * <center><img src="DemoTouch-4.jpg"></center> </p>
+ * <center><img src="./javadoc_images/DemoTouch-4.jpg"></center> </p>
  *
  * The messages above are for a single finger gesture or stroke. Thus, the events consist of a single
  * <code>ACTION_DOWN</code> event, followed by a series of <code>ACTION_MOVE</code> events, followed by a single

@@ -20,8 +20,8 @@ import android.widget.ImageView;
  * Here's is a screen snap upon launch (left) and after entering a few strokes (right): (Note: "Erase ink" is unchecked
  * in the right-side image.) <p>
  *
- * <center> <a href="DemoGraffiti-1.jpg"><img src="DemoGraffiti-1.jpg" width="300" alt="image"></a> <a
- * href="DemoGraffiti-2.jpg"><img src="DemoGraffiti-2.jpg" width="300" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGraffiti-1.jpg"><img src="./javadoc_images/DemoGraffiti-1.jpg" width="300" alt="image"></a> <a
+ * href="./javadoc_images/DemoGraffiti-2.jpg"><img src="./javadoc_images/DemoGraffiti-2.jpg" width="300" alt="image"></a> </center> <p>
  *
  * The core of this demo is a custom class called <code>GraffitiPanel</code>, which is sub-classed from
  * <code>View</code> (see pink panels in screen snaps above). A <code>GraffitiPanel</code> receives finger gestures and
@@ -70,13 +70,13 @@ import android.widget.ImageView;
  * modes: SYM, SHIFT, and NUM. Each mode is invoked with a straight-line stroke in the direction of the watermark:
  * North-West for SYM, North for SHIFT, and North-East for NUM: <p>
  *
- * <center> <a href="DemoGraffiti-6.jpg"><img src="DemoGraffiti-6.jpg" width="600" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGraffiti-6.jpg"><img src="./javadoc_images/DemoGraffiti-6.jpg" width="600" alt="image"></a> </center> <p>
  *
  * The four screen snaps below show the sequence of gestures for entering uppercase A. (i) The user first makes a North
  * stroke. (ii) This puts the application into SHIFT mode, as indicated by SHIFT in red. (iii) The user then makes the
  * stroke for "a". (iv) On finger lift, uppercase A appears with the SHIFT mode cleared.
  *
- * <center> <a href="DemoGraffiti-3.jpg"><img src="DemoGraffiti-3.jpg" width="800" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGraffiti-3.jpg"><img src="./javadoc_images/DemoGraffiti-3.jpg" width="800" alt="image"></a> </center> <p>
  *
  * Note that the sequence above was made with "Erase ink" unchecked, so the ink would persist on the display. Under
  * normal operation, the ink is erased on each finger lift. Thus, in practice, strokes are typically made on top of one
@@ -90,13 +90,13 @@ import android.widget.ImageView;
  * demo to swap between the Graffiti dictionary for letters and a digits dictionary. A North-East stroke invokes NUM
  * mode, swapping dictionaries. The strokes for digits are simple and intuitive: <p>
  *
- * <center> <a href="DemoGraffiti-4.jpg"><img src="DemoGraffiti-4.jpg" width="300" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGraffiti-4.jpg"><img src="./javadoc_images/DemoGraffiti-4.jpg" width="300" alt="image"></a> </center> <p>
  *
  * NUM and NUM_LOCK modes are available in a manner similar to SHIFT and SHIFT_LOCK modes. <p>
  *
  * A North-West stroke invokes SYM mode: <p>
  *
- * <center> <a href="DemoGraffiti-5.jpg"><img src="DemoGraffiti-5.jpg" width="600" alt="image"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoGraffiti-5.jpg"><img src="./javadoc_images/DemoGraffiti-5.jpg" width="600" alt="image"></a> </center> <p>
  *
  * Special symbols, such as punctuation, are entered in SYM mode by tapping on the symbol. SYM and SYM_LOCK modes are
  * available in a manner similar to SHIFT and SHIFT_LOCK.<p>

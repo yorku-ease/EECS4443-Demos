@@ -43,8 +43,8 @@ import java.util.Random;
  * When the program launches, an array of <code>Quotation</code> objects is created, then a quotation is selected at
  * random and presented for viewing: </p>
  *
- * <center> <a href="DemoQuotation-1.jpg"><img src="DemoQuotation-1.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoQuotation-2.jpg"><img src="DemoQuotation-2.jpg" width="375"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoQuotation-1.jpg"><img src="./javadoc_images/DemoQuotation-1.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoQuotation-2.jpg"><img src="./javadoc_images/DemoQuotation-2.jpg" width="375"></a> </center> </p>
  *
  * Separate fragments are used for the image UI and the quote UI. As seen above, we see both the person and the wisdom
  * imparted. Apparently, Phyllis Diller was not too fond of housework. The app responds to an orientation change with a
@@ -71,13 +71,13 @@ import java.util.Random;
  * of all names pops up (below right). Scroll and tap to select a new quotation. All transitions are animated. See
  * Demo_CardAnimation for details.</p>
  *
- * <center> <a href="DemoQuotation-3.jpg"><img src="DemoQuotation-3.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * <a href="DemoQuotation-4.jpg"><img src="DemoQuotation-4.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- * href="DemoQuotation-5.jpg"><img src="DemoQuotation-5.jpg" width="250"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoQuotation-3.jpg"><img src="./javadoc_images/DemoQuotation-3.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ * <a href="./javadoc_images/DemoQuotation-4.jpg"><img src="./javadoc_images/DemoQuotation-4.jpg" width="250"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ * href="./javadoc_images/DemoQuotation-5.jpg"><img src="./javadoc_images/DemoQuotation-5.jpg" width="250"></a> </center> </p>
  *
  * There is an Options menu which is activated via the Action Overflow in the Action Bar. There are three options: </p>
  *
- * <center> <a href="DemoQuotation-6.jpg"><img src="DemoQuotation-6.jpg" width="300"></a></center> </p>
+ * <center> <a href="./javadoc_images/DemoQuotation-6.jpg"><img src="./javadoc_images/DemoQuotation-6.jpg" width="300"></a></center> </p>
  *
  * The Help entry is located at the bottom of the Options Menu, as recommended in the Android Design documentation (<a
  * href="http://developer.android.com/design/patterns/help.html">click here</a>). There is at present no implementation
@@ -88,10 +88,10 @@ import java.util.Random;
  * The top item in the Options Menu is Quiz. If the user taps Quiz, the application transitions from viewing quotations
  * to a quiz. The user can take a quiz to test his or her knowledge of <i>who said what</i>. An example follows. </p>
  *
- * <center> 1-<a href="DemoQuotation-7.jpg"><img src="DemoQuotation-7.jpg" width="200"></a> 2-<a
- * href="DemoQuotation-8.jpg"><img src="DemoQuotation-8.jpg" width="200"></a> 3-<a href="DemoQuotation-9.jpg"><img
- * src="DemoQuotation-9.jpg" width="200"></a> 4-<a href="DemoQuotation-10.jpg"><img src="DemoQuotation-10.jpg"
- * width="200"></a> 5-<a href="DemoQuotation-11.jpg"><img src="DemoQuotation-11.jpg" width="200"></a> </center> </p>
+ * <center> 1-<a href="./javadoc_images/DemoQuotation-7.jpg"><img src="./javadoc_images/DemoQuotation-7.jpg" width="200"></a> 2-<a
+ * href="./javadoc_images/DemoQuotation-8.jpg"><img src="./javadoc_images/DemoQuotation-8.jpg" width="200"></a> 3-<a href="./javadoc_images/DemoQuotation-9.jpg"><img
+ * src="./javadoc_images/DemoQuotation-9.jpg" width="200"></a> 4-<a href="./javadoc_images/DemoQuotation-10.jpg"><img src="./javadoc_images/DemoQuotation-10.jpg"
+ * width="200"></a> 5-<a href="./javadoc_images/DemoQuotation-11.jpg"><img src="./javadoc_images/DemoQuotation-11.jpg" width="200"></a> </center> </p>
  *
  * The first quotation in the example quiz (above, 1) is something about apple pie and the universe. I have no idea who
  * said this. I'll guess and tap the first answer, Agatha Christie (above, 2). Nope! Did you notice the text "(swipe for
@@ -109,12 +109,12 @@ import java.util.Random;
  *
  * A few aspects of the Quiz may be controlled through Settings: </p>
  *
- * <center> <a href="DemoQuotation-12.jpg"><img src="DemoQuotation-12.jpg" width="500"></a> </center> </p>
+ * <center> <a href="./javadoc_images/DemoQuotation-12.jpg"><img src="./javadoc_images/DemoQuotation-12.jpg" width="500"></a> </center> </p>
  *
  * The first setting, Quiz Length, sets the number of questions in the quiz. The options are presented using an instance
  * of <code>ListPreference</code> as declared in <code>res/xml/preferences.xml</code>: </p>
  *
- * <center><a href="DemoQuotation-13.jpg"><img src="DemoQuotation-13.jpg" width="250"></a> </center> </p>
+ * <center><a href="./javadoc_images/DemoQuotation-13.jpg"><img src="./javadoc_images/DemoQuotation-13.jpg" width="250"></a> </center> </p>
  *
  * The remaining options are checkbox items. These are instances of <code>CheckBoxPreference</code>, also declared in
  * <code>res/xml/preferences.xml</code>. The second setting, Quiz Hints, enables or disables quiz hints. If disabled,

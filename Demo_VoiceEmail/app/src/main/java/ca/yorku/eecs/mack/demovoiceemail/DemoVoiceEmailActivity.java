@@ -45,7 +45,7 @@ import java.util.Locale;
  *
  * The UI for this demo is straight forward: <p>
  *
- * <center> <a href="DemoVoiceEmail-1.jpg"><img src="DemoVoiceEmail-1.jpg" width="300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoVoiceEmail-1.jpg"><img src="./javadoc_images/DemoVoiceEmail-1.jpg" width="300"></a> </center> <p>
  *
  * When the user clicks the Start button (under Record), recording begins. This occurs via the following code in the
  * <code>onButtonClick</code> method (abbreviated, with comments): <p>
@@ -139,8 +139,8 @@ import java.util.Locale;
  * string given as the intent's <code>EXTRA_SUBJECT</code> is used as the "Subject" and the audio file provided as the
  * intent's <code>EXTRA_STREAM</code> is used as an attachment (see above). <p>
  *
- * <center> <a href="DemoVoiceEmail-2.jpg"><img src="DemoVoiceEmail-2.jpg" width="300"></a> <a
- * href="DemoVoiceEmail-3.jpg"><img src="DemoVoiceEmail-3.jpg" width="300"></a> </center> <p>
+ * <center> <a href="./javadoc_images/DemoVoiceEmail-2.jpg"><img src="./javadoc_images/DemoVoiceEmail-2.jpg" width="300"></a> <a
+ * href="./javadoc_images/DemoVoiceEmail-3.jpg"><img src="./javadoc_images/DemoVoiceEmail-3.jpg" width="300"></a> </center> <p>
  *
  * The device's text entry method appears with focus on the "To" field. The sender enters the "To" email address and
  * perhaps their name in the subject line (after "from"). Tapping the send arrow at the top sends the email. <p>
@@ -156,7 +156,7 @@ import java.util.Locale;
  * <p>
  *
  * <center>
- * <img src="DemoVoiceEmail-4.jpg">
+ * <img src="./javadoc_images/DemoVoiceEmail-4.jpg">
  * </center>
  * <p>
  *
@@ -167,7 +167,7 @@ import java.util.Locale;
  * <p>
  *
  * <center>
- * <img src="DemoVoiceEmail-5.jpg">
+ * <img src="./javadoc_images/DemoVoiceEmail-5.jpg">
  * </center>
  * <p>
 

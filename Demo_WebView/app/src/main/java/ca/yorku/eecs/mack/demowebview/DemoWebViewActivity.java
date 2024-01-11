@@ -75,9 +75,9 @@ import android.widget.Toast;
  * full-fledged mobile web browser. Before delving into the technical details, here are examples of the UI in landscape
  * and portrait orientations: (Note that the layouts are slightly different.)<p>
  *
- * <center><a href="DemoWebView-1.jpg"><img src="DemoWebView-1.jpg" width="250" alt="image"></a>&nbsp;&nbsp;&nbsp;
+ * <center><a href="./javadoc_images/DemoWebView-1.jpg"><img src="./javadoc_images/DemoWebView-1.jpg" width="250" alt="image"></a>&nbsp;&nbsp;&nbsp;
  * &nbsp;&nbsp;
- * <a href="DemoWebView-3.jpg"><img src="DemoWebView-3.jpg" width="400" alt="image"></a> </center><p>
+ * <a href="./javadoc_images/DemoWebView-3.jpg"><img src="./javadoc_images/DemoWebView-3.jpg" width="400" alt="image"></a> </center><p>
  *
  * <p> Getting started with <code>WebView</code> is simple. In the layout file (e.g., <code>main.xml</code>), a
  * <code>FrameLayout</code> is positioned at a location in the UI where the <code>WebView</code> is to appear: <p>
@@ -177,7 +177,7 @@ import android.widget.Toast;
  * button callback (<code>onClick</code>). We also include code to disable the back or forward button if there is no
  * available history: <p>
  *
- * <center> <a href="DemoWebView-2.jpg"><img src="DemoWebView-2.jpg" width="600" alt="image"></a> </center><p>
+ * <center> <a href="./javadoc_images/DemoWebView-2.jpg"><img src="./javadoc_images/DemoWebView-2.jpg" width="600" alt="image"></a> </center><p>
  *
  *
  * In fact, the demo's back button (&larr;) isn't really needed because <code>WebView</code> supports back navigation
@@ -210,9 +210,9 @@ import android.widget.Toast;
  * exiting (below left). Press Back again and the app exits. This is similar to the warning given in Astro before
  * exiting (below right). <p>
  *
- * <center><a href="DemoWebView-4.jpg"><img src="DemoWebView-4.jpg" width="250" alt="image"></a>&nbsp;&nbsp;&nbsp;
+ * <center><a href="./javadoc_images/DemoWebView-4.jpg"><img src="./javadoc_images/DemoWebView-4.jpg" width="250" alt="image"></a>&nbsp;&nbsp;&nbsp;
  * &nbsp;&nbsp;
- * <a href="DemoWebView-5.jpg"><img src="DemoWebView-5.jpg" width="250" alt="image"></a></center> <p>
+ * <a href="./javadoc_images/DemoWebView-5.jpg"><img src="./javadoc_images/DemoWebView-5.jpg" width="250" alt="image"></a></center> <p>
  *
  * <b>URL Display and Edit</b> <p>
  *
@@ -222,7 +222,7 @@ import android.widget.Toast;
  * keyoard pops up (not shown). The user presses backspace a few times (below, 3), enters <code>toronto</code> (below,
  * 4), and taps the Go button (or taps Next on the soft keyboard).<p>
  *
- * <center><a href="DemoWebView-6.jpg"><img src="DemoWebView-6.jpg" width="350" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoWebView-6.jpg"><img src="./javadoc_images/DemoWebView-6.jpg" width="350" alt="image"></a></center> <p>
  *
  * Of course, editing is an inherent capability of <code>EditText</code> objects. See Demo_EditText for further
  * discussion. Processing the URL when Go is tapped is handled in the <code>onClick</code> callback: <p>
@@ -241,7 +241,7 @@ import android.widget.Toast;
  *
  * The demo includes a hard-coded set of bookmarks accessible through the Options Menu: <p>
  *
- * <center><a href="DemoWebView-7.jpg"><img src="DemoWebView-7.jpg" width="500" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoWebView-7.jpg"><img src="./javadoc_images/DemoWebView-7.jpg" width="500" alt="image"></a></center> <p>
  *
  * Of course, a better way to support bookmarks is to allow the user to add and delete personalised bookmarks. We'll
  * leave this for you to explore. <p>
@@ -251,7 +251,7 @@ import android.widget.Toast;
  * Notice in the UI images above that the web page's title and shortcut icon (favicon) appear in the application's
  * Action Bar: <p>
  *
- * <center><a href="DemoWebView-8.jpg"><img src="DemoWebView-8.jpg" width="500" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoWebView-8.jpg"><img src="./javadoc_images/DemoWebView-8.jpg" width="500" alt="image"></a></center> <p>
  *
  * Placing the title of the web page in the Action Bar is done in the <code>onPageFinished</code> method, which is
  * defined in <code>WebViewClient</code> (see table above). This method executes when the web page is finished loading

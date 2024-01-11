@@ -52,7 +52,7 @@ import ca.yorku.eecs.mack.demosurfaceview.MySurfaceView.MyThread;
  *
  * Below is a screen snap of the UI a few seconds after the demo is launched: </p>
  *
- * <center><a href="DemoSurfaceView-1.jpg"><img src="DemoSurfaceView-1.jpg" width="300"></a> </center> </p>
+ * <center><a href="./javadoc_images/DemoSurfaceView-1.jpg"><img src="./javadoc_images/DemoSurfaceView-1.jpg" width="300"></a> </center> </p>
  *
  * Although not apparent in the image, the happy-face ball is moving diagonally on the display, bouncing from wall to
  * wall. It's not much of a game, but this is good enough for the purpose of this demo. </p>

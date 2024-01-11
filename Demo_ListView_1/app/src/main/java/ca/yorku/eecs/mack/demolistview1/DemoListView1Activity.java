@@ -77,7 +77,7 @@ import android.widget.ListView;
  *
  * Here's a screen snap of the app with a partial view into the scrollable list of words: <p>
  *
- * <center><a href="DemoListView1-1.jpg"><img src="DemoListView1-1.jpg" width="300" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoListView1-1.jpg"><img src="./javadoc_images/DemoListView1-1.jpg" width="300" alt="image"></a></center> <p>
  *
  * In the code, note that the main activity extends <code>ListActivity</code> (not <code>Activity</code>). As noted in
  * the API
@@ -164,7 +164,7 @@ import android.widget.ListView;
  * Scrolling is improved using indexed scrolling:
  * <p>
  *
- * <center><a href="DemoListView1-2.jpg"><img src="DemoListView1-2.jpg" width="300" alt="image"></a></center> <p>
+ * <center><a href="./javadoc_images/DemoListView1-2.jpg"><img src="./javadoc_images/DemoListView1-2.jpg" width="300" alt="image"></a></center> <p>
  *
  * The user may touch and drag the scrolling elevator to move quickly over large distances in the underlying
  * data.  The pop-out letter beside the scrollbar handle provides a visual cue of the current
