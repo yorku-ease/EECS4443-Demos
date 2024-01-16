@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 The projects in this repository require:
 
-- Gradle 7.4.2
-- Java 11 or higher
+- Gradle 8.2.1
+- Java 17 or higher
 - Android SDK 33
 
 Please ensure you have these prerequisites installed before attempting to run the projects.
@@ -38,16 +38,27 @@ If you encounter any issues while trying to run the projects, here are some comm
 <summary>Common Issues</summary>
 <br>
 
-**Android Studio not recognizing the JDK**: Follow these steps to set the JDK:
+### Android Studio not recognizing the JDK
+Error might be `Could not resolve all files for configuration ':classpath'`. Follow these steps to set the JDK:
 
-1. Go to `File > Project Structure > SDK Location`.
+#### In Android Studio Hedgehog
+
+1. Go to `Android Studio` > `Settings` > `Build, Execution, Deployment` > `Build Tools` > `Gradle`.
+2. In the `Gradle Projects` section set the `Distribution` to `wrapper` and `Gradle JDK` to the path to your JDK installation.
+
+#### In older versions
+
+1. Go to `File` > `Project Structure` > `SDK Location`.
 2. In the `JDK Location` field, set the path to your JDK installation. This will set it for the current project.
 
-**Android Studio not recognizing the Android SDK**: Ensure that you have the correct Android SDK version installed. You can check this in Android Studio by going to `File > Settings > Appearance & Behavior > System Settings > Android SDK`.
+### Android Studio not recognizing the Android SDK
+Ensure that you have the correct Android SDK version installed. You can check this in Android Studio by going to `File` > `Settings` > `Appearance & Behavior` > `System Settings` > `Android SDK`.
 
-**Gradle sync failed**: This can happen if there are issues with your Gradle setup. Try invalidating caches and restarting Android Studio (`File` -> `Invalidate Caches / Restart`). Also, ensure that you're using a compatible version of Gradle.
+### Gradle sync failed
+This can happen if there are issues with your Gradle setup. Try invalidating caches and restarting Android Studio (`File` > `Invalidate Caches / Restart`). Also, ensure that you're using a compatible version of Gradle.
 
-**Project not building**: Check the `build.gradle` file for any errors. Also, try cleaning the project (`Build` -> `Clean Project`) and rebuilding it (`Build` -> `Rebuild Project`).
+### Project not building
+Check the `build.gradle` file for any errors. Also, try cleaning the project (`Build` -> `Clean Project`) and rebuilding it (`Build` -> `Rebuild Project`).
 
 </details>
 
