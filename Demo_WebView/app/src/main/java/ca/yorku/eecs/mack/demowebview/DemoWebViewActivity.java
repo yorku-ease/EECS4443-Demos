@@ -1,5 +1,6 @@
 package ca.yorku.eecs.mack.demowebview;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -147,17 +148,17 @@ import android.widget.Toast;
  *
  * <blockquote> <table summary="table" border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc"> <th
  * align="center">Class <th align="center">Summary <th align="center">Example code
- *
+ * <p>
  * <tr> <td><code>WebSettings</code> <td>Manages settings for a WebView. When the WebView is first created, a
  * WebSettings object is initialized with default settings. The settings are retrieved using get-methods and changed
  * using set-methods. <td><code> WebSettings&nbsp;ws&nbsp;=&nbsp;webView.getSettings();<br> ...<br>
  * ws.setJavaScriptEnabled(true);<br> ws.setBuiltInZoomControls(true); </code>
- *
+ * <p>
  * <tr> <td><code>WebViewClient</code> <td>A class that is called when things happen that impact the rendering of the
  * content, such as errors or form submissions. Provides the ability to intercept URL loading. <td><code>
  * webView.setWebViewClient(new MyWebViewClient());<br> ...<br> public&nbsp;void&nbsp;onPageFinished(WebView&nbsp;
  * view,&nbsp;String&nbsp;url)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do something<br> }<br> </code>
- *
+ * <p>
  * <tr> <td><code>WebChromeClient</code> <td>A class that is called when something happens that might impact a browser
  * UI. Progress updates and JavaScript alerts are sent to WebChromeClient. <td><code> webView.setWebChromeClient(new
  * MyWebChromeClient());<br> ...<br> public&nbsp;void&nbsp;onReceivedIcon(WebView&nbsp;view,&nbsp;Bitmap&nbsp;
@@ -348,13 +349,13 @@ public class DemoWebViewActivity extends Activity implements View.OnClickListene
     private final static int HELP = 2;
 
     // a kludgey way to setup up bookmarks (but demonstrates the general idea)
-    final Bookmark[] BOOKMARK = {new Bookmark("CBC", "http://www.cbc.ca/news"),
-            new Bookmark("York University", "http://www.yorku.ca/"),
-            new Bookmark("Dept of EECS", "http://www.cse.yorku.ca/cshome/"),
-            new Bookmark("BBC", "http://www.bbc.co.uk/news/"), new Bookmark("NHL", "http://www.nhl.com/"),
-            new Bookmark("Weather", "http://www.theweathernetwork.com/weather/canada/ontario/toronto"),
+    final Bookmark[] BOOKMARK = {new Bookmark("CBC", "https://www.cbc.ca/news"),
+            new Bookmark("York University", "https://www.yorku.ca/"),
+            new Bookmark("Dept of EECS", "https://lassonde.yorku.ca/eecs/"),
+            new Bookmark("BBC", "https://www.bbc.com/news"), new Bookmark("NHL", "https://www.nhl.com/"),
+            new Bookmark("Weather", "https://www.theweathernetwork.com/ca/36-hour-weather-forecast/ontario/toronto"),
             new Bookmark("Scott", "http://www.yorku.ca/mack/"),
-            new Bookmark("CSE4443", "http://www.cse.yorku.ca/course_archive/2015-16/W/4443/")};
+            new Bookmark("CSE4443", "https://www.eecs.yorku.ca/course_archive/2015-16/W/4443/")};
 
     /*
      * A FrameLayout is used as a place-holder for the WebView to solve a particular problem
@@ -384,6 +385,7 @@ public class DemoWebViewActivity extends Activity implements View.OnClickListene
         initUI();
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     protected void initUI()
     {
         // retrieve the FrameLayout place-holder (we'll put the WebView there -- see below)
@@ -478,6 +480,18 @@ public class DemoWebViewActivity extends Activity implements View.OnClickListene
 
             // move caret to end
             urlField.setSelection(urlField.getText().length());
+
+            // cleartext traffic is disabled by default starting in Android 9 (SDK 28)
+            // alternatively, add android:usesCleartextTraffic="true" to the AndroidManifest <application/>
+            if (urlString.startsWith("http://")) {
+                urlString = urlString.replaceFirst("http://", "https://");
+            }
+            else if(urlString.startsWith("www.")) {
+                urlString = "https://" + urlString;
+            }
+            else if (!urlString.startsWith("https://")) {
+                urlString = "https://www." + urlString;
+            }
 
             // load it in the WebView
             webView.loadUrl(urlString);
@@ -724,7 +738,7 @@ public class DemoWebViewActivity extends Activity implements View.OnClickListene
 
     // ==============================================================================================
     // simple class to hold a bookmark as a name and a URL (both strings)
-    private class Bookmark
+    private static class Bookmark
     {
         String name; // appears in the Options Menu
         String url; // used to load the page via WebView's loadUrl method
