@@ -10,11 +10,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 The projects in this repository require:
 
-- Gradle 8.2.1
-- Java 17 or higher
+- Gradle 7.4.2
+- Java 11 or higher
 - Android SDK 33
 
 Please ensure you have these prerequisites installed before attempting to run the projects.
+
+> [!WARNING]  
+> The latest versions of Android Studio, like Hedgehog, may prompt you to upgrade the AGP to 8.2.1 - you do not need to do this as 7.4.2 is still supported.
+> If you get the prompt `Android Gradle plugin version 7.4.2 has an upgrade available.` you can simply ignore it. Note that upgrading will require using Java 17.
 
 ### Installing
 
