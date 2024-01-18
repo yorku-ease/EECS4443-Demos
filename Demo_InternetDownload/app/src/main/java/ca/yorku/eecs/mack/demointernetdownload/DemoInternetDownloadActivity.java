@@ -88,7 +88,7 @@ import java.util.Locale;
 
 public class DemoInternetDownloadActivity extends Activity
 {
-    final String TEST_URL = "https://archives.bulbagarden.net/media/upload/4/4a/0025Pikachu.png";
+    final String TEST_URL = "https://en.meming.world/images/en/6/6e/Surprised_Pikachu.jpg";
 
     TextView textView;
     ImageView imageView;

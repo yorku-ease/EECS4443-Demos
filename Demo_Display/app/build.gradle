@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'ca.yorku.eecs.mack.demodisplay'
     compileSdkVersion 33
 
     defaultConfig {
