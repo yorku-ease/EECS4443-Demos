@@ -122,7 +122,7 @@ public class ResultsDialog extends DialogFragment
 		} catch (ClassCastException e)
 		{
 			// The activity doesn't implement the interface, throw exception
-			throw new ClassCastException(activity.toString() + " must implement OnResultsDialogClickListener");
+			throw new ClassCastException(activity + " must implement OnResultsDialogClickListener");
 		}
 	}
 }
