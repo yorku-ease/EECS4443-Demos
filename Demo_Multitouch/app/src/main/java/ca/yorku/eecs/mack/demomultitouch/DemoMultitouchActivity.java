@@ -9,7 +9,7 @@ import android.view.View;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_Multitouch - demonstration of multitouch input on Android devices. </p>
  *
  * Related information: </p>
@@ -51,25 +51,25 @@ import android.view.View;
  * We noted in Demo_Touch that the primary actions for touch events are </p>
  *
  * <blockquote> <table border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc"> <th>Action <th>Description
- *
+ * <p>
  * <tr> <td><code>ACTION_DOWN</code> <td>A finger has touched the display surface
- *
+ * <p>
  * <tr> <td><code>ACTION_MOVE</code> <td>The finger has moved
- *
+ * <p>
  * <tr> <td><code>ACTION_UP</code> <td>The finger has left the display surface </table> </blockquote> </p>
  *
  * Multitouch is a bit more complicated. The primary actions for multitouch are </p>
  *
  * <blockquote> <table border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc"> <th>Action <th>Description
- *
+ * <p>
  * <tr> <td><code>ACTION_DOWN</code> <td>The first finger has touched the display surface
- *
+ * <p>
  * <tr> <td><code>ACTION_POINTER_DOWN</code> <td>A subsequent finger has touched the display surface
- *
+ * <p>
  * <tr> <td><code>ACTION_MOVE</code> <td>A finger has moved on the display surface
- *
+ * <p>
  * <tr> <td><code>ACTION_POINTER_UP</code> <td>A finger (but not the last finger) has left the display surface
- *
+ * <p>
  * <tr> <td><code>ACTION_UP</code> <td>The last finger has left the display surface </table> </blockquote> </p>
  *
  * Of course, there is no guarantee that the first finger to touch the display surface will be the last finger to leave
