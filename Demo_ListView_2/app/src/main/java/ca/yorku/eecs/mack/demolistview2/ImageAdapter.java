@@ -11,8 +11,8 @@ import java.io.File;
 class ImageAdapter extends BaseAdapter
 {
 
-    private String[] fileNames;
-    private String path;
+    private final String[] fileNames;
+    private final String path;
 
     private final ImageDownloader imageDownloader = new ImageDownloader();
 
@@ -31,7 +31,7 @@ class ImageAdapter extends BaseAdapter
     @Override
     public String getItem(int position)
     {
-        return "" + position;
+        return String.valueOf(position);
     }
 
     @Override
