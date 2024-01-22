@@ -1,28 +1,24 @@
 package ca.yorku.eecs.mack.demolistview3;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.ImageView;
-import java.io.FilterInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.concurrent.ConcurrentHashMap;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /*
  * This helper class downloads images from the Internet and binds those with the provided ImageView.
@@ -127,98 +123,21 @@ public class ImageDownloader
 		return null;
 	}
 
-	Bitmap downloadBitmap(String url)
-	{
-		// AndroidHttpClient is not allowed to be used from the main thread
-		final HttpClient client = AndroidHttpClient.newInstance("Android");
-		final HttpGet getRequest = new HttpGet(url);
+	private Bitmap downloadBitmap(String url) {
+		OkHttpClient client = new OkHttpClient();
+		Request request = new Request.Builder()
+				.url(url)
+				.build();
 
-		try
-		{
-			HttpResponse response = client.execute(getRequest);
-			final int statusCode = response.getStatusLine().getStatusCode();
-			if (statusCode != HttpStatus.SC_OK)
-			{
-				/*
-				 * If you see this message, your device is probably *not* connected to the Internet.
-				 * Connect and try again.
-				 */
-				Log.i(MYDEBUG, "Error " + statusCode + " while retrieving bitmap from " + url);
-				return null;
-			}
+		try (Response response = client.newCall(request).execute()) {
+			if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
-			final HttpEntity entity = response.getEntity();
-			if (entity != null)
-			{
-				InputStream inputStream = null;
-				try
-				{
-					inputStream = entity.getContent();
-					// Bug on slow connections, fixed in future release.
-					return BitmapFactory.decodeStream(new FlushedInputStream(inputStream));
-				} finally
-				{
-					if (inputStream != null)
-					{
-						inputStream.close();
-					}
-					entity.consumeContent();
-				}
-			}
-		} catch (IOException e)
-		{
-			getRequest.abort();
-			Log.i(MYDEBUG, "I/O error while retrieving bitmap from " + url + ", e=" + e.toString());
-		} catch (IllegalStateException e)
-		{
-			getRequest.abort();
-			Log.i(MYDEBUG, "Incorrect URL: " + url + ", e=" + e.toString());
-		} catch (Exception e)
-		{
-			getRequest.abort();
-			Log.i(MYDEBUG, "Error while retrieving bitmap from " + url + ", e=" + e.toString());
-		} finally
-		{
-			if ((client instanceof AndroidHttpClient))
-			{
-				((AndroidHttpClient)client).close();
-			}
+			assert response.body() != null;
+			return BitmapFactory.decodeStream(response.body().byteStream());
+		} catch (IOException e) {
+			Log.i(MYDEBUG, "Error while retrieving bitmap from " + url + ", e=" + e);
 		}
 		return null;
-	}
-
-	/*
-	 * An InputStream that skips the exact number of bytes provided, unless it reaches EOF.
-	 */
-	static class FlushedInputStream extends FilterInputStream
-	{
-		public FlushedInputStream(InputStream inputStream)
-		{
-			super(inputStream);
-		}
-
-		@Override
-		public long skip(long n) throws IOException
-		{
-			long totalBytesSkipped = 0L;
-			while (totalBytesSkipped < n)
-			{
-				long bytesSkipped = in.skip(n - totalBytesSkipped);
-				if (bytesSkipped == 0L)
-				{
-					int b = read();
-					if (b < 0)
-					{
-						break; // we reached EOF
-					} else
-					{
-						bytesSkipped = 1; // we read one byte
-					}
-				}
-				totalBytesSkipped += bytesSkipped;
-			}
-			return totalBytesSkipped;
-		}
 	}
 
 	/*
