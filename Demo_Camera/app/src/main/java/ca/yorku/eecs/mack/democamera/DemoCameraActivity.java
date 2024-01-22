@@ -1,10 +1,14 @@
 package ca.yorku.eecs.mack.democamera;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.Manifest;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -20,15 +24,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Objects;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_Camera - demo application that uses an Android device's built-in camera </p>
  *
  * Related information: </p>
@@ -85,7 +94,7 @@ import java.util.Locale;
  *      Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
  *
  *      // specify a file URI where the image will be saved
- *      fileUri = getOutputMediaFileUri(mediaStorageDirectory, MEDIA_TYPE_IMAGE);
+ *      fileUri = getOutputMediaFileUri(this, mediaStorageDirectory, MEDIA_TYPE_IMAGE);
  *
  *      // use putExtra to give the file URI to the intent
  *      intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
@@ -224,7 +233,7 @@ import java.util.Locale;
  * NOTE: Sometimes new photos or videos taken with this app do not appear when viewing in Android's Gallery or Photos
  * app.  One fix for this (which worked on my device) is to delete the .thumbnails directory in the DCIM folder and
  * reboot the device.  For further discussion on this and other approaches to this problem, see
- * http://android.stackexchange .com/questions/7088/not-all-images-showing-up-in-gallery <p>
+ * <a href="http://android.stackexchange.com/questions/7088/not-all-images-showing-up-in-gallery">...</a> <p>
  *
  * @author (c) Scott MacKenzie 2011-2018
  */
@@ -255,11 +264,15 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
     int imageIdx, videoIdx;
     TextView statusTextView;
     TextView imageCountView, videoCountView;
+    private static final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
+
 
     // create a file Uri for saving an image or video
-    private static Uri getOutputMediaFileUri(File directory, int type)
+    private static Uri getOutputMediaFileUri(Context context, File directory, int type)
     {
-        return Uri.fromFile(getOutputMediaFile(directory, type));
+        return FileProvider.getUriForFile(context,
+                BuildConfig.APPLICATION_ID + ".provider",
+                Objects.requireNonNull(getOutputMediaFile(directory, type)));
     }
 
     // create a File for saving an image or video
@@ -287,8 +300,24 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         initialize();
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED)
+        {
+            // Permission is not granted
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.CAMERA)) {
+                // Show an explanation to the user
+            } else {
+                // No explanation needed; request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        MY_PERMISSIONS_REQUEST_CAMERA);
+            }
+        }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void initialize()
     {
         // hide the action bar (gives more display space on small screens)
@@ -355,6 +384,19 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
             displayVideo();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == MY_PERMISSIONS_REQUEST_CAMERA) { // If request is cancelled, the result arrays are empty.
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // permission was granted
+            } else {
+                // permission denied
+                Toast.makeText(this, "Camera permission denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
     // touch callback for picture and video views
     @Override
     public boolean onTouch(View v, MotionEvent me)
@@ -399,7 +441,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
             // specify a file URI where the image will be saved
-            fileUri = getOutputMediaFileUri(mediaStorageDirectory, MEDIA_TYPE_IMAGE);
+            fileUri = getOutputMediaFileUri(this, mediaStorageDirectory, MEDIA_TYPE_IMAGE);
 
             // use putExtra to give the file URI to the intent
             intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
@@ -414,7 +456,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
             Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
 
             // specify a file URI where the image will be saved
-            fileUri = getOutputMediaFileUri(mediaStorageDirectory, MEDIA_TYPE_VIDEO); // not needed
+            fileUri = getOutputMediaFileUri(this, mediaStorageDirectory, MEDIA_TYPE_VIDEO); // not needed
 
             // use putExtra to give the file URI to the intent
             intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
@@ -540,6 +582,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
 
                 // update file list and index
                 imageFilenames = mediaStorageDirectory.list(new MyFilenameFilter(".jpg"));
+                assert imageFilenames != null;
                 Arrays.sort(imageFilenames);
 
                 imageIdx = imageFilenames.length - 1;
@@ -557,6 +600,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
             }
         } else if (requestCode == VIDEO_CAMERA_MODE)
         {
+            Log.i("camera result", String.valueOf(resultCode));
             if (resultCode == RESULT_OK)
             {
                 // see comment above for IMAGE_MODE
@@ -564,6 +608,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
 
                 // update file list and index (NOTE: current video is last file in list)
                 videoFilenames = mediaStorageDirectory.list(new MyFilenameFilter(".mp4"));
+                assert videoFilenames != null;
                 Arrays.sort(videoFilenames);
 
                 videoIdx = videoFilenames.length - 1;
@@ -635,7 +680,7 @@ public class DemoCameraActivity extends Activity implements OnClickListener, OnT
 
     // A filter used with listFiles (see above) to return only files with a specified extension
     // (e.g., ".jpg" or ".mp4")
-    class MyFilenameFilter implements FilenameFilter
+    static class MyFilenameFilter implements FilenameFilter
     {
         String extension;
 
