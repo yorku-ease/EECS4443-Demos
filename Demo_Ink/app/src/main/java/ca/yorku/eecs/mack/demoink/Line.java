@@ -23,4 +23,3 @@ class Line implements Serializable
 		strokeWidth = strokeWidthArg;
 	}
 }
-

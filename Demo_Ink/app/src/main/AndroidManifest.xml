@@ -13,7 +13,7 @@
         android:label="@string/app_name" >
         <activity
             android:name="ca.yorku.eecs.mack.demoink.DemoInkActivity"
-            android:label="@string/app_name" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

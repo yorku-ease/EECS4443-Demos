@@ -88,7 +88,7 @@ public class TouchModeButton extends View
     {
         width = widthArg;
         height = heightArg;
-        textPaint.setTextSize(width / 4);
+        textPaint.setTextSize((float) width / 4);
         xText = width / 2;
         yText = height / 2 - (int)(textPaint.ascent() / 3);
     }

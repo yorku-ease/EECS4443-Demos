@@ -14,8 +14,8 @@ class Stroke implements Serializable
 {
     private static final long serialVersionUID = 1L;
 
-    private transient Paint strokePaint;
-    private ArrayList<Line> strokeSegments;
+    private final transient Paint strokePaint;
+    private final ArrayList<Line> strokeSegments;
 
     Stroke(Paint strokePaintArg)
     {
