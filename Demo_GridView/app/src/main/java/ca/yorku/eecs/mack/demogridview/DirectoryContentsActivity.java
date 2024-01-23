@@ -52,6 +52,7 @@ public class DirectoryContentsActivity extends Activity implements AdapterView.O
 
         // Get a list of files in the directory, sorted by filename. See...
         files = directory.listFiles(new MyFilenameFilter(".jpg"));
+        assert files != null;
         Arrays.sort(files, new Comparator<File>()
         {
             public int compare(File f1, File f2)

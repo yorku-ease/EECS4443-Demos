@@ -11,7 +11,7 @@ public class DirectoryInfo
 {
     int numberOfImageFiles;
     String sampleImageFileName;
-    private File directory;
+    private final File directory;
 
     DirectoryInfo(File directoryArg, int numberOfImageFilesArg, String sampleImageFileNameArg)
     {

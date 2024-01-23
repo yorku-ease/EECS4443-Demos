@@ -6,8 +6,7 @@
     android:orientation="vertical"
     >
     <GridView android:id="@+id/directorygridview"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
+        android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:background="#ff222222"
               android:gravity="center"

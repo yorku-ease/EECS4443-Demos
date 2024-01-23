@@ -12,15 +12,15 @@ import java.util.ArrayList;
 
 /**
  * This code is more-or-less taken from the Android API Guide for GridView:
- *
- * http://developer.android.com/guide/topics/ui/layout/gridview.html
+ * <p>
+ * <a href="http://developer.android.com/guide/topics/ui/layout/gridview.html">...</a>
  */
 public class DirectoryAdapter extends BaseAdapter
 {
-    private ArrayList<DirectoryInfo> directoryInfo;
-    private ImageDownloader imageDownloader = new ImageDownloader();
+    private final ArrayList<DirectoryInfo> directoryInfo;
+    private final ImageDownloader imageDownloader = new ImageDownloader();
     private int columnWidth;
-    private Context context;
+    private final Context context;
 
     DirectoryAdapter(Context c, ArrayList<DirectoryInfo> directoryInfoArg)
     {
@@ -48,11 +48,11 @@ public class DirectoryAdapter extends BaseAdapter
 
     /**
      * Create a new DirectoryImageView for each item referenced by the Adapter.
-     *
+     * <p>
      * Note: DirectoryImageView is a subclass of ImageView. The only difference is the addition of a semi-transparent
      * grey band across the bottom of the view. The band display the directory name and the number of JPG files within
      * the directory.
-     *
+     * <p>
      * Note: As scrolling takes place on the GridView, old views are recycled, if possible.  In other words, when a view
      * in the grid is scrolled off the display, that same view is used for the data/image of a view being scrolled onto
      * the display.

@@ -1,8 +1,11 @@
 package ca.yorku.eecs.mack.demogridview;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.DisplayMetrics;
@@ -12,7 +15,13 @@ import android.widget.GridView;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.Objects;
+
 import android.util.Log;
+import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 /**
  * <style> pre {font-size:110%} </style>
@@ -282,6 +291,7 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
     GridView directoryGridView; // the view in which to display the images
     DirectoryAdapter directoryAdapter; // interface between the view and images in the view
     ArrayList<DirectoryInfo> directoryInfo; // directory that contains at least one image/JPG file
+    private static final int PERMISSIONS_REQUEST_STORAGE = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -289,21 +299,22 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        String[] permissions;
+        // request READ_MEDIA_IMAGES permission when targeting SDK 33+, and READ_EXTERNAL_STORAGE otherwise (SDK 16-32)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissions = new String[] {Manifest.permission.READ_MEDIA_IMAGES};
+        } else {
+            permissions = new String[] {Manifest.permission.READ_EXTERNAL_STORAGE};
+        }
+
+        // request permission
+        ActivityCompat.requestPermissions(this, permissions, PERMISSIONS_REQUEST_STORAGE);
+
         // get a reference to the DirectoryImageView
         directoryGridView = (GridView)findViewById(R.id.directorygridview);
 
         // initialize the ArrayList to hold information about directories containing image files
         directoryInfo = new ArrayList<>();
-
-        /*
-         * Starting at the top of the public storage space, find all directories that contain at
-         * least one JPG file. Put the name of the directory, the number of image file and the
-         * name of a sample image file file in the ArrayLists just created.
-         */
-        File f = Environment.getExternalStorageDirectory();
-        traverse(f);
-
-        Log.i(MYDEBUG, "Number of image directories: " + directoryInfo.size());
 
         // create the DirectoryAdapter and pass it the array of directory info data
         directoryAdapter = new DirectoryAdapter(this, directoryInfo);
@@ -320,12 +331,6 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
                 .heightPixels / 3 - 12;
         directoryAdapter.setColumnWidth(columnWidth);
         directoryGridView.setColumnWidth(columnWidth);
-
-        // give the ImageAdapter to the GridView (and load the images)
-        directoryGridView.setAdapter(directoryAdapter);
-
-        // attach a click listener to the GridView (to respond to finger taps)
-        directoryGridView.setOnItemClickListener(this);
     }
 
     @Override
@@ -362,7 +367,7 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
                 .indexOf(".") > 0))
         {
             // get a list of all the entries in the directory
-            String entryArray[] = file.list();
+            String[] entryArray = file.list();
 
             // ensure that the list is not null
             if (entryArray != null)
@@ -375,7 +380,7 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
                 {
                     if (entry.toLowerCase().indexOf(".jpg") > 0)
                     {
-                        int n = file.list(new MyFilenameFilter(".jpg")).length;
+                        int n = Objects.requireNonNull(file.list(new MyFilenameFilter(".jpg"))).length;
                         directoryInfo.add(new DirectoryInfo(file, n, entry));
                         break;
                     }
@@ -391,6 +396,37 @@ public class DemoGridViewActivity extends Activity implements AdapterView.OnItem
                 }
             }
         }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == PERMISSIONS_REQUEST_STORAGE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission was granted
+                loadImages();
+            } else {
+                // Permission was denied
+                Toast.makeText(this, "Storage access denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void loadImages() {
+        /*
+         * Starting at the top of the public storage space, find all directories that contain at
+         * least one JPG file. Put the name of the directory, the number of image file and the
+         * name of a sample image file file in the ArrayLists just created.
+         */
+        File f = Environment.getExternalStorageDirectory();
+        traverse(f);
+
+        Log.i(MYDEBUG, "Number of image directories: " + directoryInfo.size());
+
+        // give the ImageAdapter to the GridView (and load the images)
+        directoryGridView.setAdapter(directoryAdapter);
+
+        // attach a click listener to the GridView (to respond to finger taps)
+        directoryGridView.setOnItemClickListener(this);
     }
 
     // A filter used with the list method (see above) to return only files with a specified

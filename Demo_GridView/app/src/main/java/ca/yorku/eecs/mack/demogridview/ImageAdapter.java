@@ -16,7 +16,7 @@ public class ImageAdapter extends BaseAdapter
     ImageDownloader imageDownloader = new ImageDownloader();
     int columnWidth;
 
-    private Context context;
+    private final Context context;
 
     public ImageAdapter(Context c)
     {
