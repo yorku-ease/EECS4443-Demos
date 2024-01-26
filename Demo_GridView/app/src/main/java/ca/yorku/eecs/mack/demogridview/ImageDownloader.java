@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * This helper class downloads images and binds them with the provided ImageView.
- *
+ * <p>
  * A local cache of downloaded images is maintained internally to improve performance.
  */
 public class ImageDownloader 
@@ -36,7 +36,7 @@ public class ImageDownloader
      */
     public void download(String pathArg, ImageView imageView, int widthArg) 
     {
-    	String path = pathArg;    	
+    	String path = pathArg;
     	int width = widthArg;
     	
         resetPurgeTimer();
@@ -125,7 +125,7 @@ public class ImageDownloader
         private String path;
         private final WeakReference<ImageView> imageViewReference;
         
-        private int viewWidth;
+        private final int viewWidth;
 
         public BitmapDownloaderTask(ImageView imageView, int displayWidthArg) 
         {

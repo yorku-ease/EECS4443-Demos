@@ -30,7 +30,7 @@ public class DirectoryImageView extends ImageView
 	{
 		super.onDraw(canvas);
 		canvas.drawRect(rect, rectPaint);
-		canvas.drawText(text, width / 2, 0.95f * height, textPaint);
+		canvas.drawText(text, (float) width / 2, 0.95f * height, textPaint);
 	}
 
 	@Override
