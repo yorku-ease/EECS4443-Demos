@@ -1,12 +1,19 @@
 package ca.yorku.eecs.mack.demolistview2;
 
+import android.Manifest;
 import android.app.ListActivity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.Arrays;
 
 /**
  * Demo_ListVew_2 - demonstrates presenting an array of images in a <code>ListView</code>.  The images are read from
@@ -55,11 +62,11 @@ import java.io.FilenameFilter;
  *
  * <blockquote> <table border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc" width="100"> <th align="center"
  * >Demo <th align="center" >Content (view class) <th align="center" >Source of Content
- *
+ * <p>
  * <tr> <td>Demo_ListView_1 <td>Strings (<code>TextView</code>) <td>Resources Array
- *
+ * <p>
  * <tr> <td>Demo_ListView_2 <td>Images (<code>ImageView</code>) <td>Device's internal memory card
- *
+ * <p>
  * <tr> <td>Demo_ListView_3 <td>Images (<code>ImageView</code>) <td>Internet web site
  *
  * </table> </blockquote> <p>
@@ -140,6 +147,7 @@ import java.io.FilenameFilter;
 public class DemoListView2Activity extends ListActivity
 {
     final static String MYDEBUG = "MYDEBUG"; // for Log.i messages
+    private static final int PERMISSIONS_REQUEST_IMAGES = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -148,27 +156,40 @@ public class DemoListView2Activity extends ListActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listviewlayout);
 
-        // get the directory of this device's camera images
-        File f = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
-
-        /*
-         * There should be a subdirectory named "Camera" within the directory returned by the method above.
-         * So, let's create a new File object for this directory before continuing.
-         */
-        File f2 = new File(f.getPath() + File.separator + "Camera");
-
-        // as a precaution, don't continue unless the directory exists
-        if (!f2.exists())
-        {
-            Log.i(MYDEBUG, "Oops! No directory named \"Camera\".  Exiting...");
-            this.finish();
+        String[] permissions;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissions = new String[] {Manifest.permission.READ_MEDIA_IMAGES};
+        } else {
+            permissions = new String[] {Manifest.permission.READ_EXTERNAL_STORAGE};
         }
 
-        // get a string array of the names of all the JPG files in the Camera directory
-        String[] imageFiles = f2.list(new MyFilenameFilter(".jpg"));
+        ActivityCompat.requestPermissions(this, permissions, PERMISSIONS_REQUEST_IMAGES);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == PERMISSIONS_REQUEST_IMAGES) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission was granted
+                loadImages();
+            } else {
+                // Permission was denied
+                Toast.makeText(this, "Storage access denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void loadImages() {
+        // get the directory of this device's camera images
+        File pictures = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File images = new File(pictures.getPath());
+
+        // get a string array of the names of all the JPG files in the Pictures directory
+        String[] imageFiles = pictures.list(new MyFilenameFilter(".jpg"));
+        Log.i("imageFiles", Arrays.toString(imageFiles));
 
         // we'll need the directory's path, so get that too
-        String path = f2.getAbsolutePath();
+        String path = images.getAbsolutePath();
 
         // give the array of image filenames and their path to the image adapter and use that to fill our ListView
         setListAdapter(new ImageAdapter(imageFiles, path));

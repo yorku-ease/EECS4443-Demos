@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * This helper class downloads images and binds them with the provided ImageView.
- *
+ * <p>
  * A local cache of downloaded images is maintained internally to improve performance.
  */
 class ImageDownloader
