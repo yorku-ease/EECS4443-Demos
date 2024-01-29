@@ -28,11 +28,11 @@ import android.util.Log;
  *
  * <blockquote> <table border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc" width="100"> <th align="center"
  * >Demo <th align="center" >Content (view class) <th align="center" >Source of Content
- *
+ * <p>
  * <tr> <td>Demo_ListView_1 <td>Strings (<code>TextView</code>) <td>Resources Array
- *
+ * <p>
  * <tr> <td>Demo_ListView_2 <td>Images (<code>ImageView</code>) <td>Device's internal memory card
- *
+ * <p>
  * <tr> <td>Demo_ListView_3 <td>Images (<code>ImageView</code>) <td>Internet web site
  *
  * </table> </blockquote> <p>
@@ -90,21 +90,23 @@ public class DemoListView3Activity extends ListActivity
 {
     final static String MYDEBUG = "MYDEBUG"; // for Log.i messages
 
-    private static final String[] URLS = {"http://www.yorku.ca/mack/nordichi2012-f1.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f2.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f3.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f4a.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f4b.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f5.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f6.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f7.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f8.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f9.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f10.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f11.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f12.jpg",
-            "http://www.yorku.ca/mack/nordichi2012-f13.jpg"};
-
+    private static final String[] URLS = {
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png",
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

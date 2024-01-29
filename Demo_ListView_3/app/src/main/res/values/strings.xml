@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Demo_ListView_3</string>
-    <string name="empty">Loading images...</string>
+    <string name="empty">Loading images…</string>
     <string name="noTasks">No tasks</string>
     <string name="random">Random</string>
     <string name="correct">Correct</string>
