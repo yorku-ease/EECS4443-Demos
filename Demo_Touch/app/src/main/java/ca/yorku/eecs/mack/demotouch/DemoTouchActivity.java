@@ -18,7 +18,7 @@ import java.util.Locale;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_Touch - demonstration of touch input on Android devices. This demo supports single touch only. </p>
  *
  * Related information: </p>
@@ -298,25 +298,25 @@ public class DemoTouchActivity extends Activity implements View.OnTouchListener
         String s = String.format(Locale.CANADA, "Touch event: %11s {x=%4.1f, y=%4.1f, p=%1.3f}", eventType, x, y, p);
         Log.i(MYDEBUG, s);
 
-        s = x == -1f ? "" : "" + (int)(x + 0.5f);
+        s = x == -1f ? "" : String.valueOf((int) (x + 0.5f));
         xText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.xEquals), s));
 
-        s = y == -1f ? "" : "" + (int)(y + 0.5f);
+        s = y == -1f ? "" : String.valueOf((int) (y + 0.5f));
         yText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.yEquals), s));
 
-        s = p == -1f ? "" : "" + (int)(100f * p + 0.5f); // x 100
+        s = p == -1f ? "" : String.valueOf((int) (100f * p + 0.5f)); // x 100
         pText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.pEquals), s));
 
-        s = (int)xVelocity == 0 ? "" : "" + (int)(xVelocity + 0.5f);
+        s = (int)xVelocity == 0 ? "" : String.valueOf((int) (xVelocity + 0.5f));
         vxText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.xEquals), s));
 
-        s = (int)yVelocity == 0 ? "" : "" + (int)(yVelocity + 0.5f);
+        s = (int)yVelocity == 0 ? "" : String.valueOf((int) (yVelocity + 0.5f));
         vyText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.yEquals), s));
 
-        s = (int)xFling == 0 ? "" : "" + (int)(xFling + 0.5f);
+        s = (int)xFling == 0 ? "" : String.valueOf((int) (xFling + 0.5f));
         flingxText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.flingXEquals), s));
 
-        s = (int)yFling == 0 ? "" : "" + (int)(yFling + 0.5f);
+        s = (int)yFling == 0 ? "" : String.valueOf((int) (yFling + 0.5f));
         flingyText.setText(String.format(Locale.CANADA, "%s%s", getResources().getString(R.string.flingYEquals), s));
     }
 
