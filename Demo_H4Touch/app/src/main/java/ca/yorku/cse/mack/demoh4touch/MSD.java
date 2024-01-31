@@ -70,7 +70,7 @@ package ca.yorku.cse.mack.demoh4touch;
  ******************************************************************/
 public class MSD
 {
-	private String s1, s2;
+	private final String s1, s2;
 	private int[][] d;
 
 	/**

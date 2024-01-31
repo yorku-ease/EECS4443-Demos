@@ -2,7 +2,7 @@ package ca.yorku.cse.mack.demoh4touch;
 
 /** StringPair - A simple class to hold a pair of
 * strings.
-*
+* <p>
 * Used by the <code>MSD</code> and <code>ErrorMatrix</code> classes.  
 */
 public class StringPair

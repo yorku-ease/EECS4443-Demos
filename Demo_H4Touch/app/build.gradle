@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 12
-    buildToolsVersion "22.0.1"
+    compileSdk 33
 
     defaultConfig {
         applicationId "ca.yorku.cse.mack.demoh4touch"
-        minSdkVersion 10
-        targetSdkVersion 10
+        minSdk 13
+        targetSdk 33
     }
 
     buildTypes {
