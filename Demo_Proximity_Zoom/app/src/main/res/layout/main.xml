@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/instructions"
         android:text="@string/instructions"
-        android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <LinearLayout
         android:id="@+id/image_container"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#ff123456"
-            android:contentDescription="@string/image_view_text"></ImageView>
+            android:contentDescription="@string/image_view_text" />
     </LinearLayout>
 
     <LinearLayout

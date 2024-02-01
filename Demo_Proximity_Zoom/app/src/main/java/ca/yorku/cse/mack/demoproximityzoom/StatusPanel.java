@@ -64,7 +64,7 @@ public class StatusPanel extends View
 
 	protected void onDraw(Canvas canvas)
 	{
-		final float fieldWidth = (this.getWidth() / 2);
+		final float fieldWidth = ((float) this.getWidth() / 2);
 		canvas.drawText("x = " + x, margin + 0 * fieldWidth, 1 * (textSize + textSize / 4), p);
 		canvas.drawText("w = " + w, margin + 1 * fieldWidth, 1 * (textSize + textSize / 4), p);
 		canvas.drawText("y = " + y, margin + 0 * fieldWidth, 2 * (textSize + textSize / 4), p);
