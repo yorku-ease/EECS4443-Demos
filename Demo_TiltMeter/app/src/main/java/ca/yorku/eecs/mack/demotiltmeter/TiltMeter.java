@@ -176,7 +176,7 @@ public class TiltMeter extends View
         xCircle = xCenter + radius * (float)Math.sin(Math.toRadians(tiltAngle));
         yCircle = yCenter - radius * (float)Math.cos(Math.toRadians(tiltAngle));
 
-        tiltMagnitude = tiltMagnitude > MAX_MAGNITUDE ? MAX_MAGNITUDE : tiltMagnitude;
+        tiltMagnitude = Math.min(tiltMagnitude, MAX_MAGNITUDE);
         xMagnitude = xCenter + (tiltMagnitude / MAX_MAGNITUDE) * radius * (float)Math.sin(Math.toRadians(tiltAngle));
         yMagnitude = yCenter - (tiltMagnitude / MAX_MAGNITUDE) * radius * (float)Math.cos(Math.toRadians(tiltAngle));
 

@@ -11,5 +11,4 @@
     <string name="radioButton2Label">Accelerometer + Magnetic Field</string>
     <string name="radioButton3Label">Accelerometer only</string>
 
-
 </resources>
