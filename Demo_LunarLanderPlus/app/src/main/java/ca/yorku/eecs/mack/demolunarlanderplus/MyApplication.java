@@ -10,12 +10,12 @@ import android.os.Bundle;
  * onRestart method is only called if the app is being launched having previously been stopped but
  * not destroyed.
  * <p>
- * 
- * See http://developer.android.com/guide/components/activities.html
+ *
+ * See <a href="http://developer.android.com/guide/components/activities.html">Activities</a>
  * <p>
- * 
+ *
  * @author (c) Scott MacKenzie, 2013
- * 
+ *
  */
 public class MyApplication extends Application
 {

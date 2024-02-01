@@ -108,8 +108,8 @@ public class ButtonPad extends View
 	{
 		width = widthArg;
 		height = heightArg;
-		textPaint.setTextSize(width / 8);
-		pressedTextPaint.setTextSize(width / 8);
+		textPaint.setTextSize((float) width / 8);
+		pressedTextPaint.setTextSize((float) width / 8);
 		centerX = (int)(width / 2f + 0.5f);
 		centerY = (int)(height / 2f + 0.5f);
 
@@ -190,12 +190,12 @@ public class ButtonPad extends View
 
 	/**
 	 * Get the button at the indicated x/y coordinate.
-	 * 
+	 * <p>
 	 * Will return one of ButtonPad.CENTER, ButtonPad.UP, etc.
-	 * 
+	 * <p>
 	 * The algebra here is a bit tricky, but it works. First, identify if the touch point is in the
 	 * center button. This is straight forward.
-	 * 
+	 * <p>
 	 * If the touch point is not in the center button, then compute the angle of the touch point
 	 * relative to the top-left and top-right corners of the button pad. The combination of these
 	 * two angles is used to determine which of the four remaining regions the touch point lies
@@ -228,7 +228,7 @@ public class ButtonPad extends View
 
 	/**
 	 * Set the state of the button to pressed. Invalidate to update L&F.
-	 * 
+	 * <p>
 	 * If this seems overly complicated, it's because we are supporting multitouch interaction on
 	 * the button pad. There is the possibility of >1 button being pressed simultaneously. So, we
 	 * want to set to pressed the indicated button while not changing the state of the other
@@ -304,7 +304,7 @@ public class ButtonPad extends View
 
 		// Middle section (top to bottom)
 		int[] colorArray = { color & 0x00ffffff, color, color, color & 0x00ffffff };
-		float[] positionArray = { 0f, gradientSize / width, 1f - gradientSize / width, 1f };
+		float[] positionArray = { 0f, (float) gradientSize / width, 1f - (float) gradientSize / width, 1f };
 		LinearGradient lg = new LinearGradient(width / 2f, 0, width / 2f, height, colorArray, positionArray, Shader
 				.TileMode.CLAMP);
 		p.setShader(lg);
@@ -375,12 +375,12 @@ public class ButtonPad extends View
 		float[] positionArray = { 0f, 1f - (float)gradientSize / diameter, 1f };
 
 		// create the shader and give it to the paint instance
-		RadialGradient rg = new RadialGradient(diameter / 2, diameter / 2, diameter / 2, colorArray, positionArray,
+		RadialGradient rg = new RadialGradient((float) diameter / 2, (float) diameter / 2, (float) diameter / 2, colorArray, positionArray,
 				Shader.TileMode.CLAMP);
 		p.setShader(rg);
 		
 		// draw the gradient circle into the bitmap and return the bitmap
-		canvas.drawCircle(diameter / 2, diameter / 2, diameter / 2, p);
+		canvas.drawCircle((float) diameter / 2, (float) diameter / 2, (float) diameter / 2, p);
 		return bitmap;
 	}
 }
