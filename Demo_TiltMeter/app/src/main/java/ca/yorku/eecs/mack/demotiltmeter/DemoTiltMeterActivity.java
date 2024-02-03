@@ -15,7 +15,7 @@ import android.view.WindowManager;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_TiltMeter - demo application that displays a tilt meter. </p>
  *
  * Related information: </p>
@@ -90,14 +90,14 @@ import android.view.WindowManager;
  *
  * <blockquote> <table border="1" cellspacing="0" cellpadding="6"> <tr bgcolor="#cccccc"> <th>Sensor Mode <th>Sensor's
  * Used <th>This Mode Is Used If... <th>Example Devices
- *
+ * <p>
  * <tr> <td><font size="-1">ORIENTATION</font> <td><code>TYPE_ORIENTATION</code> <td>the device has an orientation
  * sensor <td>LG <i>Nexus 4</i>, Samsung <i>Galaxy Tab 10.1</i>
- *
+ * <p>
  * <tr> <td><font size="-1">ACCELEROMETER_AND_MAGNETIC_FIELD</font> <td><code>TYPE_ACCELEROMETER</code> and<br>
  * <code>TYPE_MAGNETIC_FIELD</code> <td>the device does not have an orientation sensor but has both an accelerometer and
  * a magnetic field sensor <td align="center">?
- *
+ * <p>
  * <tr> <td><font size="-1">ACCELEROMETER_ONLY</font> <td><code>TYPE_ACCELEROMETER</code> <td>the device has an
  * accelerometer but no orientation sensor and no magnetic field sensor <td>HTC <i>Desire C</i>, Asus <i>MeMO Pad</i>
  * </table>
@@ -170,6 +170,7 @@ public class DemoTiltMeterActivity extends Activity implements SensorEventListen
     private void initialize()
     {
         Bundle b = getIntent().getExtras();
+        assert b != null;
         samplingRate = b.getInt("sensorSamplingRate");
         sensorMode = b.getInt("sensorMode");
 
