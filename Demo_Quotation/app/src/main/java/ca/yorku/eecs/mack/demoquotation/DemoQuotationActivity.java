@@ -28,7 +28,7 @@ import java.util.Random;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_Quotation - demo program to display quotations by famous people. Also includes a quiz to test the user's
  * knowledge of quotations. </p>
  *

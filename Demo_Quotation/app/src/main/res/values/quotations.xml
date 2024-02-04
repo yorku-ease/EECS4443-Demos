@@ -4,7 +4,7 @@
     <!--
     Each entry is in four parts: name, dates, quotation, bio 
     
-    NOTE: If a new entry is inserted before "Al Capone", adjust the baseIndexImage in the main activity!
+    NOTE: If a new entry is inserted before "Al Capone", adjust the baseIndexImage in the main activity!
     -->
     <array name="quotations">
         <item>Abraham Lincoln      #(1809-1865)  #Folks are usually about as happy as they make their minds up to be.#An American president serving from 1861 until his assassination in 1865. Lincoln led the United States through its Civil War. In so doing he preserved the Union, abolished slavery, strengthened the national government and modernized the economy.</item>
