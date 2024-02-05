@@ -664,15 +664,15 @@ public class DemoInkActivity extends Activity implements View.OnTouchListener, V
         if (direction == DARKER)
         {
             // attempt a 1% decrease on each color
-            red = red - (int)(0.01f * COLOR_MAX) < 0 ? 0 : red - (int)(0.01f * COLOR_MAX);
-            green = green - (int)(0.01f * COLOR_MAX) < 0 ? 0 : green - (int)(0.01f * COLOR_MAX);
-            blue = blue - (int)(0.01f * COLOR_MAX) < 0 ? 0 : blue - (int)(0.01f * COLOR_MAX);
+            red = Math.max(red - (int) (0.01f * COLOR_MAX), 0);
+            green = Math.max(green - (int) (0.01f * COLOR_MAX), 0);
+            blue = Math.max(blue - (int) (0.01f * COLOR_MAX), 0);
         } else if (direction == LIGHTER)
         {
             // attempt a 1% increase on each color
-            red = red + (int)(0.01f * COLOR_MAX) > COLOR_MAX ? COLOR_MAX : red + (int)(0.01f * COLOR_MAX);
-            green = green + (int)(0.01f * COLOR_MAX) > COLOR_MAX ? COLOR_MAX : green + (int)(0.01f * COLOR_MAX);
-            blue = blue + (int)(0.01f * COLOR_MAX) > COLOR_MAX ? COLOR_MAX : blue + (int)(0.01f * COLOR_MAX);
+            red = Math.min(red + (int) (0.01f * COLOR_MAX), COLOR_MAX);
+            green = Math.min(green + (int) (0.01f * COLOR_MAX), COLOR_MAX);
+            blue = Math.min(blue + (int) (0.01f * COLOR_MAX), COLOR_MAX);
         }
 
         // put the adjusted RGB components back together in inkColor
@@ -736,7 +736,6 @@ public class DemoInkActivity extends Activity implements View.OnTouchListener, V
      *
      * http://developer.android.com/guide/topics/resources/runtime-changes.html
      */
-    @SuppressWarnings("unchecked")
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState)
     {
