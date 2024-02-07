@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 /**
  * View that draws for a simple LunarLander game.
- * 
+ * <p>
  * Has a mode which is RUNNING, PAUSED, etc. Has x, y, dx, dy, ... capturing the current ship
  * physics. All x/y, etc., are measured with (0,0) at the lower left. updatePhysics() advances the
  * physics based on realtime. draw() renders the ship, and does an invalidate() to prompt another
@@ -39,7 +39,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 	private TextView statusText;
 
 	// pointer to the surface holder (to fetch the canvas to draw into)
-	private SurfaceHolder surfaceHolder;
+	private final SurfaceHolder surfaceHolder;
 
 	// the secondary thread that actually draws the animation
 	private LunarThread lunarThread;
@@ -242,17 +242,17 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 
 		private Vibrator v; // used when engine is fired
 		private Bitmap backgroundImage; // drawable to use as the background of the animation canvas
-		private Drawable crashedImage; // what to draw for the lander when it crashes
-		private Drawable firingImage; // what to draw for the Lander when the engine is firing
-		private Drawable landerImage; // what to draw for the lander in its normal state
-		private Handler handler; // message handler used by thread to interact with TextView
+		private final Drawable crashedImage; // what to draw for the lander when it crashes
+		private final Drawable firingImage; // what to draw for the Lander when the engine is firing
+		private final Drawable landerImage; // what to draw for the lander in its normal state
+		private final Handler handler; // message handler used by thread to interact with TextView
 		private final SurfaceHolder surfaceHolder; // handle to the surface manager object we interact
 												// with
-		private Paint linePaint; // paint to draw the lines on the the screen
-		private Paint fillPaint;
-		private Paint fillPaintTooFast; // speed-too-high variant of the line color
-		private Paint resultsPaint;
-		private Paint landingPadPaint;
+		private final Paint linePaint; // paint to draw the lines on the the screen
+		private final Paint fillPaint;
+		private final Paint fillPaintTooFast; // speed-too-high variant of the line color
+		private final Paint resultsPaint;
+		private final Paint landingPadPaint;
 		private int canvasHeight = 1; // current height of the surface/canvas
 		private int canvasWidth = 1; // current width of the surface/canvas
 		private int difficulty; // current difficulty -- amount of fuel, allowed angle, etc. Default
@@ -275,14 +275,14 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 		private int rotating; // currently rotating: -1 =left, 0 = now, 1 = right
 		private boolean run = false; // indicate whether the surface has been created & is ready to
 										// draw
-		private RectF scratchRect; // scratch rectangle object
+		private final RectF scratchRect; // scratch rectangle object
 		private double x; // x of the lander center
 		private double y; // y of the lander center
 
 		//private float pixelDensity;
 		private float barWidth, barHeight;
 		private float hGap;
-		private float landingPadHeight;
+		private final float landingPadHeight;
 		private int totalWins, winsInARow;
 		private int totalTries;
 		private long elapsedTime;
@@ -360,8 +360,8 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				landerHeight = landerImage.getIntrinsicHeight();
 				landingPadX = 10;
 				landingPadWidth = (int)(landerWidth * LANDING_PAD_WIDTH_FACTOR);
-				x = landingPadX + landingPadWidth / 2;
-				y = LANDING_PAD_HEIGHT + landerHeight / 2 - LANDER_FUEL_GAP;
+				x = landingPadX + (double) landingPadWidth / 2;
+				y = LANDING_PAD_HEIGHT + (double) landerHeight / 2 - LANDER_FUEL_GAP;
 				dx = 0;
 				dy = 0;
 				heading = 0;
@@ -410,8 +410,8 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				}
 
 				// pick a convenient initial location for the lander sprite
-				x = canvasWidth / 2;
-				y = canvasHeight - landerHeight / 2;
+				x = (double) canvasWidth / 2;
+				y = canvasHeight - (double) landerHeight / 2;
 
 				// start with a little random motion
 				dy = Math.random() * -speedInit;
@@ -422,7 +422,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				while (true)
 				{
 					landingPadX = (int)(Math.random() * (canvasWidth - landingPadWidth));
-					if (Math.abs(landingPadX - (x - landerWidth / 2)) > canvasHeight / 6.0)
+					if (Math.abs(landingPadX - (x - (double) landerWidth / 2)) > canvasHeight / 6.0)
 						break;
 				}
 
@@ -825,11 +825,11 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			canvas.drawText("Speed", hGap + barWidth + hGap, 4 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// wins
-			canvas.drawText("" + totalWins, 0.70f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
+			canvas.drawText(String.valueOf(totalWins), 0.70f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
 			canvas.drawText("Wins", 0.70f * canvasWidth, 4 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// tries
-			canvas.drawText("" + totalTries, 0.80f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
+			canvas.drawText(String.valueOf(totalTries), 0.80f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
 			canvas.drawText("Tries", 0.80f * canvasWidth, 4 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// time
@@ -960,7 +960,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			futureTime = now;
 
 			// Evaluate if we have landed ... stop the game
-			double yLowerBound = LANDING_PAD_HEIGHT + landerHeight / 2 - TARGET_BOTTOM_PADDING;
+			double yLowerBound = LANDING_PAD_HEIGHT + (double) landerHeight / 2 - TARGET_BOTTOM_PADDING;
 			CharSequence message = "";
 			Resources res = context.getResources();
 			if (y <= yLowerBound)
@@ -969,7 +969,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 
 				int result = STATE_LOSE;
 				double speed = Math.sqrt(dx * dx + dy * dy);
-				boolean onGoal = (landingPadX <= x - landerWidth / 2 && x + landerWidth / 2 <= landingPadX
+				boolean onGoal = (landingPadX <= x - (double) landerWidth / 2 && x + (double) landerWidth / 2 <= landingPadX
 						+ landingPadWidth);
 
 				// "Hyperspace" win -- upside down, going fast, puts you back at the top.
@@ -1003,7 +1003,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				setState(result, message);
 			}
 			// added (29/3/2013) to check if the lander has ventured off the canvas
-			else if (x + landerWidth / 2 < 0 || x - landerWidth / 2 > canvasWidth)
+			else if (x + (double) landerWidth / 2 < 0 || x - (double) landerWidth / 2 > canvasWidth)
 			{
 				message = res.getText(R.string.message_off_screen);
 				++totalTries;
