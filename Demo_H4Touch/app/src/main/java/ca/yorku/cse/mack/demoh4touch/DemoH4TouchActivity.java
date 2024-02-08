@@ -41,7 +41,7 @@ public class DemoH4TouchActivity extends Activity implements OnClickListener, H4
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);  
+		setContentView(R.layout.main);
         
 		transcribedTextField = (EditText)findViewById(R.id.transcribedtextfield);
 		transcribedText = "";
