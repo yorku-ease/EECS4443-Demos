@@ -1,15 +1,15 @@
 package ca.yorku.eecs.mack.demovoiceemail;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.media.MediaScannerConnection;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -17,14 +17,16 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Locale;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_VoiceEmail - demonstrate recording and playing back audio and sending audio as a voice email <p>
  *
  * Related information: <p>
@@ -170,7 +172,6 @@ import java.util.Locale;
  * <img src="./javadoc_images/DemoVoiceEmail-5.jpg">
  * </center>
  * <p>
-
  * When playing back the
  * recorded message, the duration of the playback is known, since the message has already been recorded.  The
  * animation in this case is a yellow bar that grows in size, filling the gray bar when the playback is
@@ -180,8 +181,8 @@ import java.util.Locale;
  * <p>
  * NOTE: Jan 6, 2016.  This demo app stopped working when I tried it on my new device, a Nexus 5x running Android 6. The
  * message "can't attach empty file" was generated when tapping the Gmail icon to send the voice message by email. Once
- * again, StackOverflow provided a quick fix: http://stackoverflow
- * .com/questions/32318692/android-attaching-a-file-to-gmail-cant-attach-empty-file").
+ * again, StackOverflow provided a quick fix:
+ * (<a href="http://stackoverflow.com/questions/32318692/android-attaching-a-file-to-gmail-cant-attach-empty-file">StackOverflow</a>).
  * The fix is required when running this app on Android 6.  Go to Settings > Apps > Gmail > Permissions,  and enable the
  * "Storage" permission manually.
  *
@@ -190,10 +191,11 @@ import java.util.Locale;
 public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnErrorListener
 {
     final static String MYDEBUG = "MYDEBUG"; // for Log.i messages
-    final String WORKING_DIRECTORY = "/VoiceEmailStuff/";
+    final String WORKING_DIRECTORY = "VoiceEmailStuff";
     final int TEN_MINUTES = 1000 * 60 * 10;
     final int ONE_SECOND = 1000; // ms
     final int ONE_TWENTIETH_SECOND = 50; // ms
+    private static final int PERMISSIONS_RECORD_AUDIO = 1;
 
     ImageButton playButton, stopPlayButton, recordButton, stopRecordButton, sendButton;
     TextView recordTime, playbackTime;
@@ -210,8 +212,8 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
     /**
      * MediaPlayer is rather heavy, so getting the duration of the recorded message is a bit of a challenge.  The
      * following StackOverflow posting provides this simple static method that does the trick:
-     *
-     * https://stackoverflow.com/questions/15394640/get-duration-of-audio-file
+     * <p>
+     * <a href="https://stackoverflow.com/questions/15394640/get-duration-of-audio-file">Getting duration of audio file</a>
      */
     private static long getDuration(File file)
     {
@@ -227,6 +229,12 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        // need to request permission at runtime for Android 6.0 (API 23) and above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            String[] permissions = new String[] {Manifest.permission.RECORD_AUDIO};
+            requestPermissions(permissions, PERMISSIONS_RECORD_AUDIO);
+        }
+
         // get views by ID
         recordButton = (ImageButton)findViewById(R.id.recordbutton);
         stopRecordButton = (ImageButton)findViewById(R.id.stopbutton1);
@@ -240,7 +248,7 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
         playbackProgress = (ProgressBar)findViewById(R.id.determinateBar);
 
         // if it does not yet exist, create the directory for the voice recordings to be saved into
-        dataDirectory = new File(Environment.getExternalStorageDirectory() + WORKING_DIRECTORY);
+        dataDirectory = new File(getExternalFilesDir(null), WORKING_DIRECTORY);
         if (!dataDirectory.exists() && !dataDirectory.mkdir())
         {
             Log.i(MYDEBUG, "Failed to create directory: " + dataDirectory.toString());
@@ -269,7 +277,7 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
             // update the progress bar 20x per second
             public void onTick(long millisUntilFinished)
             {
-                elapsedTime = 1000 * playbackSeconds + (ONE_SECOND - millisUntilFinished);
+                elapsedTime = 1000L * playbackSeconds + (ONE_SECOND - millisUntilFinished);
                 progress = (int)(elapsedTime / playbackDuration * 100.0);
                 playbackProgress.setProgress(progress);
             }
@@ -445,16 +453,15 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
                 return;
             }
 
-            Uri voiceMessage = Uri.parse("file://" + audioFilename);
             Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
             emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
             // add your name when the email intent launches
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Voice message from ");
 
-            emailIntent.putExtra(Intent.EXTRA_STREAM, voiceMessage);
-            //emailIntent.setType("audio/3gp");
-            emailIntent.setType("audio/mp4");
+            emailIntent.putExtra(Intent.EXTRA_STREAM, audioFilename);
+            emailIntent.setType("audio/3gp");
+//            emailIntent.setType("audio/mp4");
             startActivity(Intent.createChooser(emailIntent, "Send email using..."));
         }
     }
@@ -532,10 +539,10 @@ public class DemoVoiceEmailActivity extends Activity implements MediaPlayer.OnEr
      */
     private String getTimeString(int secondsArg)
     {
-        String seconds = "" + secondsArg % 60;
+        String seconds = String.valueOf(secondsArg % 60);
         if (seconds.length() == 1)
             seconds = "0" + seconds;
-        String minutes = secondsArg / 60 < 10 ? "" + secondsArg / 60 : "?";
+        String minutes = secondsArg / 60 < 10 ? String.valueOf(secondsArg / 60) : "?";
         return minutes + ":" + seconds;
     }
 
