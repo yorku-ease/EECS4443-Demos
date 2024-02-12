@@ -1,13 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '27.0.3'
+    namespace 'ca.yorku.eecs.mack.democamera'
+    compileSdk 34
 
     defaultConfig {
         applicationId "ca.yorku.eecs.mack.democamera"
-        minSdkVersion 13
-        targetSdkVersion 22
+        minSdkVersion 14
+        targetSdk 34
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
@@ -15,5 +19,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+
+    dependencies {
+        implementation 'androidx.core:core:1.12.0'
     }
 }
