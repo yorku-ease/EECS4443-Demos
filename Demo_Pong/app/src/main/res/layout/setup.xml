@@ -17,8 +17,8 @@
 
         <!-- Title and Subtitle -->
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                      android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:layout_gravity="center_horizontal"
                       android:gravity="center_horizontal"
@@ -96,7 +96,7 @@
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_participant_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -104,7 +104,7 @@
                 <Spinner
                     android:id="@+id/param_participant"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:singleLine="true"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -112,7 +112,7 @@
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_condition_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -120,7 +120,7 @@
                 <Spinner
                     android:id="@+id/param_condition"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
@@ -128,7 +128,7 @@
 
                 <TextView
                     android:id="@+id/param_group_text"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_group_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -136,14 +136,14 @@
                 <Spinner
                     android:id="@+id/param_group"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_level_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -151,14 +151,14 @@
                 <Spinner
                     android:id="@+id/param_level"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_trials_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -166,14 +166,14 @@
                 <Spinner
                     android:id="@+id/param_trials"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_sequences_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -181,14 +181,14 @@
                 <Spinner
                     android:id="@+id/param_sequences"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_tilt_range_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -196,14 +196,14 @@
                 <Spinner
                     android:id="@+id/param_tilt_range"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
  
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_tilt_center_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -211,14 +211,14 @@
                 <Spinner
                     android:id="@+id/param_tilt_center"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="5dp"
                     android:text="@string/param_gain_velocity_control_text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -226,7 +226,7 @@
                 <Spinner
                     android:id="@+id/param_gain_velocity_control"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 

@@ -99,9 +99,10 @@
             android:id="@+id/touch_strip"
             android:layout_width="120dp"
             android:layout_height="320dp"
-            android:layout_gravity="left|bottom"
+            android:layout_gravity="start|bottom"
             android:layout_marginBottom="32dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             class="ca.yorku.eecs.mack.demopong.TouchStrip"
             android:visibility="invisible" />
     </LinearLayout>

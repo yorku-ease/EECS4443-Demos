@@ -70,6 +70,9 @@ public class ResultsView extends View
 		// get ball image
 		ballVictory = context.getResources().getDrawable(R.drawable.happy_face_ball);
 
+		// initialise resultsBitmap to avoid nullPointerException
+		resultsBitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
+
 		pixelDensity = context.getResources().getDisplayMetrics().density;
 		ballRadius = DEFAULT_BALL_DIAMETER / 2f * pixelDensity;
 		xBall = 100;
