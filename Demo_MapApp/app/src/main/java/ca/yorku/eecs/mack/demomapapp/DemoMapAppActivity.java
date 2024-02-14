@@ -1,16 +1,22 @@
 package ca.yorku.eecs.mack.demomapapp;
 
+import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.widget.DrawerLayout;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +31,7 @@ import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -33,11 +40,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Locale;
-import android.util.Log;
+import java.util.Objects;
 
 /**
  * <style> pre {font-size:110%} </style>
- *
+ * <p>
  * Demo_MapApp - demonstrates a UI containing a Google Maps map. Also demonstrates using a Navigation Drawer. <p>
  *
  * Related Information: </p>
@@ -102,7 +109,12 @@ import android.util.Log;
  * <pre>
  *      GoogleMap myMap;
  *      ...
- *      myMap = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+ *      ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(new OnMapReadyCallback() {
+ *          `@Override
+ *          public void onMapReady(@NonNull GoogleMap googleMap) {
+ *              myMap = googleMap;
+ *          }
+ *      });
  * </pre>
  *
  * Thereafter, it is a simple matter of listening for UI events and then manipulating the map through methods of the
@@ -133,18 +145,18 @@ import android.util.Log;
  *
  * <center> <table border="1" cellspacing="0" cellpadding="6" width="80%"> <tr bgcolor="#cccccc"> <th>Camera View
  * Parameter <th>Data Type <th>Description
- *
+ * <p>
  * <tr> <td align="center">Target <td align="center"><code>LatLng</code> <td>Sets the location the camera is pointing
  * at. The target location is specified through a <code>LatLng</code> object which holds the latitude and longitude of
  * the location.
- *
+ * <p>
  * <tr> <td align="center">Zoom <td align="center"><code>float</code> <td>Sets the zoom level of the camera. Zoom ranges
  * from 0 to 21. At zoom = 0, the entire world is rendered with a width of 256 dp (density independent pixels). Adding 1
  * to zoom doubles the width.
- *
+ * <p>
  * <tr> <td align="center">Bearing <td align="center"><code>float</code> <td>Sets the direction the camera is pointing,
  * in degrees clockwise from north. North is 0 degrees (= 360 degrees). South is 180 degrees.
- *
+ * <p>
  * <tr> <td align="center">Tilt <td align="center"><code>float</code> <td>Sets the angle, in degrees, of the camera from
  * the nadir (directly facing the Earth). The minimum is 0 (looking directly down). The maximum ranges from 30 to 67.5,
  * depending on the current zoom. (<a href= "http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html#tilt%28float%29"
@@ -378,6 +390,7 @@ public class DemoMapAppActivity extends FragmentActivity
     private final static int RESTORE = 1;
     private final static int SETTINGS = 2;
     private final static int HELP = 3;
+    private final int PERMISSION_REQUEST_LOCATION = 100;
 
     // preset/bookmark buttons (initialized from resources in onCreate)
     CameraPosition[] bookmarks;
@@ -421,13 +434,13 @@ public class DemoMapAppActivity extends FragmentActivity
         setContentView(R.layout.main);
         //Log.i(MYDEBUG, "onCreate!");
 
-        ontario = (Button)findViewById(R.id.ontario);
-        york = (Button)findViewById(R.id.york_university);
-        ottawa = (Button)findViewById(R.id.ottawa_parliament_bldgs);
-        muskoka = (Button)findViewById(R.id.muskoka);
-        cameraControlModeButton = (Button)findViewById(R.id.seek);
-        seekBar = (SeekBar)findViewById(R.id.seek_bar);
-        seekValue = (TextView)findViewById(R.id.seek_value);
+        ontario = (Button) findViewById(R.id.ontario);
+        york = (Button) findViewById(R.id.york_university);
+        ottawa = (Button) findViewById(R.id.ottawa_parliament_bldgs);
+        muskoka = (Button) findViewById(R.id.muskoka);
+        cameraControlModeButton = (Button) findViewById(R.id.seek);
+        seekBar = (SeekBar) findViewById(R.id.seek_bar);
+        seekValue = (TextView) findViewById(R.id.seek_value);
 
         // initialize SharedPreferences instance
         sp = PreferenceManager.getDefaultSharedPreferences(this);
@@ -438,7 +451,7 @@ public class DemoMapAppActivity extends FragmentActivity
         cameraControlMode = ZOOM; // default
 
         // init vibrator (used for long-press gesture)
-        vib = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // load the preset locations (bookmarks)
         bookmarkNames = this.getResources().getStringArray(R.array.locations); // for markers
@@ -456,13 +469,13 @@ public class DemoMapAppActivity extends FragmentActivity
                     .build();
         }
 
-		/*
+        /*
          * Setup the Navigation Drawer to hold the preset/bookmark locations. See...
-		 * 
-		 * http://developer.android.com/training/implementing-navigation/nav-drawer.html
-		 */
-        myDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        myDrawerList = (ListView)findViewById(R.id.left_drawer);
+         *
+         * http://developer.android.com/training/implementing-navigation/nav-drawer.html
+         */
+        myDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        myDrawerList = (ListView) findViewById(R.id.left_drawer);
         myDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, bookmarkNames));
         myDrawerList.setOnItemClickListener(new MyDrawerItemClickListener());
 
@@ -473,8 +486,7 @@ public class DemoMapAppActivity extends FragmentActivity
         builder.setTitle(R.string.camera_control_mode_dialog_title);
         builder.setItems(cameraControlModeOptions, new DialogInterface.OnClickListener()
         {
-            public void onClick(DialogInterface dialog, int which)
-            {
+            public void onClick(DialogInterface dialog, int which) {
                 // update the label in the button to reflect the new camera control mode
                 cameraControlModeButton.setText(cameraControlModeOptions[which]);
 
@@ -488,11 +500,9 @@ public class DemoMapAppActivity extends FragmentActivity
                 updateSeekBar(myMap.getCameraPosition());
             }
 
-        }).setOnCancelListener(new DialogInterface.OnCancelListener()
-        {
+        }).setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
-            public void onCancel(DialogInterface dialog)
-            {
+            public void onCancel(DialogInterface dialog) {
                 // (re)attach the listener
                 seekBar.setOnSeekBarChangeListener(mySeekBarListener);
             }
@@ -506,8 +516,7 @@ public class DemoMapAppActivity extends FragmentActivity
     /*
      * Only one setting, so this is overkill, but we might add new settings later.
      */
-    private void loadSettings()
-    {
+    private void loadSettings() {
         // build keys (makes the code more readable)
         final String SATELLITE_KEY = getBaseContext().getString(R.string.pref_satellite);
 
@@ -517,8 +526,7 @@ public class DemoMapAppActivity extends FragmentActivity
     }
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
         //Log.i(MYDEBUG, "onResume!");
         //setUpMapIfNeeded();
@@ -532,12 +540,16 @@ public class DemoMapAppActivity extends FragmentActivity
     private void setUpMapIfNeeded()
     {
         // do a null check to confirm that we have not already instantiated the map
-        if (myMap == null)
-        {
+        if (myMap == null) {
             //Log.i(MYDEBUG, "Try to obtain map...");
 
             // try to obtain the map from the SupportMapFragment
-            myMap = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+            ((SupportMapFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.map))).getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(@NonNull GoogleMap googleMap) {
+                    myMap = googleMap;
+                }
+            });
 
             //if (myMap == null)
             //    Log.i(MYDEBUG, "No map!");
@@ -549,6 +561,22 @@ public class DemoMapAppActivity extends FragmentActivity
             {
                 int mapType = satellite ? GoogleMap.MAP_TYPE_SATELLITE : GoogleMap.MAP_TYPE_NORMAL;
                 myMap.setMapType(mapType);
+
+                // request location permission at runtime
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                        ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    String[] permissions;
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                        permissions = new String[] {Manifest.permission.ACCESS_FINE_LOCATION};
+                    } else {
+                        permissions = new String[] {Manifest.permission.ACCESS_COARSE_LOCATION};
+                    }
+
+                    ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_LOCATION);
+
+                    return;
+                }
+
                 myMap.setMyLocationEnabled(true);
                 myMap.setOnCameraChangeListener(new MyOnCameraChangeListener());
                 myMap.setOnMapLongClickListener(new MyOnMapLongClickListener(this));
@@ -557,6 +585,16 @@ public class DemoMapAppActivity extends FragmentActivity
 
                 //Log.i(MYDEBUG, "Go to Ontario...");
                 goToOntario(); // the initial map when the app launches
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantedResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantedResults);
+        if (requestCode == PERMISSION_REQUEST_LOCATION) {
+            if (permissions.length > 0 && grantedResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // permission is granted
             }
         }
     }
@@ -628,11 +666,10 @@ public class DemoMapAppActivity extends FragmentActivity
      * to the settings here.
      */
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // SETTINGS is the only possibility, but we'll check anyway
-        if (requestCode == SETTINGS)
-        {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SETTINGS) {
             loadSettings();
 
             // do this here (perhaps re-organize later)
@@ -826,7 +863,7 @@ public class DemoMapAppActivity extends FragmentActivity
 			/*
              * Use the new data to create a new CameraPosition instance which is passed on to
 			 * changeCamera to adjust the position of the camera.
-			 * 
+			 *
 			 * To make the UI responsive to real-time adjustments in the seekbar, we call
 			 * changeCamera with animate = false. This will invoke "moveCamera" rather than
 			 * "animateCamera".
@@ -874,7 +911,7 @@ public class DemoMapAppActivity extends FragmentActivity
          * better way to manage the visibility of custom markers (ToDo!).
          */
         @Override
-        public void onCameraChange(CameraPosition position)
+        public void onCameraChange(@NonNull CameraPosition position)
         {
             updateSeekBar(position);
             if (position.zoom >= 15)
@@ -897,7 +934,7 @@ public class DemoMapAppActivity extends FragmentActivity
 
         // process a long-press on the map surface (for future consideration)
         @Override
-        public void onMapLongClick(LatLng point)
+        public void onMapLongClick(@NonNull LatLng point)
         {
             Toast.makeText(context, "Long press! (no implementation)", Toast.LENGTH_SHORT).show();
             vib.vibrate(50);
