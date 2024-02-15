@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '27.0.3'
+    namespace 'ca.yorku.eecs.mack.demovoiceemail'
+    compileSdk 33
 
     defaultConfig {
         applicationId "ca.yorku.eecs.mack.demovoiceemail"
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdk 14
+        targetSdk 33
     }
 
     buildTypes {
@@ -17,4 +17,3 @@ android {
         }
     }
 }
-
