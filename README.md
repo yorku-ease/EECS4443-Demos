@@ -2,6 +2,8 @@
 
 This repository contains a collection of Android application projects for the EECS4443 course. Each project is contained within its own folder. Students are encouraged to download the repository, open the individual project in Android Studio, and run it.
 
+The Javadoc for each of the demos can be accessed here: [https://yorku-ease.github.io/EECS4443-Demos/](https://yorku-ease.github.io/EECS4443-Demos/).
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
