@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'ca.yorku.eecs.mack.democardanimation'
     compileSdk 33
 
     defaultConfig {
